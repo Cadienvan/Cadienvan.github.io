@@ -26,6 +26,17 @@ import "nes.css/css/nes.min.css";
     <title>{title}</title>
   </head>
   <body>
+    <!-- Google tag (gtag.js) -->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=G-2N5QT9XQKT'></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-2N5QT9XQKT");
+    </script>
     <main>
       <slot />
       {
