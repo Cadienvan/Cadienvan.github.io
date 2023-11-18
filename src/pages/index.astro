@@ -7,6 +7,7 @@ import Bio from "../components/Bio.astro";
 
 import conferences from "../data/conferences.json";
 import interviews from "../data/interviews.json";
+import linkedinPosts from "../data/linkedin-posts.json";
 
 import pointerRight from "../../public/assets/pointer-right.png";
 ---
@@ -24,7 +25,7 @@ import pointerRight from "../../public/assets/pointer-right.png";
   </section>
   <section>
     <h2 id='linkedin'>
-      <a href='/linkedin'><Image src={pointerRight} alt='Pointer Right' /><span>I miei post Linkedin</span></a>
+      <a href='/linkedin'><Image src={pointerRight} alt='Pointer Right' /><span>I miei post Linkedin ({linkedinPosts.length})</span></a>
     </h2>
   </section>
   <section>
