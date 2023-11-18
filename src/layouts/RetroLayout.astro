@@ -1,0 +1,106 @@
+---
+interface Props {
+  title: string;
+  hasGoBack: boolean;
+}
+
+const { title, hasGoBack = false } = Astro.props;
+
+import "nes.css/css/nes.min.css";
+---
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='description' content='Astro description' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
+    <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
+    <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
+    <link rel='manifest' href='/site.webmanifest' />
+    <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#5bbad5' />
+    <meta name='msapplication-TileColor' content='#da532c' />
+    <meta name='theme-color' content='#ffffff' />
+    <meta name='generator' content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <main>
+      <slot />
+      {
+        hasGoBack && (
+          <section>
+            <a href='/' class='nes-btn is-primary'>
+              Torna alla home
+            </a>
+          </section>
+        )
+      }
+    </main>
+  </body>
+</html>
+<style is:global>
+  @font-face {
+    font-family: "PressStart2P-Regular";
+    src: url("/fonts/PressStart2P-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  * {
+    font-family: "PressStart2P-Regular", sans-serif;
+  }
+
+  main {
+    margin: auto;
+    padding: 1rem;
+    max-width: calc(100% - 2rem);
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  main > section {
+    margin-bottom: 3rem;
+  }
+
+  h2 > a {
+    margin-right: 1rem;
+  }
+
+  h2 > a > img {
+    margin-left: 0;
+    transition: margin-left 0.2s ease-in-out;
+  }
+
+  h2 > a > span {
+    margin-left: 1rem;
+  }
+
+  h2 > a:has(img):hover img {
+    margin-left: 10px;
+  }
+
+  .message {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .message img {
+    margin-right: 1rem;
+    flex: 1;
+    align-self: end;
+    max-width: 100%;
+    width: auto;
+  }
+
+  .message .nes-balloon {
+    flex: 2;
+  }
+
+  .article-link > .title span {
+    margin-left: 1rem;
+  }
+</style>

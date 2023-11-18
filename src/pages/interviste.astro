@@ -1,0 +1,13 @@
+---
+import Layout from "../layouts/RetroLayout.astro";
+
+import interviews from "../data/interviews.json";
+import LinkedTitle from "../components/LinkedTitle.astro";
+---
+
+<Layout title='Interviste' hasGoBack>
+  <section>
+    <h2><a href='javascript:void(0);'>#</a>Interviste</h2>
+    {interviews.map(interview => <LinkedTitle icon={interview.media} content={`${interview.title} @ ${interview.interviewer}`} href={interview.url} date={interview.date} />)}
+  </section>
+</Layout>

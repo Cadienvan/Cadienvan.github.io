@@ -1,0 +1,41 @@
+---
+import Layout from "../layouts/RetroLayout.astro";
+import { Image } from "astro:assets";
+
+import Profile from "../components/Profile.astro";
+import Bio from "../components/Bio.astro";
+
+import conferences from "../data/conferences.json";
+import interviews from "../data/interviews.json";
+
+import pointerRight from "../../public/assets/pointer-right.png";
+---
+
+<Layout title='Welcome to Astro.' hasGoBack={false}>
+  <section>
+    <h2>
+      <a href='javascript:void(0);'>#</a>Chi sono
+    </h2>
+    <Profile />
+  </section>
+  <section class='nes-container with-title'>
+    <h3 class='title'>Questo sito</h3>
+    <p>Qui raccolgo tutto ciò che mi riguarda, da post su LinkedIn a conferenze al quale ho partecipato.</p>
+  </section>
+  <section>
+    <h2 id='linkedin'>
+      <a href='/linkedin'><Image src={pointerRight} alt='Pointer Right' /><span>I miei post Linkedin</span></a>
+    </h2>
+  </section>
+  <section>
+    <h2 id='conferenze'>
+      <a href='/conferenze'><Image src={pointerRight} alt='Pointer Right' /><span>Conferenze ({conferences.length})</span></a>
+    </h2>
+  </section>
+  <section>
+    <h2 id='interviste'>
+      <a href='/interviste'><Image src={pointerRight} alt='Pointer Right' /><span>Interviste ({interviews.length})</span></a>
+    </h2>
+  </section>
+  <Bio />
+</Layout>

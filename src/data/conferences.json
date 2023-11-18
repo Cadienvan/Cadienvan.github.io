@@ -1,0 +1,58 @@
+[
+  {
+    "date": "2023-03-29",
+    "conference": "Codemotion Workshop Fest",
+    "title": "[IT] Come l'Asynchronous Batching e la Microkernel Architecture possono salvare il tuo matrimonio",
+    "url": "https://talks.codemotion.com/come-lasynchronous-batching-e-la-microke?playlist=codemotion-workshop-fest---2023",
+    "media": ""
+  },
+  {
+    "date": "2023-05-10",
+    "conference": "EDASummit",
+    "title": "[EN] EDA For Dummies: Event-Driven Architecture Design Patterns & Best Practices",
+    "url": "https://www.youtube.com/watch?v=5I64R7KnrFE",
+    "media": "youtube"
+  },
+  {
+    "date": "2023-05-16",
+    "conference": "JS FW Days",
+    "title": "[EN] Leveraging the Event Loop for Blazing-Fast Applications!",
+    "url": "https://www.youtube.com/watch?v=xcJuwHcspyY",
+    "media": "youtube"
+  },
+  {
+    "date": "2023-05-23",
+    "conference": "PUG Rovigo",
+    "title": "[IT] Microservices, Service-Based & Event-Driven Architecture",
+    "url": "https://www.youtube.com/watch?v=7GUGEQ_t0sw",
+    "media": "youtube"
+  },
+  {
+    "date": "2023-10-20",
+    "conference": "React Advanced London // GitNation",
+    "title": "[EN] Leveraging the Event Loop for Blazing-Fast Applications!",
+    "url": "https://www.youtube.com/watch?v=dREDJG58WLk",
+    "media": "youtube"
+  },
+  {
+    "date": "2023-10-24",
+    "conference": "Codemotion Milan (Community Area)",
+    "title": "[IT] Il Libro Open Source",
+    "url": "",
+    "media": ""
+  },
+  {
+    "date": "2023-11-09",
+    "conference": "Laravelday // Grusp",
+    "title": "[IT] Come Redis ha rotto il nostro applicativo",
+    "url": "",
+    "media": ""
+  },
+  {
+    "date": "2023-11-24",
+    "conference": "bitRocket",
+    "title": "[IT] Event Loop: l'arma (non) segreta di JavaScript",
+    "url": "",
+    "media": ""
+  }
+]

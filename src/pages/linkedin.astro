@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/RetroLayout.astro";
+
+import linkedinPosts from "../data/linkedin-posts.json";
+import linkedinPostsCategories from "../data/linkedin-posts-categories.json";
+---
+
+<Layout title='LinkedIn' hasGoBack>
+  <section>
+    <h2><a href='javascript:void(0);'>#</a>LinkedIn</h2>
+    <p>Dal 2022 sono diventato piuttosto attivo e in questa sezione ho categorizzato i {linkedinPosts.length} post che credo valga la pena leggere.</p>
+    <p>Per comodità, ho raccolto i post in <span class='nes-text is-primary'>{linkedinPostsCategories.length}</span> categorie.</p>
+  </section>
+  {
+    linkedinPostsCategories.map(category => (
+      <section class='nes-container with-title'>
+        <h3 class='title'>
+          <a href={`/linkedin/${category.slug}`}>{category.title}</a>
+        </h3>
+        <p>{category.description}</p>
+        <small>
+          La categoria contiene <span class='nes-text is-primary'>{linkedinPosts.filter(post => post.category === category.slug).length}</span> post.
+        </small>
+      </section>
+    ))
+  }
+</Layout>

@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+import avatarSmall from "../assets/avatar-small.jpg";
+
+interface Props {
+  date: string;
+  content: string;
+  href: string;
+  icon: string;
+}
+
+const { date, content, href, icon } = Astro.props;
+
+const availableIcons = ["twitter", "facebook", "instagram", "github", "google", "gmail", "medium", "linkedin", "twitch", "youtube", "reddit", "whatsapp"];
+---
+
+<article class='article-link'>
+  <h4 class='title'>
+    <a href={href || "javascript:void(0)"} target={href ? "_blank" : "_self"} rel='noopener' class:list={["nes-text", href ? "is-primary" : "is-disabled"]}>
+      {availableIcons.includes(icon) && <i class:list={["nes-icon", icon]} />}
+      {!availableIcons.includes(icon) && <Image src={avatarSmall} width={32} height={32} alt='Michael Di Prisco' />}
+      <span>{date} // {content}</span>
+    </a>
+  </h4>
+</article>

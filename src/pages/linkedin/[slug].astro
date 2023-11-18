@@ -1,0 +1,49 @@
+---
+import type { GetStaticPaths } from "astro";
+import linkedinPostsCategories from "../../data/linkedin-posts-categories.json";
+import linkedinPosts from "../../data/linkedin-posts.json";
+import Layout from "../../layouts/RetroLayout.astro";
+
+export const getStaticPaths = (() => {
+  return linkedinPostsCategories.map(category => ({
+    params: {
+      slug: category.slug,
+    },
+  }));
+}) satisfies GetStaticPaths;
+
+const { slug } = Astro.params;
+
+const category = linkedinPostsCategories.find(category => category.slug === slug);
+
+if (!category) {
+  return {
+    status: 404,
+  };
+}
+const posts = linkedinPosts.filter(post => post.category === category.slug).reverse();
+---
+
+<Layout title={category.title} hasGoBack={false}>
+  <section>
+    <h2><a href='javascript:void(0);'>#</a>LinkedIn</h2>
+    <section class='nes-container with-title'>
+      <h3 class='title'>{category.title}</h3>
+      <ul class='nes-list'>
+        {
+          posts.map(post => (
+            <li>
+              <a href={post.url} target='_blank' rel='noopener noreferrer'>
+                <i class='nes-icon linkedin' />
+                {post.title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+    <section style='margin-top: 1rem;'>
+      <a href='/linkedin' class='nes-btn is-primary'> Torna a LinkedIn</a>
+    </section>
+  </section>
+</Layout>

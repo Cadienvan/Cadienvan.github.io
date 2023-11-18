@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Me",
+    "description": "La mia vita e le mie esperienze più significative.",
+    "slug": "personal"
+  },
+  {
+    "title": "if - Identità futura.",
+    "description": "Una serie di post riguardo al nostro futuro come esseri umani in un mondo sempre più artificiale.",
+    "slug": "if"
+  },
+  {
+    "title": "Discussioni",
+    "description": "Discussioni su argomenti vari.",
+    "slug": "discussions"
+  },
+  {
+    "title": "Discussioni Tech",
+    "description": "Discussioni su argomenti tech-oriented.",
+    "slug": "tech-discussions"
+  },
+  {
+    "title": "Il diario.",
+    "description": "Il diario di uno sviluppatore in cerca di lavoro che ho scritto tra il 2022 e il 2023.",
+    "slug": "diario"
+  },
+  {
+    "title": "Libri consigliati",
+    "description": "Una lista di libri che ho letto e che consiglio.",
+    "slug": "books"
+  },
+  {
+    "title": "Risate",
+    "description": "I post più divertenti che ho scritto.",
+    "slug": "fun"
+  },
+  {
+    "title": "Snippet",
+    "description": "Piccoli snippet di codice che ho voluto condividere.",
+    "slug": "snippets"
+  }
+]

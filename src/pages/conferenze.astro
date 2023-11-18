@@ -1,0 +1,13 @@
+---
+import Layout from "../layouts/RetroLayout.astro";
+
+import conferences from "../data/conferences.json";
+import LinkedTitle from "../components/LinkedTitle.astro";
+---
+
+<Layout title='Conferenze' hasGoBack>
+  <section>
+    <h2><a href='javascript:void(0);'>#</a>Conferenze</h2>
+    {conferences.map(conference => <LinkedTitle icon={conference.media} content={conference.title} href={conference.url} date={conference.date} />)}
+  </section>
+</Layout>
