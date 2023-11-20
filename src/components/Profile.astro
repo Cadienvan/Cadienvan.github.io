@@ -1,12 +1,28 @@
 <section class='message-list'>
   <section class='message -left'>
-    <img src='/assets/avatar.gif' alt='Michael Di Prisco' />
+    <img src='/assets/avatar.gif' alt='Michael Di Prisco' width='400' height='400' />
     <div class='nes-balloon from-left'>
       <p>Ciao, sono Michael Di Prisco e sono un Software Engineer.</p>
       <p>
-        <a href='https://www.linkedin.com/in/mdiprisco/' target='_blank'><i class='nes-icon linkedin'></i></a>
-        <a href='https://github.com/Cadienvan/' target='_blank'><i class='nes-icon github'></i></a>
+        <a href='https://www.linkedin.com/in/mdiprisco/' title='LinkedIn' target='_blank'><i class='nes-icon linkedin'></i></a>
+        <a href='https://github.com/Cadienvan/' title='GitHub' target='_blank'><i class='nes-icon github'></i></a>
       </p>
     </div>
   </section>
 </section>
+<style>
+  @media (max-width: 1023px) {
+    .message {
+      flex-direction: column;
+    }
+
+    .message img {
+      display: none;
+    }
+
+    .nes-balloon.from-left:before,
+    .nes-balloon.from-left:after {
+      display: none;
+    }
+  }
+</style>
