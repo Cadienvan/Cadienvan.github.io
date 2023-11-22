@@ -1,10 +1,17 @@
 ---
 interface Props {
   title: string;
-  hasGoBack: boolean;
+  description?: string;
+  hasGoBack?: boolean;
 }
 
-const { title, hasGoBack = false } = Astro.props;
+declare global {
+  interface Window {
+    dataLayer: any[];
+  }
+}
+
+const { title, description = "Il mio sito web.", hasGoBack = false } = Astro.props;
 
 import "nes.css/css/nes.min.css";
 ---
@@ -13,7 +20,7 @@ import "nes.css/css/nes.min.css";
 <html lang='en'>
   <head>
     <meta charset='UTF-8' />
-    <meta name='description' content='Il mio sito web.' />
+    <meta name='description' content={description} />
     <meta name='viewport' content='width=device-width' />
     <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
     <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
@@ -31,7 +38,7 @@ import "nes.css/css/nes.min.css";
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
-        dataLayer.push(arguments);
+        window.dataLayer.push(arguments);
       }
       gtag("js", new Date());
 
@@ -118,5 +125,20 @@ import "nes.css/css/nes.min.css";
 
   .article-link > .title span {
     margin-left: 1rem;
+  }
+
+  .default-font * {
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell,
+      "Open Sans",
+      "Helvetica Neue",
+      sans-serif;
   }
 </style>

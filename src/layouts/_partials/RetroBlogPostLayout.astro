@@ -1,0 +1,21 @@
+---
+const { frontmatter } = Astro.props;
+
+import Layout from "../RetroLayout.astro";
+---
+
+<Layout title={frontmatter.title} description={frontmatter.description} hasGoBack>
+  <section>
+    <h2>
+      <a href='javascript:void(0);'>#</a>Blog
+    </h2>
+    <h1>{frontmatter.title}</h1>
+    <h3>{frontmatter.description}</h3>
+    <h4 style='margin-bottom: 1rem;'>{new Date(frontmatter.date).toLocaleDateString()}</h4>
+
+    <small>Vuoi ripristinare il font di sistema per il contenuto del post? <a href='javascript:void(0);' onclick='document.getElementById("post-content").classList.add("default-font"); this.parentNode.remove();'>Clicca qui</a>.</small>
+    <div id='post-content' style='margin-top: 2rem;'>
+      <slot />
+    </div>
+  </section>
+</Layout>
