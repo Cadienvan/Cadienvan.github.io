@@ -2,7 +2,7 @@
 layout: ../../layouts/_partials/RetroBlogPostLayout.astro
 title: Inevitabot.
 author: Michael Di Prisco
-description: Un futuro tanto inevitabile quanto inprevedibile.
+description: Un futuro tanto inevitabile quanto imprevedibile.
 date: 2023-11-21
 AISupport: low
 ---
