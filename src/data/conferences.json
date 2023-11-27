@@ -29,7 +29,7 @@
   },
   {
     "date": "2023-10-20",
-    "conference": "React Advanced London // GitNation",
+    "conference": "React Advanced London",
     "title": "[EN] Leveraging the Event Loop for Blazing-Fast Applications!",
     "url": "https://portal.gitnation.org/contents/leveraging-the-event-loop-for-blazing-fast-applications",
     "media": ""
@@ -43,7 +43,7 @@
   },
   {
     "date": "2023-11-09",
-    "conference": "Laravelday // Grusp",
+    "conference": "Laravelday",
     "title": "[IT] Come Redis ha rotto il nostro applicativo",
     "url": "",
     "media": ""
