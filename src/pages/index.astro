@@ -10,6 +10,7 @@ import interviews from "../data/interviews.json";
 import linkedinPosts from "../data/linkedin-posts.json";
 
 import pointerRight from "../../public/assets/pointer-right.png";
+import Blog from "../components/Blog.astro";
 ---
 
 <Layout title='Home' hasGoBack={false}>
@@ -35,4 +36,5 @@ import pointerRight from "../../public/assets/pointer-right.png";
       <a href='/interviste'><Image src={pointerRight} alt='Pointer Right' /><span>Interviste ({interviews.length})</span></a>
     </h2>
   </section>
+  <Blog />
 </Layout>
