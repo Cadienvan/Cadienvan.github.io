@@ -56,6 +56,41 @@ import "nes.css/css/nes.min.css";
         )
       }
     </main>
+    <script>
+      let copyButtonLabel = "Copia";
+      let codeBlocks = Array.from(document.querySelectorAll("pre"));
+
+      for (let codeBlock of codeBlocks) {
+        let wrapper = document.createElement("div");
+        wrapper.style.position = "relative";
+
+        let copyButton = document.createElement("button");
+        copyButton.className = "copy-code nes-btn is-primary";
+        copyButton.innerHTML = copyButtonLabel;
+
+        codeBlock.setAttribute("tabindex", "0");
+        codeBlock.appendChild(copyButton);
+        // wrap codebock with relative parent element
+        codeBlock.parentNode.insertBefore(wrapper, codeBlock);
+        wrapper.appendChild(codeBlock);
+
+        copyButton.addEventListener("click", async () => {
+          try {
+            await navigator.clipboard.writeText(codeBlock.querySelector('code').innerText);
+            copyButton.innerHTML = "Copiato!";
+            setTimeout(() => {
+              copyButton.innerHTML = copyButtonLabel;
+            }, 2000);
+          } catch (err) {
+            console.error("Failed to copy: ", err);
+            copyButton.innerHTML = "Errore!";
+            setTimeout(() => {
+              copyButton.innerHTML = copyButtonLabel;
+            }, 5000);
+          }
+        });
+      }
+    </script>
   </body>
 </html>
 <style is:global>
@@ -141,6 +176,39 @@ import "nes.css/css/nes.min.css";
       "Helvetica Neue",
       sans-serif;
   }
+
+  code {
+    font-family:
+      SFMono-Regular,
+      Menlo,
+      Monaco,
+      Consolas,
+      Liberation Mono,
+      Courier New,
+      monospace !important;
+    background-color: #24292e;
+    color: #e1e4e8;
+  }
+
+  pre {
+    padding: 0.5rem 1rem;
+  }
+
+  .copy-code {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    /*background-color: #3730a3;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    line-height: 1rem;*/
+  }
+
+  /*.copy-code:hover {
+    background-color: #312e81;
+  }*/
 
   [data-tooltip] {
     position: relative;
