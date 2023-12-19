@@ -6,6 +6,10 @@ description: L'arma (non) segreta per migliorare le prestazioni delle applicazio
 date: 2023-12-11
 ---
 
+<div class="nes-container is-rounded">
+Questo post è stato pubblicato ed è apparso per la prima volta su <a href="https://www.theredcode.it/devops/asynchronous-batching-nodejs-fastify/" target="_blank">TheRedCode</a>.
+</div>
+
 ### Introduzione
 
 La programmazione asincrona è un concetto fondamentale nello sviluppo web moderno e una tecnica potente nel nostro arsenale è il batching asincrono, o _asynchronous batching_. In questo articolo approfondiremo il mondo del batching asincrono utilizzando **Node.js** e **Fastify**, un framework web noto per la sua velocità e il basso _overhead_.
