@@ -1,0 +1,270 @@
+<div id='cookies-eu-banner' style='display: none;' data-wait-remove='1200'>
+  Questo sito web utilizza i cookie. Utilizziamo i cookie per migliorare l'esperienza dell'utente.<br />
+  Questi strumenti di tracciamento permettono di misurare il traffico.<br />
+  Se vuoi saperne di più, visualizza la <a href='/cookie-policy' target='_blank'>cookie policy</a>.
+  <div class='ib'>
+    <button id='cookies-eu-reject'>Rifiuta</button>
+    <button id='cookies-eu-accept'>Accetta</button>
+  </div>
+</div>
+
+<style>
+  #cookies-eu-banner {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #eee;
+    border-top: 1px solid #ddd;
+    box-sizing: border-box;
+    color: #444;
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 1em 2em;
+    text-align: center;
+    transform: translateY(100%);
+  }
+  #cookies-eu-banner[style*="display: block"] {
+    animation: 1s ease-in-out 1s forwards showCookieBanner;
+  }
+  #cookies-eu-banner.before-remove {
+    animation: 1s ease-in-out forwards hideCookieBanner;
+  }
+
+  #cookies-eu-more {
+    padding: 0 0.25em;
+    white-space: nowrap;
+  }
+
+  #cookies-eu-banner button {
+    cursor: pointer;
+    padding: 0.25em 0.5em 0.2em;
+    transition: 300ms all;
+  }
+
+  #cookies-eu-reject {
+    background: none;
+    border: 1px solid #b7b7b7;
+    color: #6b6b6b;
+  }
+  #cookies-eu-reject:hover {
+    border-color: #6b6b6b;
+    color: #333;
+  }
+
+  #cookies-eu-accept {
+    background: #1976d2;
+    border: 1px solid #1976d2;
+    color: #ffffff;
+  }
+  #cookies-eu-accept:hover {
+    background: none;
+    color: #1976d2;
+  }
+
+  @keyframes showCookieBanner {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
+  @keyframes hideCookieBanner {
+    from {
+      transform: translateY(0%);
+    }
+    to {
+      transform: translateY(100%);
+    }
+  }
+</style>
+<script>
+  var CookiesEuBanner,
+    document = window.document;
+
+  CookiesEuBanner = function (launchFunction, waitAccept, useLocalStorage, undefined) {
+    if (!(this instanceof CookiesEuBanner)) {
+      return new CookiesEuBanner(launchFunction);
+    }
+
+    this.cookieTimeout = 31104000000; // 12 months in milliseconds
+    this.bots = /bot|crawler|spider|crawling/i;
+    this.cookieName = "hasConsent";
+    this.trackingCookiesNames = ["__utma", "__utmb", "__utmc", "__utmt", "__utmv", "__utmz", "_ga", "_gat", "_gid"];
+    this.launchFunction = launchFunction;
+    this.waitAccept = waitAccept || false;
+    this.useLocalStorage = useLocalStorage || false;
+    this.init();
+  };
+
+  CookiesEuBanner.prototype = {
+    init: function () {
+      // Detect if the visitor is a bot or not
+      // Prevent for search engine take the cookie alert message as main content of the page
+      var isBot = this.bots.test(navigator.userAgent);
+
+      // Check if DoNotTrack is activated
+      var dnt = navigator.doNotTrack || navigator.msDoNotTrack || window.doNotTrack;
+      var isToTrack = dnt !== null && dnt !== undefined ? dnt && dnt !== "yes" && dnt !== 1 && dnt !== "1" : true;
+
+      // Do nothing if it is a bot
+      // If DoNotTrack is activated, do nothing too
+      if (isBot || !isToTrack || this.hasConsent() === false) {
+        this.removeBanner(0);
+        return false;
+      }
+
+      // User has already consent to use cookies to tracking
+      if (this.hasConsent() === true) {
+        // Launch user custom function
+        this.launchFunction();
+        return true;
+      }
+
+      // If it's not a bot, no DoNotTrack and not already accept, so show banner
+      this.showBanner();
+
+      if (!this.waitAccept) {
+        // Accept cookies by default for the next page
+        this.setConsent(true);
+      }
+    },
+
+    /*
+     * Show banner at the top of the page
+     */
+    showBanner: function () {
+      var _this = this,
+        getElementById = document.getElementById.bind(document),
+        banner = getElementById("cookies-eu-banner"),
+        rejectButton = getElementById("cookies-eu-reject"),
+        acceptButton = getElementById("cookies-eu-accept"),
+        moreLink = getElementById("cookies-eu-more"),
+        waitRemove = banner.dataset.waitRemove === undefined ? 0 : parseInt(banner.dataset.waitRemove),
+        // Variables for minification optimization
+        addClickListener = this.addClickListener,
+        removeBanner = _this.removeBanner.bind(_this, waitRemove);
+
+      banner.style.display = "block";
+
+      if (moreLink) {
+        addClickListener(moreLink, function () {
+          _this.deleteCookie(_this.cookieName);
+        });
+      }
+
+      if (acceptButton) {
+        addClickListener(acceptButton, function () {
+          removeBanner();
+          _this.setConsent(true);
+          _this.launchFunction();
+        });
+      }
+
+      if (rejectButton) {
+        addClickListener(rejectButton, function () {
+          removeBanner();
+          _this.setConsent(false);
+
+          // Delete existing tracking cookies
+          _this.trackingCookiesNames.map(_this.deleteCookie);
+        });
+      }
+    },
+
+    /*
+     * Set consent cookie or localStorage
+     */
+    setConsent: function (consent) {
+      if (this.useLocalStorage) {
+        return localStorage.setItem(this.cookieName, consent);
+      }
+
+      this.setCookie(this.cookieName, consent);
+    },
+
+    /*
+     * Check if user already consent
+     */
+    hasConsent: function () {
+      var cookieName = this.cookieName;
+      var isCookieSetTo = function (value) {
+        return document.cookie.indexOf(cookieName + "=" + value) > -1 || localStorage.getItem(cookieName) === value;
+      };
+
+      if (isCookieSetTo("true")) {
+        return true;
+      } else if (isCookieSetTo("false")) {
+        return false;
+      }
+
+      return null;
+    },
+
+    /*
+     * Create/update cookie
+     */
+    setCookie: function (name, value) {
+      var date = new Date();
+      date.setTime(date.getTime() + this.cookieTimeout);
+
+      document.cookie = name + "=" + value + ";expires=" + date.toGMTString() + ";path=/";
+    },
+
+    /*
+     * Delete cookie by changing expire
+     */
+    deleteCookie: function (name) {
+      var hostname = document.location.hostname.replace(/^www\./, ""),
+        commonSuffix = "; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/";
+
+      document.cookie = name + "=; domain=." + hostname + commonSuffix;
+      document.cookie = name + "=" + commonSuffix;
+    },
+
+    addClickListener: function (DOMElement, callback) {
+      if (DOMElement.attachEvent) {
+        // For IE 8 and earlier versions
+        return DOMElement.attachEvent("onclick", callback);
+      }
+
+      // For all major browsers, except IE 8 and earlier
+      DOMElement.addEventListener("click", callback);
+    },
+
+    /*
+     * Delays removal of banner allowing developers
+     * to specify their own transition effects
+     */
+    removeBanner: function (wait) {
+      var banner = document.getElementById("cookies-eu-banner");
+      banner.classList.add("before-remove");
+      setTimeout(function () {
+        if (banner && banner.parentNode) {
+          banner.parentNode.removeChild(banner);
+        }
+      }, wait);
+    },
+  };
+
+  var cookiesBanner = new CookiesEuBanner(function () {
+    // Load https://www.googletagmanager.com/gtag/js?id=G-2N5QT9XQKT
+    var script = document.createElement("script");
+    script.onload = function () {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-2N5QT9XQKT");
+    };
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-2N5QT9XQKT";
+    document.head.appendChild(script);
+  }, true);
+
+  /*cookiesBanner.addClickListener(document.getElementById("custom-reset"), function () {
+    cookiesBanner.deleteCookie(cookiesBanner.cookieName);
+  });*/
+</script>

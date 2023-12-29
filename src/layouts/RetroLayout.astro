@@ -14,6 +14,7 @@ declare global {
 const { title, description = "Il mio sito web.", hasGoBack = false } = Astro.props;
 
 import "nes.css/css/nes.min.css";
+import CookieBanner from "../components/CookieBanner.astro";
 ---
 
 <!doctype html>
@@ -33,17 +34,7 @@ import "nes.css/css/nes.min.css";
     <title>{title} - Michael Di Prisco</title>
   </head>
   <body>
-    <!-- Google tag (gtag.js) -->
-    <script async src='https://www.googletagmanager.com/gtag/js?id=G-2N5QT9XQKT'></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        window.dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-2N5QT9XQKT");
-    </script>
+    <CookieBanner />
     <main>
       <slot />
       {
@@ -76,7 +67,7 @@ import "nes.css/css/nes.min.css";
 
         copyButton.addEventListener("click", async () => {
           try {
-            await navigator.clipboard.writeText(codeBlock.querySelector('code').innerText);
+            await navigator.clipboard.writeText(codeBlock.querySelector("code").innerText);
             copyButton.innerHTML = "Copiato!";
             setTimeout(() => {
               copyButton.innerHTML = copyButtonLabel;
