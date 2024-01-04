@@ -5,6 +5,11 @@
     "slug": "personal"
   },
   {
+    "title": "Il Libro Open Source",
+    "description": "Il manuale del buon dev, open source, in continua stesura scritto da tutta la community.",
+    "slug": "book"
+  },
+  {
     "title": "if - Identità futura.",
     "description": "Una serie di post riguardo al nostro futuro come esseri umani in un mondo sempre più artificiale.",
     "slug": "if"
