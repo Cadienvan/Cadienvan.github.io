@@ -5,6 +5,16 @@
     "slug": "personal"
   },
   {
+    "title": "Le Domande",
+    "description": "Le domande a cui nessuno vuole rispondere.",
+    "slug": "le-domande"
+  },
+  {
+    "title": "Spiegato ad un/una 12enne.",
+    "description": "Concetti e temi di sviluppo spiegati in modo semplice e chiaro.",
+    "slug": "spiegare-12"
+  },
+  {
     "title": "Il Libro Open Source",
     "description": "Il manuale del buon dev, open source, in continua stesura scritto da tutta la community.",
     "slug": "book"

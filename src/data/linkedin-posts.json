@@ -536,7 +536,27 @@
   },
   {
     "url": "https://www.linkedin.com/posts/mdiprisco_domande-sviluppo-sviluppatori-activity-7148605785797816321-zD8V?utm_source=share&utm_medium=member_desktop",
-    "title": "Le domande a cui nessuno vuole rispondere.",
-    "category": "discussions"
+    "title": "Presentazione.",
+    "category": "le-domande"
+  },
+  {
+    "url": "https://www.linkedin.com/posts/mdiprisco_programmazione-lavoro-sviluppo-activity-7150048501828050945-j3r0?utm_source=share&utm_medium=member_desktop",
+    "title": "Presentazione.",
+    "category": "spiegare-12"
+  },
+  {
+    "url": "https://www.linkedin.com/posts/mdiprisco_domande-pareto-activity-7150765726612500480-HD1X?utm_source=share&utm_medium=member_desktop",
+    "title": "Ma è veramente necessaria tutta questa scalabilità?",
+    "category": "le-domande"
+  },
+  {
+    "url": "https://www.linkedin.com/posts/mdiprisco_domande-activity-7151490493976092672-1IRv?utm_source=share&utm_medium=member_desktop",
+    "title": "Hai mai pensato di aver sbagliato mestiere?",
+    "category": "le-domande"
+  },
+  {
+    "url": "https://www.linkedin.com/posts/mdiprisco_client-side-rendering-csr-e-server-side-activity-7152577680742268928-Tlr6?utm_source=share&utm_medium=member_desktop",
+    "title": "Client Side Rendering (CSR) e Server Side Rendering (SSR).",
+    "category": "spiegare-12"
   }
 ]
