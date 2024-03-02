@@ -38,8 +38,8 @@
     "date": "2023-10-03",
     "interviewer": "Continous Delivery",
     "title": "L'Open Source è un libro aperto",
-    "url": "https://open.spotify.com/episode/56sWHfbfWjAZesN6VM7uxx",
-    "media": "spotify"
+    "url": "https://www.youtube.com/watch?v=sKCDCF84Yko",
+    "media": "youtube"
   },
   {
     "date": "2024-01-18",
@@ -52,6 +52,7 @@
     "date": "2024-02-13",
     "interviewer": "Caffè Sviluppo",
     "title": "Il terrore della fatigue",
-    "url": "https://www.twitch.tv/videos/2060973474"
+    "url": "https://www.youtube.com/watch?v=Aegbzrsa2_Q",
+    "media": "youtube"
   }
 ]
