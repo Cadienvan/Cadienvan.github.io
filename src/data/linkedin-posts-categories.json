@@ -1,21 +1,21 @@
 [
   {
-    "title": "Me",
+    "title": "Me.",
     "description": "La mia vita e le mie esperienze più significative.",
     "slug": "personal"
   },
   {
-    "title": "Le Domande",
+    "title": "Le Domande.",
     "description": "Le domande a cui nessuno vuole rispondere.",
     "slug": "le-domande"
   },
   {
-    "title": "Spiegato ad un/una 12enne.",
+    "title": "In poche parole.",
     "description": "Concetti e temi di sviluppo spiegati in modo semplice e chiaro.",
-    "slug": "spiegare-12"
+    "slug": "in-poche-parole"
   },
   {
-    "title": "Il Libro Open Source",
+    "title": "Il Libro Open Source.",
     "description": "Il manuale del buon dev, open source, in continua stesura scritto da tutta la community.",
     "slug": "book"
   },
@@ -25,32 +25,32 @@
     "slug": "if"
   },
   {
-    "title": "Discussioni",
+    "title": "Discussioni.",
     "description": "Discussioni su argomenti vari.",
     "slug": "discussions"
   },
   {
-    "title": "Discussioni Tech",
+    "title": "Discussioni Tech.",
     "description": "Discussioni su argomenti tech-oriented.",
     "slug": "tech-discussions"
   },
   {
     "title": "Il diario.",
-    "description": "Il diario di uno sviluppatore in cerca di lavoro che ho scritto tra il 2022 e il 2023.",
+    "description": "Il diario di uno sviluppatore in cerca di lavoro che ho scritto a partire dal 2022.",
     "slug": "diario"
   },
   {
-    "title": "Libri consigliati",
+    "title": "Libri consigliati.",
     "description": "Una lista di libri che ho letto e che consiglio.",
     "slug": "books"
   },
   {
-    "title": "Risate",
+    "title": "Risate.",
     "description": "I post più divertenti che ho scritto.",
     "slug": "fun"
   },
   {
-    "title": "Snippet",
+    "title": "Snippet.",
     "description": "Piccoli snippet di codice che ho voluto condividere.",
     "slug": "snippets"
   }

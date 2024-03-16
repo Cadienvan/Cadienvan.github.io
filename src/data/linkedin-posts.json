@@ -531,7 +531,7 @@
   },
   {
     "url": "https://www.linkedin.com/posts/mdiprisco_chiudo-lanno-con-una-piccola-punta-di-orgoglio-activity-7146417069541023744-iBiu?utm_source=share&utm_medium=member_desktop",
-    "title": "Architetture Software",
+    "title": "Architetture Software.",
     "category": "book"
   },
   {
@@ -542,7 +542,7 @@
   {
     "url": "https://www.linkedin.com/posts/mdiprisco_programmazione-lavoro-sviluppo-activity-7150048501828050945-j3r0?utm_source=share&utm_medium=member_desktop",
     "title": "Presentazione.",
-    "category": "spiegare-12"
+    "category": "in-poche-parole"
   },
   {
     "url": "https://www.linkedin.com/posts/mdiprisco_domande-pareto-activity-7150765726612500480-HD1X?utm_source=share&utm_medium=member_desktop",
@@ -557,7 +557,7 @@
   {
     "url": "https://www.linkedin.com/posts/mdiprisco_client-side-rendering-csr-e-server-side-activity-7152577680742268928-Tlr6?utm_source=share&utm_medium=member_desktop",
     "title": "Client Side Rendering (CSR) e Server Side Rendering (SSR).",
-    "category": "spiegare-12"
+    "category": "in-poche-parole"
   },
   {
     "url": "https://www.linkedin.com/posts/mdiprisco_domande-activity-7153664860369674240-_hia?utm_source=share&utm_medium=member_desktop",
@@ -567,7 +567,7 @@
   {
     "url": "https://www.linkedin.com/posts/mdiprisco_static-site-generation-ssg-spiegato-a-un-activity-7155114392668233728-srnW?utm_source=share&utm_medium=member_desktop",
     "title": "Static-site Generation (SSG).",
-    "category": "spiegare-12"
+    "category": "in-poche-parole"
   },
   {
     "url": "https://www.linkedin.com/posts/mdiprisco_domande-activity-7156209141819092992-JM4F?utm_source=share&utm_medium=member_desktop",
@@ -577,7 +577,7 @@
   {
     "url": "https://www.linkedin.com/posts/mdiprisco_docker-activity-7157651090274988034-Pr6t?utm_source=share&utm_medium=member_desktop",
     "title": "Docker.",
-    "category": "spiegare-12"
+    "category": "in-poche-parole"
   },
   {
     "url": "https://www.linkedin.com/posts/mdiprisco_domande-activity-7158746065079353344-oxnK?utm_source=share&utm_medium=member_desktop",
@@ -587,7 +587,7 @@
   {
     "url": "https://www.linkedin.com/posts/mdiprisco_microservizi-monoliti-activity-7160187840218161155-OxsI?utm_source=share&utm_medium=member_desktop",
     "title": "Microservizi Vs Monoliti.",
-    "category": "spiegare-12"
+    "category": "in-poche-parole"
   },
   {
     "url": "https://www.linkedin.com/posts/mdiprisco_domande-activity-7160912582147489793-ZunN?utm_source=share&utm_medium=member_desktop",
@@ -602,7 +602,7 @@
   {
     "url": "https://www.linkedin.com/posts/mdiprisco_dependency-injection-docker-activity-7162724521328820224-18DK?utm_source=share&utm_medium=member_desktop",
     "title": "Dependency Injection.",
-    "category": "spiegare-12"
+    "category": "in-poche-parole"
   },
   {
     "url": "https://www.linkedin.com/posts/mdiprisco_domande-activity-7163449371609481216-Hvtb?utm_source=share&utm_medium=member_desktop",
@@ -612,7 +612,7 @@
   {
     "url": "https://www.linkedin.com/posts/mdiprisco_cache-activity-7165268810034364416-GH34?utm_source=share&utm_medium=member_desktop",
     "title": "Cache.",
-    "category": "spiegare-12"
+    "category": "in-poche-parole"
   },
   {
     "url": "https://www.linkedin.com/posts/mdiprisco_lavoro-work-recruiter-activity-7165986100287672320-8AgR?utm_source=share&utm_medium=member_desktop",
@@ -627,7 +627,7 @@
   {
     "url": "https://www.linkedin.com/posts/mdiprisco_debito-tecnico-activity-7167797988260470784-ELav?utm_source=share&utm_medium=member_desktop",
     "title": "Debito Tecnico.",
-    "category": "spiegare-12"
+    "category": "in-poche-parole"
   },
   {
     "url": "https://www.linkedin.com/posts/mdiprisco_domande-server-cloud-activity-7168530314129096704-Bh0E?utm_source=share&utm_medium=member_desktop",
@@ -638,5 +638,30 @@
     "url": "https://www.linkedin.com/posts/mdiprisco_event-loop-e-javascript-oggi-voglio-provare-activity-7169255183766568964-l6m0?utm_source=share&utm_medium=member_desktop",
     "title": "Event Loop e JavaScript.",
     "category": "tech-discussions"
+  },
+  {
+    "url": "https://www.linkedin.com/posts/mdiprisco_database-activity-7170334736157032448-hSi0?utm_source=share&utm_medium=member_desktop",
+    "title": "Database relazionali e non-relazionali. Parte 1.",
+    "category": "in-poche-parole"
+  },
+  {
+    "url": "https://www.linkedin.com/posts/mdiprisco_domande-devexp-activity-7171059452438081536-WHbW?utm_source=share&utm_medium=member_desktop",
+    "title": "Come mantieni un equilibrio tra innovazione e stabilità in un progetto?",
+    "category": "le-domande"
+  },
+  {
+    "url": "https://www.linkedin.com/posts/mdiprisco_database-activity-7172871438423601152-2-2x?utm_source=share&utm_medium=member_desktop",
+    "title": "Database relazionali e non-relazionali. Parte 2.",
+    "category": "in-poche-parole"
+  },
+  {
+    "url": "https://www.linkedin.com/posts/mdiprisco_domande-activity-7173966125838319616-pD6f?utm_source=share&utm_medium=member_desktop",
+    "title": "Come ti comporteresti se dovessi lavorare a progetti che ritieni poco etici o moralmente discutibili?",
+    "category": "le-domande"
+  },
+  {
+    "url": "https://www.linkedin.com/posts/mdiprisco_data-engineer-activity-7173592387896688640-fFPF?utm_source=share&utm_medium=member_desktop",
+    "title": "Fundamentals of Data Engineering.",
+    "category": "books"
   }
 ]
