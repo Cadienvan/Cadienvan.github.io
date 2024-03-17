@@ -11,7 +11,7 @@ import Layout from "../RetroLayout.astro";
     </h2>
     <h1>{frontmatter.title}</h1>
     <h3>{frontmatter.description}</h3>
-    <h4 style='margin-bottom: 1rem;'>{new Date(frontmatter.date).toLocaleDateString()}</h4>
+    <h4 style='margin-bottom: 1rem;'>{new Date(frontmatter.date).toLocaleDateString('it-IT')}</h4>
 
     <small>Vuoi ripristinare il font di sistema per il contenuto del post? <a href='javascript:void(0);' onclick='document.getElementById("post-content").classList.add("default-font"); this.parentNode.remove();'>Clicca qui</a>.</small>
     <div id='post-content' style='margin-top: 2rem;'>
