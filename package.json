@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "astro": "^4.0.5",
-    "cssnano": "^6.0.1",
+    "cssnano": "^6.0.5",
     "nes.css": "^2.3.0"
   }
 }
