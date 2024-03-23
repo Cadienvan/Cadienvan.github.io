@@ -54,5 +54,12 @@
     "title": "Il terrore della fatigue",
     "url": "https://www.youtube.com/watch?v=Aegbzrsa2_Q",
     "media": "youtube"
+  },
+  {
+    "date": "2024-03-04",
+    "interviewer": "La Locanda del Tech",
+    "title": "Git e Branching Models",
+    "url": "https://www.youtube.com/watch?v=jbG9BoFNx3g",
+    "media": "youtube"
   }
 ]
