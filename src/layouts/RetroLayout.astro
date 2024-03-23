@@ -185,6 +185,20 @@ import CookieBanner from "../components/CookieBanner.astro";
     padding: 0.5rem 1rem;
   }
 
+  #search-container {
+    & .nes-list {
+      padding-left: 0;
+
+      & li {
+        margin-bottom: 0.5rem;
+
+        &:last-child {
+          text-align: right;
+        }
+      }
+    }
+  }
+
   .copy-code {
     position: absolute;
     top: 0;
