@@ -15,6 +15,11 @@
     "slug": "in-poche-parole"
   },
   {
+    "title": "Software Architecture.",
+    "description": "Una rubrica settimanale nel quale parlo di architettura software.",
+    "slug": "software-architecture"
+  },
+  {
     "title": "Il Libro Open Source.",
     "description": "Il manuale del buon dev, open source, in continua stesura scritto da tutta la community.",
     "slug": "book"
