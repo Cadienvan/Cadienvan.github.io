@@ -168,6 +168,16 @@ import CookieBanner from "../components/CookieBanner.astro";
       sans-serif;
   }
 
+  blockquote {
+    border-left: 4px solid #005099;
+    padding-left: 1rem;
+    margin-left: 0;
+
+    & p {
+      margin: 0;
+    }
+  }
+
   code {
     font-family:
       SFMono-Regular,
@@ -257,11 +267,11 @@ import CookieBanner from "../components/CookieBanner.astro";
   /* MOBILE ONLY */
   @media (max-width: 600px) {
     main {
-        max-width: 100%;
-        font-size: 14px;
+      max-width: 100%;
+      font-size: 14px;
     }
     h2 {
-        font-size: 1.2em;
+      font-size: 1.2em;
     }
   }
 </style>
