@@ -13,9 +13,9 @@ Quello che segue è una risposta al bellissimo articolo di Josh Collinsworth che
 
 Ho deciso di strutturare questo contenuto prendendo ogni citazione riassuntiva che lui stesso fa nel suo articolo e rispondendo a ciascuna di esse con la mia opinione.
 
-Questo articolo è quindi da considerarsi una serie di spunti che identificano un parere personale. Delle 12 citazioni riportate, mi sono trovato d'accordo con ✅ 8 di esse, in disaccordo con ❌ 3 e senza opinione su 🟡 1.
+Questo articolo è quindi da considerarsi una serie di spunti che identificano un parere personale. Delle 12 citazioni riportate, mi sono trovato d'accordo con **✅ 8** di esse, in disaccordo con **❌ 3** e senza opinione su **🟡 1**.
 
-> [TL;DR] Sono generalmente d'accordo con l'opinione dell'autore e con il suo punto di vista, anche se in alcuni casi la visione distorta creata dall'articolo mi ha portato a dissentire di alcune affermazioni. L'analisi del pregiudizio ha causato, secondo me, altrettanto pregiudizio nei confronti del mondo dello sviluppo da parte dell'autore.
+> **[TL;DR]** Sono generalmente d'accordo con l'opinione dell'autore e con il suo punto di vista, anche se in alcuni casi la visione distorta creata dall'articolo mi ha portato a dissentire di alcune affermazioni. L'analisi sul pregiudizio ha causato, secondo me, altrettanto pregiudizio nei confronti del mondo dello sviluppo da parte dell'autore.
 
 
 ### I feel like I’m seeing a widespread diminishment of the practice of frontend. Nearly everywhere I look, I notice its importance minimized, and its challenges trivialized.
