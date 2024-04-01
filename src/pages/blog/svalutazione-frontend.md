@@ -2,7 +2,7 @@
 layout: ../../layouts/_partials/RetroBlogPostLayout.astro
 title: La silenziosa e pervasiva svalutazione del frontend.
 author: Michael Di Prisco
-description: Un'analisi sullo stato attuale del frontend e sulle prospettive future.
+description: La mia risposta all'articolo di Josh Collinsworth.
 date: 2024-04-01
 AISupport: low
 ---
