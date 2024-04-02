@@ -42,7 +42,7 @@ Come accennato in risposta alla citazione precedente, credo che il problema di C
 
 > ✅ Concordo in parte.
 
-A dir la verità, mi trovo spesso a dover dibattere con persone che ritengono il frontend un lavoro "minore" rispetto al backend, e che ritengono che il frontend developer non debba essere un _programmatore_, ma un _supporto_ a chi fa il vero lavoro, il backend. Quando mi chiedono quale sia il mio ruolo, io rispondo sempre _Full-Stack_, perché nella mia formazione e crescita sono presenti elementi vari e diversi, ed entrambe le facce della medaglia sono state importanti e significative per me.
+A dir la verità, vedo questo tema ben più esplicito di quanto dica l'autore. Mi trovo spesso, infatti, a dover dibattere con persone che ritengono il frontend un lavoro "minore" rispetto al backend, e che ritengono che il frontend developer non debba essere un _programmatore_, ma un _supporto_ a chi fa il vero lavoro, il backend. Quando mi chiedono quale sia il mio ruolo, io rispondo sempre _Full-Stack_, perché nella mia formazione e crescita sono presenti elementi vari e diversi, ed entrambe le facce della medaglia sono state importanti e significative per me.
 
 Credo che la comunità debba fare di più per sradicare questa mentalità. Il frontend developer è un professionista a tutti gli effetti, e il suo lavoro è fondamentale per il successo di un prodotto.
 
@@ -56,13 +56,13 @@ La mancanza di comprensione dei ruoli e delle responsabilità gioca un ruolo fon
 
 In primis, spesso non è il frontend developer a decidere il design di un'applicazione, ma il designer (UX, UI, chiamatelo come volete). Il frontend developer è chiamato a tradurre il design in codice, e a farlo in modo efficiente e performante. Questo richiede competenze tecniche e conoscenze specifiche, che vanno ben oltre la semplice scrittura di codice.
 
-In secundis, come già accennato sopra, le responsabilità di un frontend developer spesso vanno ben oltre la semplice scrittura di codice. Se modifico del codice nel mio applicativo backend, molto probabilmente i test automatici si accorgeranno di eventuali regressioni prima di quanto io possa farlo. Se modifico del codice nel mio applicativo frontend, è molto probabile che l'unico modo per accorgersi di eventuali regressioni sia testare manualmente l'applicativo o attendere una segnalazione da parte dei clienti finali*. Questo rende il lavoro del frontend developer molto più complesso e impegnativo di quanto si possa pensare.
+In secundis, come già accennato sopra, le responsabilità di un frontend developer spesso vanno ben oltre la semplice scrittura di codice. Se modifico del codice nel mio applicativo backend, molto probabilmente i test automatici si accorgeranno di eventuali regressioni prima di quanto io possa farlo. Se modifico del codice nel mio applicativo frontend, è molto probabile che l'unico modo per accorgersi di eventuali regressioni sia testare manualmente l'applicativo o attendere una segnalazione da parte dei clienti finali*. Questo rende il lavoro del frontend developer molto più complesso e impegnativo di quanto si possa pensare. Per non parlare della quantità di _business logic_ e _state management_ - entrambi puntualmente riversati nel frontend - che rendono il ruolo sempre più integrato con il business.
 
 *Nota: so bene dell'esistenza dei test end-to-end, ma la loro implementazione è molto più complessa e dispendiosa rispetto ai test automatici tradizionali, inoltre la loro affidabilità è spesso messa in discussione per via della loro natura aleatoria e dipendente da condizioni esterne.
 
 ### The language implies interfaces are decoupled from the software, and not an actual part of it.
 
-> ❌ Nessuna opinione a riguardo.
+> 🟡 Nessuna opinione a riguardo.
 
 Il riferimento, qui, è al paradosso per cui nel nostro settore sembra esistere una differenza tra _Developer_ e _Engineer_ e che si debba necessariamente mostrare come qualcosa _di più_. Non ho opinioni a riguardo, ma concordo sul fatto che al giorno d'oggi il proliferare di titoli e bandiere non faccia altro che confondere le acque rispetto a ciò che realmente ognuno di noi fa.
 
@@ -80,7 +80,7 @@ La complessità del mondo odierno rende il ruolo del frontend developer ancora p
 
 ### Yes, as a group, we get excited about new things. But why doesn’t that make us curious, or adaptable, or inquisitive? Why don’t we get credit for our joy of learning, instead of denigrated for refusing to stay in place?
 
-> 🟡 Su questa sono meno d'accordo.
+> ❌ Su questa sono meno d'accordo.
 
 Seppur vero che l'evoluzione del mondo frontend - come già accennato in precedenza - abbia portato ad un proliferare di idee, strumenti e metodologie, la _Shiny Object Syndrome_ è un problema reale e diffuso, soprattutto nella community frontend. Questo non vuol dire che non si debba essere curiosi o adattabili, ma che spesso si cade nella trappola di adottare nuove tecnologie senza comprenderne appieno i pro e i contro, e senza valutare se effettivamente siano necessarie o meno.
 
