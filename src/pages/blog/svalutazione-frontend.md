@@ -30,13 +30,13 @@ Perché accade? Dal mio punto di vista, credo sia perché nell'ultimo decennio i
 
 > ✅ Anche qui, concordo.
 
-CSS è uno dei linguaggi più sottovalutati e svalutati del mondo dello sviluppo web. CSS è un linguaggio potente e complesso, che permette di creare interfacce utente complesse e ricche di dettagli. Tuttavia, la lontananza rispetto al _normale_ modo di scrivere codice, la sua sintassi particolare e la sua natura "imperativa" lo rendono spesso difficile da padroneggiare e da utilizzare. CSS è un linguaggio che richiede tempo e dedizione per essere padroneggiato, e quanto accaduto con il movimento _CSS-in-JS_ è un chiaro esempio di come la comunità abbia cercato di risolvere un problema che non esisteva creandone uno nuovo, andando inoltre ad aggiungere astrazione ad un linguaggio già di per sé molto complesso.
+CSS è uno dei linguaggi più sottovalutati e svalutati del mondo dello sviluppo web. CSS è un linguaggio potente e complesso, che permette di creare interfacce utente complesse e ricche di dettagli. Tuttavia, la lontananza rispetto al _normale_ modo di scrivere codice, la sua sintassi particolare e la sua logica di funzionamento lo rendono spesso difficile da padroneggiare e da utilizzare. CSS è un linguaggio che richiede tempo e dedizione per essere padroneggiato, e quanto accaduto con il movimento _CSS-in-JS_ è un chiaro esempio di come la comunità abbia cercato di risolvere un problema che non esisteva creandone uno nuovo, andando inoltre ad aggiungere astrazione ad un linguaggio già di per sé molto complesso.
 
 ### In many ways, CSS has greater impact than any other language on a user’s experience, which often directly influences success. Why, then, is its role so belittled?
 
 > ✅ Sono d'accordo.
 
-Come accennato in risposta alla citazione precedente, credo che il problema di CSS sia dovuto alla sua natura "imperativa" e alla sua sintassi particolare. Il problema è che spesso viene visto come un linguaggio "secondario" rispetto a JavaScript, quando in realtà è un linguaggio a sé stante, con le sue regole e le sue peculiarità, e necessita di un tempo di apprendimento equiparabile a quello di un linguaggio di programmazione. CSS è un linguaggio potente e complesso, e il suo ruolo non può essere sottovalutato.
+Come accennato in risposta alla citazione precedente, credo che il problema di CSS sia dovuto alla sua logica di funzionamento e alla sua sintassi particolare. Il problema è che spesso viene visto come un linguaggio "secondario" rispetto a JavaScript, quando in realtà è un linguaggio a sé stante, con le sue regole e le sue peculiarità, e necessita di un tempo di apprendimento equiparabile a quello di un linguaggio di programmazione. CSS è un linguaggio potente e complesso, e il suo ruolo non può essere sottovalutato.
 
 ### Mostly, nobody actually says frontend is less important, or less real, or that you don’t have to be as smart to do it. But it often seems to be implied.
 
