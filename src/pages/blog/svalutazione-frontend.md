@@ -7,7 +7,7 @@ date: 2024-04-01
 AISupport: low
 ---
 
-### Premessa
+## Premessa
 
 Quello che segue è una risposta al bellissimo articolo di Josh Collinsworth che potete trovare <a href="https://joshcollinsworth.com/blog/devaluing-frontend" target="_blank" rel="noopener">qui</a>.
 
@@ -18,7 +18,7 @@ Questo articolo è quindi da considerarsi una serie di spunti che identificano u
 > **[TL;DR]** Sono generalmente d'accordo con l'opinione dell'autore e con il suo punto di vista, anche se in alcuni casi la visione distorta creata dall'articolo mi ha portato a dissentire di alcune affermazioni. L'analisi sul pregiudizio ha causato, secondo me, altrettanto pregiudizio nei confronti del mondo dello sviluppo da parte dell'autore.
 
 
-### I feel like I’m seeing a widespread diminishment of the practice of frontend. Nearly everywhere I look, I notice its importance minimized, and its challenges trivialized.
+## I feel like I’m seeing a widespread diminishment of the practice of frontend. Nearly everywhere I look, I notice its importance minimized, and its challenges trivialized.
 
 > ✅ Concordo pienamente con questa affermazione.
 
@@ -26,19 +26,19 @@ Il frontend è stato per troppo tempo considerato il "fratello piccolo" del back
 
 Perché accade? Dal mio punto di vista, credo sia perché nell'ultimo decennio il mondo dello sviluppo frontend è stato invaso da framework e librerie che hanno reso il lavoro più semplice e accessibile a tutti. Questo ha portato a rispondere a tantissime delle problematiche che si presentavano in passato, portando lo sviluppo frontend a diventare più "semplice". Questo ha portato a una svalutazione del ruolo del frontend developer, che viene spesso visto come una "code monkey". Semplice però non significa facile, e il frontend developer è spesso chiamato a risolvere problemi complessi e a prendere decisioni importanti, proprio perché da lui o lei non ci si aspetta più la risoluzione di problemi "semplici", già risolti dal framework, quanto di arricchire delle esperienze utente in modi nuovi e innovativi.
 
-### It’s like CSS exists in some bizarre quantum state; somehow both too complex to use, yet too simple to take seriously, all at once.
+## It’s like CSS exists in some bizarre quantum state; somehow both too complex to use, yet too simple to take seriously, all at once.
 
 > ✅ Anche qui, concordo.
 
 CSS è uno dei linguaggi più sottovalutati e svalutati del mondo dello sviluppo web. CSS è un linguaggio potente e complesso, che permette di creare interfacce utente complesse e ricche di dettagli. Tuttavia, la lontananza rispetto al _normale_ modo di scrivere codice, la sua sintassi particolare e la sua logica di funzionamento lo rendono spesso difficile da padroneggiare e da utilizzare. CSS è un linguaggio che richiede tempo e dedizione per essere padroneggiato, e quanto accaduto con il movimento _CSS-in-JS_ è un chiaro esempio di come la comunità abbia cercato di risolvere un problema che non esisteva creandone uno nuovo, andando inoltre ad aggiungere astrazione ad un linguaggio già di per sé molto complesso.
 
-### In many ways, CSS has greater impact than any other language on a user’s experience, which often directly influences success. Why, then, is its role so belittled?
+## In many ways, CSS has greater impact than any other language on a user’s experience, which often directly influences success. Why, then, is its role so belittled?
 
 > ✅ Sono d'accordo.
 
 Come accennato in risposta alla citazione precedente, credo che il problema di CSS sia dovuto alla sua logica di funzionamento e alla sua sintassi particolare. Il problema è che spesso viene visto come un linguaggio "secondario" rispetto a JavaScript, quando in realtà è un linguaggio a sé stante, con le sue regole e le sue peculiarità, e necessita di un tempo di apprendimento equiparabile a quello di un linguaggio di programmazione. CSS è un linguaggio potente e complesso, e il suo ruolo non può essere sottovalutato.
 
-### Mostly, nobody actually says frontend is less important, or less real, or that you don’t have to be as smart to do it. But it often seems to be implied.
+## Mostly, nobody actually says frontend is less important, or less real, or that you don’t have to be as smart to do it. But it often seems to be implied.
 
 > ✅ Concordo in parte.
 
@@ -48,7 +48,7 @@ Credo che la comunità debba fare di più per sradicare questa mentalità. Il fr
 
 Il frontend developer è chiamato a risolvere problemi complessi, supportato da strumenti in continua evoluzione - cosa che aumenta di molto il carico cognitivo - e a prendere decisioni importanti che influenzano direttamente l'esperienza utente, baluardo di un prodotto di successo.
 
-### Our output is artistic, to some degree, and artistic things have a long, storied history of being tragically devalued merely because they seem simple and enjoyable.
+## Our output is artistic, to some degree, and artistic things have a long, storied history of being tragically devalued merely because they seem simple and enjoyable.
 
 > ✅ Sono d'accordo.
 
@@ -60,37 +60,37 @@ In secundis, come già accennato sopra, le responsabilità di un frontend develo
 
 *Nota: so bene dell'esistenza dei test end-to-end, ma la loro implementazione è molto più complessa e dispendiosa rispetto ai test automatici tradizionali, inoltre la loro affidabilità è spesso messa in discussione per via della loro natura aleatoria e dipendente da condizioni esterne.
 
-### The language implies interfaces are decoupled from the software, and not an actual part of it.
+## The language implies interfaces are decoupled from the software, and not an actual part of it.
 
 > 🟡 Nessuna opinione a riguardo.
 
 Il riferimento, qui, è al paradosso per cui nel nostro settore sembra esistere una differenza tra _Developer_ e _Engineer_ e che si debba necessariamente mostrare come qualcosa _di più_. Non ho opinioni a riguardo, ma concordo sul fatto che al giorno d'oggi il proliferare di titoli e bandiere non faccia altro che confondere le acque rispetto a ciò che realmente ognuno di noi fa.
 
-### Writing CSS seems to be regarded much like taking notes in a meeting, complete with the implicit sexism and devaluation of the note taker’s importance in the room.
+## Writing CSS seems to be regarded much like taking notes in a meeting, complete with the implicit sexism and devaluation of the note taker’s importance in the room.
 
 > ✅ Concordo.
 
 Come già accennato in precedenza in questo articolo, concordo sulla errata svalutazione del CSS e del mondo del frontend in generale. Inoltre, in questa parte di articolo, si fa riferimento al maschilismo presente nel nostro settore, e pur non avendone mai avuto una percezione diretta, ne comprendo la realtà e la gravità. Il nostro settore è ancora troppo spesso un ambiente ostile per le donne, e credo che la comunità debba fare di più per combattere questa mentalità.
 
-### As though the nearly impossible job of supporting every possible device, operating system, screen size, browser, user preference, and interface in the past, present and future is so simple we invented all the complexity ourselves, just because we were bored.
+## As though the nearly impossible job of supporting every possible device, operating system, screen size, browser, user preference, and interface in the past, present and future is so simple we invented all the complexity ourselves, just because we were bored.
 
 > ✅ Concordo con il significato intrinseco di questa affermazione.
 
 La complessità del mondo odierno rende il ruolo del frontend developer ancora più complesso di quanto non lo sia mai stato, e quando le battute e le _punchline_ sul frontend diventano _bias_, è facile cadere nella trappola di svalutare il lavoro di chi si occupa di frontend.
 
-### Yes, as a group, we get excited about new things. But why doesn’t that make us curious, or adaptable, or inquisitive? Why don’t we get credit for our joy of learning, instead of denigrated for refusing to stay in place?
+## Yes, as a group, we get excited about new things. But why doesn’t that make us curious, or adaptable, or inquisitive? Why don’t we get credit for our joy of learning, instead of denigrated for refusing to stay in place?
 
 > ❌ Su questa sono meno d'accordo.
 
 Seppur vero che l'evoluzione del mondo frontend - come già accennato in precedenza - abbia portato ad un proliferare di idee, strumenti e metodologie, la _Shiny Object Syndrome_ è un problema reale e diffuso, soprattutto nella community frontend. Questo non vuol dire che non si debba essere curiosi o adattabili, ma che spesso si cade nella trappola di adottare nuove tecnologie senza comprenderne appieno i pro e i contro, e senza valutare se effettivamente siano necessarie o meno.
 
-### If our skills are valuable as duct tape over the cracks of organizational shortcomings, why aren’t they valuable during the planning and decision-making that led to those defects, when we could potentially prevent them?
+## If our skills are valuable as duct tape over the cracks of organizational shortcomings, why aren’t they valuable during the planning and decision-making that led to those defects, when we could potentially prevent them?
 
 > ✅ Pienamente d'accordo.
 
 Esattamente come un Software Architect (O Tech Lead, o chiunque sia in carico dell'architettura) deve coinvolgere ogni membro del team nelle scelte architetturali - pur avendo l'ultima parola ed in definitiva la responsabilità su di esse -, anche il processo decisionale che porta alla creazione di un'applicazione o di parte di essa dovrebbe coinvolgere ogni membro del team, compresi i frontend developer. Chi fa da abbastanza tempo questo mestiere può essere in grado di trovare lacune nell'esperienza utente o nel design che altri non vedrebbero, e coinvolgerli nel processo decisionale può portare a una migliore esperienza utente e a un prodotto di successo.
 
-### Frontend tools market themselves as though frontend is something no one wants to do, and nobody should care about any more than they have to.
+## Frontend tools market themselves as though frontend is something no one wants to do, and nobody should care about any more than they have to.
 
 > ❌ Si vede chiaramente la frustrazione aumentare via via che il post si sviluppa, ma in questo caso non posso che dissentire.
 
@@ -98,7 +98,7 @@ Il _marketing_ - così come lo definisce Josh - dei tool frontend non ha mai ban
 
 Ricordiamoci, infine, che il mondo delle Developer Relations si è sviluppato negli ultimi anni in maniera strutturata, e alcuni eventuali passi falsi di alcune aziende non devono essere considerati come la norma.
 
-### It seems like nobody thinks of frontend as a critical part of the product anymore; they only think of it as the nice box the product arrives in.
+## It seems like nobody thinks of frontend as a critical part of the product anymore; they only think of it as the nice box the product arrives in.
 
 > ❌ Anche qui, ahimè, sono in disaccordo con Josh.
 

@@ -2,9 +2,19 @@
 const { frontmatter } = Astro.props;
 
 import Layout from "../RetroLayout.astro";
+
+const premiseI18N = {
+  it: "Per garantire una maggiore leggibilità, i post del blog rispecchiano il font di default impostato dal sistema, anziché il comune Press2Start presente nel resto del sito.",
+  en: "To ensure a better readability, blog posts reflect the default font set by the system, rather than the common Press2Start used in the rest of the site.",
+};
+
+const aiSupportI18N = {
+  it: "P.S. Questo articolo è stato scritto con il <span data-tooltip>supporto dell'intelligenza artificiale</span>.",
+  en: "P.S. This article was written with the <span data-tooltip>support of artificial intelligence</span>.",
+};
 ---
 
-<Layout title={frontmatter.title} description={frontmatter.description} hasGoBack>
+<Layout title={frontmatter.title} description={frontmatter.description} hasGoBack lang={frontmatter.lang ?? "it"}>
   <section>
     <h2>
       <a href='javascript:void(0);'>#</a>Blog
@@ -14,12 +24,13 @@ import Layout from "../RetroLayout.astro";
     <h4 style='margin-bottom: 1rem;'>{new Date(frontmatter.date).toLocaleDateString("it-IT")}</h4>
 
     <div id='post-content' class='default-font' style='margin-top: 2rem;'>
-      <small>Per garantire una maggiore leggibilità, i post del blog rispecchiano il font di default impostato dal sistema, anziché il comune Press2Start presente nel resto del sito.</small>
+      <small>{premiseI18N[frontmatter.lang ?? "it"]}</small>
+      <hr />
       <slot />
       {
         frontmatter.AISupport && (
           <small data-ai-support-amount={frontmatter.AISupport}>
-            P.S. Questo articolo è stato scritto con il <span data-tooltip>supporto dell'intelligenza artificiale</span>.
+            <span set:html={aiSupportI18N[frontmatter.lang ?? "it"]} />
           </small>
         )
       }
@@ -35,5 +46,10 @@ import Layout from "../RetroLayout.astro";
   p,
   blockquote {
     max-width: 1280px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
   }
 </style>

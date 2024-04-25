@@ -7,7 +7,7 @@ date: 2023-11-21
 AISupport: low
 ---
 
-### Premessa
+## Premessa
 
 Quello che segue è una mia personale opinione su ciò che reputo plausibile che accada in un futuro non troppo lontano, non è una previsione, tantomeno una certezza, e come opinione va presa e valutata.
 
@@ -15,11 +15,11 @@ Da tecno-ottimista, reputo l'avanzamento tecnologico nel suo complesso un fattor
 
 Dove ritenuto possibile ho indicato un anno nel quale reputo verosimile che quello specifico aspetto possa essere realizzato o comunque assuma una forma simile a quella descritta.
 
-### Introduzione
+## Introduzione
 
 Nel vortice dell'evoluzione tecnologica, ci avviciniamo sempre più a un futuro che ridefinirà radicalmente la nostra percezione di lavoro, creatività e persino del concetto stesso di intelligenza. Le evoluzioni dell'intelligenza artificiale (IA) stanno gettando le basi per un cambiamento epocale, dove ogni aspetto della nostra vita quotidiana sarà intrecciato con la presenza onnipresente di algoritmi e macchine intelligenti.
 
-### Large Language Models: Il primo tassello.
+## Large Language Models: Il primo tassello.
 
 L'avvento dei Large Language Models (LLM) segna indubbiamente un punto di svolta nella ricerca e nello sviluppo dell'intelligenza artificiale, ma è soltanto il primo passo di una corsa che si preannuncia intensa e ricca di sviluppi nei prossimi anni. Questi modelli, come i moderni (Novembre 2023) GPT-4, Claude, ecc., hanno dimostrato la straordinaria capacità di comprendere e generare linguaggio umano su vasta scala, aprendo la strada a molteplici applicazioni in settori come l'assistenza virtuale, la creazione di contenuti, la traduzione automatica e molto altro.
 
@@ -37,7 +37,7 @@ In conclusione, i Large Language Models rappresentano un punto di partenza eccel
 
 > La mia predizione è che il test di Turing diventerà obsoleto entro il 2030 e verrà sostituito da un test più sofisticato che prenda in considerazione ciò che, quando il Turing è stato ideato, era considerato il limite da superare.
 
-### AGI
+## AGI
 
 L'AGI, o Intelligenza Artificiale Generale, rappresenta l'obiettivo finale nell'ambito dell'intelligenza artificiale come oggi la conosciamo, caratterizzato dalla capacità di eseguire qualsiasi compito intellettuale umano. Si prevede che l'AGI non solo raggiungerà, ma supererà radicalmente le capacità degli attuali Large Language Models (LLM), portando l'intelligenza artificiale a un livello di comprensione e adattabilità senza precedenti.
 
@@ -53,7 +53,7 @@ In conclusione, mentre gli attuali Large Language Models rappresentano un passo 
 
 > La mia previsione è che raggiungeremo la AGI entro il 2040, ma che non sarà ancora in grado di superare l'intelligenza umana, seppur avvicinandosi molto. Questo avverrà, a parer mio, non prima del 2045.
 
-### Il lavoro
+## Il lavoro
 
 Il concetto tradizionale di lavoro potrebbe gradualmente cedere il passo a un'era in cui l'occupazione è più simile a un hobby remunerato che a un dovere monotono.
 
@@ -61,7 +61,7 @@ L'automazione delle mansioni ripetitive e l'efficienza delle macchine nell'esecu
 
 > La mia previsione è che il lavoro come lo conosciamo oggi sarà obsoleto entro il 2050, e che entro il 2100 nessuno lavorerà più nella maniera _tradizionale_. Il periodo è volutamente ampio in quanto il cambiamento culturale sarà così drastico da richiedere un cambio generazionale o due per essere assimilato.
 
-### La creatività
+## La creatività
 
 Il futuro della creatività si staglia come un paesaggio in evoluzione, in cui gli esseri umani continuano a detenere il timone, pur assistendo a una trasformazione radicale che rimanda, in modo singolare, alle radici del passato. Se da un lato l'intelligenza artificiale e le tecnologie avanzate influenzeranno profondamente il processo creativo, è probabile che assistiremo a una rinascita dei principi fondamentali dell'ispirazione umana.
 
@@ -73,7 +73,7 @@ Tuttavia, mentre gli esseri umani riscopriranno le radici della creatività, la 
 
 In definitiva, la creatività nel futuro rimarrà un atto deliberato degli esseri umani, un'articolazione della nostra unicità e della nostra capacità di adattarci alle sfide in evoluzione. La sintesi tra antico e moderno potrebbe plasmare un paesaggio creativo che celebra la diversità umana, riconoscendo che la creatività è, e continuerà ad essere, un tratto intrinseco della nostra specie.
 
-### L'istruzione
+## L'istruzione
 
 Il futuro dell'istruzione si prospetta come un terreno di cambiamento radicale, un luogo in cui il focus si sposterà da competenze tecniche a una formazione più incentrata sulle discipline umanistiche, filosofiche e artistiche. In un'epoca in cui l'intelligenza artificiale e la tecnologia avanzata assumeranno un ruolo predominante nelle competenze tecniche, l'essenza umana si rifletterà sempre più nelle materie che sfidano la creatività, la riflessione critica e la comprensione di sé.
 
@@ -87,7 +87,7 @@ In questo scenario, l'istruzione non sarà solo un veicolo per acquisire conosce
 
 > La mia previsione è che l'istruzione non farà mai a meno di materie tecniche, ma che non saranno più obbligatorie entro il 2060. Questo tempo ampio nasce dalla necessità di un cambio generazionale per assimilare un cambiamento così radicale.
 
-### La politica
+## La politica
 
 Il futuro della politica si delineerà come un contesto in cui le decisioni e le soluzioni ai problemi saranno quasi totalmente sostituite da un approccio etico e da un controllo consapevole dell'evoluzione tecnologica.
 
@@ -103,7 +103,7 @@ In conclusione, la politica del futuro sarà caratterizzata da una prospettiva e
 
 > La mia previsione è che in un contesto politico l'applicazione di tecnologie decentralizzate, non necessariamente tramite blockchain ma similare, sarà prima caldamente consigliata e poi resa obbligatoria in ottica di trasparenza entro il 2040.
 
-### I problemi globali
+## I problemi globali
 
 Il progresso tecnologico, guidato dall'intelligenza artificiale e dalla sua capacità di analizzare dati su larga scala, si prospetta come il baluardo che trasformerà i nostri più gravi problemi quotidiani in ricordi lontani.
 

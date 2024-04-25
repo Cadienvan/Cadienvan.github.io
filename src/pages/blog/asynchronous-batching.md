@@ -10,17 +10,17 @@ date: 2023-12-11
 Questo post è stato pubblicato ed è apparso per la prima volta su <a href="https://www.theredcode.it/devops/asynchronous-batching-nodejs-fastify/" target="_blank">TheRedCode</a>.
 </div>
 
-### Introduzione
+## Introduzione
 
 La programmazione asincrona è un concetto fondamentale nello sviluppo web moderno e una tecnica potente nel nostro arsenale è il batching asincrono, o _asynchronous batching_. In questo articolo approfondiremo il mondo del batching asincrono utilizzando **Node.js** e **Fastify**, un framework web noto per la sua velocità e il basso _overhead_.
 
 Illustreremo il concetto creando un server Fastify che risponderà alle nostre richieste sfruttando sempre la stessa Promise.
 
-### Comprensione del batch asincrono
+## Comprensione del batch asincrono
 
 Fondamentalmente, il batching asincrono implica il raggruppamento di più operazioni asincrone in una singola unità di lavoro. Questo approccio è particolarmente utile quando si gestiscono attività o richieste ripetitive, poiché può migliorare significativamente le prestazioni e l'utilizzo delle risorse.
 
-### Configurazione di Fastify
+## Configurazione di Fastify
 
 Per iniziare, assicurati di avere Node.js e npm installati sul tuo computer - la versione non è importante, Node.js supporta le Promises dalla versione 0.12. Crea un nuovo progetto Fastify, installa le dipendenze necessarie (`npm i fastify`) e configura un server di base. La natura semplice e leggera di Fastify lo rende la scelta ideale per questa dimostrazione.
 
@@ -43,7 +43,7 @@ fastify.listen({ port: 3000 }, (err, address) => {
 
 Se ora esegui il tuo server con `node index.js` e visiti `http://localhost:3000`, dovresti vedere un messaggio di benvenuto.
 
-### Creazione di un endpoint di esempio
+## Creazione di un endpoint di esempio
 
 Nel nostro esempio, ci concentreremo su un endpoint HTTP specifico che risponde con la stessa Promise per ogni richiesta in entrata. Questo scenario può sembrare estremamente semplificato, ma rappresenta un esempio semplice del batching asincrono in azione.
 
@@ -69,7 +69,7 @@ Come puoi vedere, nel pezzo di codice sopra stiamo effettivamente creando una si
 
 N.B. Ricordati di chiudere il server con `Ctrl + C` e riavviarlo ogni volta che apporti modifiche al codice. Se hai una versione aggiornata di Node.js, puoi lanciare il comando `node --watch index.js` per riavviare automaticamente il server quando il file viene modificato. Lo stesso vale per `nodemon` o altri tool simili.
 
-### Testare il nostro server
+## Testare il nostro server
 
 Ora che abbiamo configurato il nostro server, possiamo testarlo con un semplice client HTTP. In questo esempio useremo **autocannon** insieme a **npx**, un piccolo tool da CLI sviluppato da npm che ci permette di eseguire i pacchetti senza doverli installare localmente.
 
@@ -99,7 +99,7 @@ Ora possiamo eseguire nuovamente il nostro test e confrontare i risultati. Sul m
 
 Come puoi notare, il batching asincrono ha migliorato le prestazioni del nostro server di oltre 100 volte!
 
-### Implementazione del batch asincrono nella vita reale
+## Implementazione del batch asincrono nella vita reale
 
 Lo sviluppo della funzionalità di batching asincrono implica l'intercettazione di più richieste in entrata all'URL designato e la restituzione della stessa Promise per tutte. In uno scenario reale, salveremo l'esecuzione della nostra Promise in una sorta di stato (Globale o locale, non importa) in modo che ogni client possa effettivamente richiedere la stessa risorsa.
 
@@ -128,15 +128,15 @@ fastify.get('/batched', async (request, reply) => {
 ```
 
 
-### Miglioramenti in termini di prestazioni
+## Miglioramenti in termini di prestazioni
 
 Il batching asincrono brilla negli scenari in cui più richieste attivano operazioni identiche. Elaborando queste richieste insieme, riduciamo al minimo il sovraccarico associato alle attività ridondanti, con conseguente miglioramento dei tempi di risposta e un utilizzo più efficiente delle risorse.
 
-### Considerazioni sul parallellismo - Cache Stampede
+## Considerazioni sul parallellismo - Cache Stampede
 
 Anche se l'invio in batch asincrono migliora le prestazioni, è fondamentale considerare il sovraccarico sul processo e sull'Event Loop. L'architettura basata sugli eventi di Node supporta intrinsecamente queste situazioni, ma un'attenta progettazione è essenziale per garantire che il sistema si comporti in modo prevedibile sotto vari carichi.
 
-### Conclusione
+## Conclusione
 
 Il batch asincrono è uno strumento potente nell'arsenale di uno sviluppatore, poiché offre miglioramenti significativi delle prestazioni per determinati tipi di carichi di lavoro. Esplorando la sua implementazione in un server Node-Fastify, abbiamo acquisito informazioni su come questa tecnica può essere applicata per semplificare e ottimizzare lo sviluppo di applicazioni web. Mentre sperimenti il batch asincrono, considera le sue potenziali applicazioni oltre l'esempio presentato, poiché i suoi vantaggi si estendono a un'ampia gamma di scenari nel panorama in continua evoluzione dello sviluppo web.
 

@@ -3,6 +3,7 @@ interface Props {
   title: string;
   description?: string;
   hasGoBack?: boolean;
+  lang?: string;
 }
 
 declare global {
@@ -11,14 +12,14 @@ declare global {
   }
 }
 
-const { title, description = "Il mio sito web.", hasGoBack = false } = Astro.props;
+const { title, description = "Il mio sito web.", hasGoBack = false, lang = "it" } = Astro.props;
 
 import "nes.css/css/nes.min.css";
 import CookieBanner from "../components/CookieBanner.astro";
 ---
 
 <!doctype html>
-<html lang='en'>
+<html lang={lang}>
   <head>
     <meta charset='UTF-8' />
     <meta name='description' content={description} />
@@ -254,15 +255,25 @@ import CookieBanner from "../components/CookieBanner.astro";
     transition-duration: 300ms;
   }
 
-  [data-ai-support-amount="high"] [data-tooltip]:after {
-    content: "Supporto autonomo: redazione tramite prompt engineering.";
-  }
-  [data-ai-support-amount="mid"] [data-tooltip]:after {
-    content: "Supporto collaborativo: redazione di alcuni paragrafi sotto revisione.";
-  }
-  [data-ai-support-amount="low"] [data-tooltip]:after {
-    content: "Supporto limitato: revisione di alcune frasi e paragrafi.";
-  }
+[data-ai-support-amount="high"] [data-tooltip]:after {
+  content: "Supporto autonomo: redazione tramite prompt engineering.";
+}
+[data-ai-support-amount="mid"] [data-tooltip]:after {
+  content: "Supporto collaborativo: redazione di alcuni paragrafi sotto revisione.";
+}
+[data-ai-support-amount="low"] [data-tooltip]:after {
+  content: "Supporto limitato: revisione di alcune frasi e paragrafi.";
+}
+
+[lang="en"] [data-ai-support-amount="high"] [data-tooltip]:after {
+  content: "Autonomous support: drafting through prompt engineering.";
+}
+[lang="en"] [data-ai-support-amount="mid"] [data-tooltip]:after {
+  content: "Collaborative support: drafting of some paragraphs under review.";
+}
+[lang="en"] [data-ai-support-amount="low"] [data-tooltip]:after {
+  content: "Limited support: review of some sentences and paragraphs.";
+}
 
   /* MOBILE ONLY */
   @media (max-width: 600px) {
