@@ -14,6 +14,15 @@ declare global {
 
 const { title, description = "Il mio sito web.", hasGoBack = false, lang = "it" } = Astro.props;
 
+const i18n = {
+  it: {
+    goBack: "Torna alla home",
+  },
+  en: {
+    goBack: "Go back to home",
+  },
+};
+
 import "nes.css/css/nes.min.css";
 import CookieBanner from "../components/CookieBanner.astro";
 ---
@@ -42,7 +51,7 @@ import CookieBanner from "../components/CookieBanner.astro";
         hasGoBack && (
           <section>
             <a href='/' class='nes-btn is-primary'>
-              Torna alla home
+              <span>{i18n[lang].goBack}</span>
             </a>
           </section>
         )
