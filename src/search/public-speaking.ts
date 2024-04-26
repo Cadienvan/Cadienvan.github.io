@@ -15,7 +15,7 @@ export default async function fill() {
 
   for (const conference of conferences) {
     await insert(publicSpeakingDB, {
-      title: conference.title,
+      title: `Conferenza: ${conference.title}`,
       date: conference.date,
       occasion: conference.conference,
       url: conference.url,
@@ -24,7 +24,7 @@ export default async function fill() {
 
   for (const interview of interviews) {
     await insert(publicSpeakingDB, {
-      title: interview.title,
+      title: `Intervista: ${interview.title}`,
       date: interview.date,
       occasion: interview.interviewer,
       url: interview.url,
