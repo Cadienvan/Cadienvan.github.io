@@ -19,7 +19,7 @@ export default async function fill() {
 
   for (const post of posts) {
     await insert(postsDB, {
-      title: post.title,
+      title: `LinkedIn: ${post.title}`,
       category: categoriesMap.get(post.category) ?? post.category,
       url: post.url,
     });
