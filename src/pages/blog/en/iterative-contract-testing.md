@@ -3,16 +3,18 @@ layout: ../../../layouts/_partials/RetroBlogPostLayout.astro
 title: Iterative Contract Testing
 author: Michael Di Prisco
 description: How we tested all our APIs without writing a single test.
-date: 2024-04-25
+date: 2024-04-26
 AISupport: low
 lang: en
 ---
+
+> Stai cercando la versione italiana di questo articolo? [Clicca qui](/blog/iterative-contract-testing).
 
 ## Introduction
 
 In my current role (Tech Lead @ Jointly), I'm almost involved in Back-End related stuff, which always ends up with some API design and development to make stuff available in front-end. **Some parts of the codebase are messy** and people have come and gone over the years, so it's not always easy to understand what's going on and which API exposes which information and why. I've been working on this codebase for the last year and a half, and **the team's main struggle has been about end-to-end front-end testing in CI**. Testing all the different scenarios of a user experience can be a real pain, especially when you have thousands of micro differences between every scenario you need to test, and creating each one of them can take months, without even considering the maintenance!
 
-That's where, usually, Contract Testing comes into play, so you can take a step back and test the APIs themselves.
+That's where, usually, Contract Testing comes into play, so you can take a step back and test the APIs themselves, without having to test the whole user experience.
 
 ## Contract Testing
 
@@ -24,9 +26,9 @@ Contract Testing is a fantastic approach as it can help you catch bugs early in 
 
 > So, what's wrong with Contract Testing?
 
-Well, nothing really. It's a great metodology, but it's not always enough. The problem with Contract Testing is the manual process needed to take it into action. You need to _write_ the contracts, you need to _test_ them, you need to _maintain_ them. It's a lot of work, and it's not always easy to keep up with it. You have to unveil and discover all your APIs hidden secrets (And _hell_, so many of them can be hidden very well in a decade-old codebase), and that can be time-consuming and error-prone. And if you're working on a large codebase with lots of APIs, it can be a real headache. If you are lucky enough, you'll need some months to get it done and working. If you're not, you'll need years or, worse, you'll never get it done because it will be unreliable and outdated as soon as you start using it.
+Well, nothing really. It's a great methodology, but it's not always feasible. The problem with Contract Testing is the manual process needed to take it into action. You need to _write_ the contracts, you need to _test_ them, you need to _maintain_ them. It's a lot of work, and it's not always easy to keep up with it. You have to unveil and discover all your APIs hidden secrets (And _hell_, so many of them can be hidden very well in a decade-old codebase!), and that can be time-consuming and error-prone. And if you're working on a large codebase with lots of APIs, it can be a real headache. If you are lucky enough, you'll need some months to get it done and working. If you're not, you'll need years or, worse, you'll never get it done because it will be unreliable and outdated as soon as you start using it.
 
-_And here comes Iterative Contract Testing._
+_And here comes what we call "Iterative Contract Testing"._
 
 ## Iterative Contract Testing
 
@@ -56,11 +58,11 @@ Once you have the contracts, you can use them to test the API. If the API respon
 
 > What do you mean by "optimistically search for patterns"?
 
-Well, let's say you have an API that returns a list of users. The first time you encounter this API, you generate a contract that defines the structure of the response. If the response changes the next time you encounter the API, you can look for patterns in the response and update the contract accordingly. For example, if the response now includes a new field, you can add this field to the contract. If the response now includes a new object, you can add this object to the contract. Those patterns, of course, depend on the domain you are working on.
+Well, let's say you have an API that returns some data about a user. The first time you encounter this API, you generate a contract that defines the structure of the response. If the response changes the next time you encounter the API, you can look for patterns in the response and update the contract accordingly. For example, if the response now includes a new field, you can add this field to the contract. If the response now includes a new object, you can add this object to the contract. Those patterns, of course, depend on the domain you are working on.
 
-In our case, we defined some _supersets_, like "Double", which replaces any number. This way, if our saved contract expects a number, and the response is a double, the contract will still be valid and will update itself to expect a double.
+In our case, we defined some _supersets_, like _Double_, which replaces any number. This way, if our saved contract expects an _Integer_, and the response is a _Double_, the contract will still be valid and will update itself to expect a _Double_ in the future.
 
-Also, we defined a pattern called _NULL replacement_, which allows the tool to replace a NULL value with any value found in a subsequent response. This way, if the contract says that a field is nullable, and the response is not null, the contract will update itself to expect the value found in the response. Of course, when faced with a NULL value, the contract will still be considered valid.
+Also, we defined a pattern called _NULL replacement_, which allows the tool to replace a NULL value with any value found in a subsequent response. This way, if the contract says that a field is _NULL_, and the response is not, the contract will update itself to expect the value found in the response. Of course, when faced with a _NULL_ value next time, the contract will still be considered valid.
 
 Those patterns are the ones we found most useful for our specific scenario, but you can define your own patterns based on your domain.
 
@@ -70,7 +72,7 @@ Lastly, we built a simple UI in which you can define non-mandatory fields, so th
 
 ### Unexpected Benefits
 
-When we started working on this tool, we didn't expect to find so many benefits. To be honest, it all started as a cool side project I had in mind and shared with the team. We tried to build it in a couple of days to have some fun and decided to share it in a learning session. And you know what? **We found a bug during the presentation.** I'm not joking. We launched the tool for the first time and found out we removed two fields from an API in the morning by mistake. We were able to fix it in a couple of minutes, and we updated the contract accordingly via the UI we created. We were all amazed by how easy it was for such a tool to catch a bug that would have been hard to find otherwise.
+When we started working on this tool, we didn't expect to find so many benefits. To be honest, it all started as a cool side project I had in mind and shared with the team. We tried to build it in a couple of days to have some fun and decided to share it in a learning session. And you know what? **We found a bug during the presentation.** I'm not joking. We launched the tool for the first time and found out we removed two fields from an API the same morning by mistake. We were able to fix it in a couple of minutes, and we updated the contract accordingly via the UI we created. We were all amazed by how easy it was for such a tool to catch a bug that would have been hard to find otherwise.
 
 Also, we found out that the tool is a great way to drop unused APIs. If a contract isn't generated for an API in a certain amount of time, it means that the API is not used anymore. This way, we found out many APIs that were not used anymore and we are starting to remove them from the codebase.
 
@@ -78,10 +80,10 @@ Also, we found out that the tool is a great way to drop unused APIs. If a contra
 
 Of course, there is a performance overhead. You are logging every API call in your application, and you are parsing those logs to generate contracts. This can be a problem if you have a high-traffic application.
 
-What we did was **find a compromise**. We only log the API calls in the staging environment, as it is used enough to be useful, but without being a real, production environment. To give you some numbers, we elaborate around 3000 API calls per day, and we have around 100 APIs, and we were able to generate all the contracts in a couple of days, tweaking them in a week to make them work. As of today, more than 10 APIs have been updated according to findings from CAT, and we are happy with the results.
+What we did was **find a compromise**. We only log the API calls in the staging environment, as it is used enough to be useful, but without the hassle of running it in production. To give you some numbers, we elaborate around 3000 API calls per day, and we have around 100 APIs, and we were able to generate all the contracts in a couple of days, tweaking them in a week to make them work. As of today, more than 10 APIs have been updated according to findings from CAT, and we are extremely happy with the results.
 
 ## Conclusion
 
-So, that's it. We found a way to test all our APIs without writing a single test. We are happy with the results, and we are planning to use this tool for the time being. A couple of days ago we were considering going open-source with it, but the tool as it is implemented is just too immature to be shared. We are planning to work on it in the next months and maybe, who knows, we will share it with the community.
+So, that's it. We found a way to test all our APIs without writing a single test. We are happy with the results, and we are planning to use this tool for the time being. Some days ago we were considering going open-source with it, but the tool as it is implemented is just too immature to be shared. We are planning to work on it in the next months and maybe, who knows, we will share it with the community.
 
 Farewell, and happy coding! 🐈
