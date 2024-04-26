@@ -75,7 +75,7 @@ Quando abbiamo iniziato a lavorare su questo strumento non ci aspettavamo di tro
 
 Inoltre, abbiamo scoperto che lo strumento è un ottimo modo per eliminare le API inutilizzate. Se non viene generato un contratto per un'API entro un certo periodo di tempo, significa che l'API non viene più utilizzata. In questo modo, abbiamo scoperto molte API che non venivano più utilizzate e stiamo iniziando a rimuoverle dalla codebase.
 
-### Performance Pverhead
+### Performance Overhead
 
 Naturalmente c'è un sovraccarico in termini di prestazioni. Stai registrando ogni chiamata API nella tua applicazione e stai analizzando quei log per generare contratti. Questo può essere un problema se si dispone di un'applicazione a traffico elevato.
 
