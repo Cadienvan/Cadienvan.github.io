@@ -5,9 +5,8 @@ author: Michael Di Prisco
 description: Come abbiamo testato tutte le nostre API senza scrivere un singolo test.
 date: 2024-04-26
 AISupport: low
+hasTranslation: true
 ---
-
-> Are you looking for the english version? [Click here](/blog/en/iterative-contract-testing)
 
 ## Introduzione
 

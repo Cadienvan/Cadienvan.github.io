@@ -7,11 +7,20 @@ const i18n = {
   it: {
     premise: "Per garantire una maggiore leggibilità, i post del blog rispecchiano il font di default impostato dal sistema, anziché il comune Press2Start presente nel resto del sito.",
     aiSupport: "P.S. Questo articolo è stato scritto con il <span data-tooltip>supporto dell'intelligenza artificiale</span>.",
+    alternateLink: "🇮🇹 Stai cercando la versione italiana di questo articolo? <a href='%url%'>Clicca qui</a>",
   },
   en: {
     premise: "To ensure a better readability, blog posts reflect the default font set by the system, rather than the common Press2Start used in the rest of the site.",
     aiSupport: "P.S. This article was written with the <span data-tooltip>support of artificial intelligence</span>.",
+    alternateLink: "🇬🇧 Are you looking for the english version? <a href='%url%'>Click here</a>",
   },
+};
+
+const buildTranslationUrl = (url, lang) => {
+  if (lang === "en") {
+    return url.replace("/blog/en/", "/blog/");
+  }
+  return url.replace("/blog/", "/blog/en/");
 };
 ---
 
@@ -27,6 +36,13 @@ const i18n = {
     <div id='post-content' class='default-font' style='margin-top: 2rem;'>
       <small>{i18n[frontmatter.lang ?? "it"].premise}</small>
       <hr />
+      {
+        frontmatter.hasTranslation && (
+          <p>
+            <blockquote set:html={i18n[(frontmatter.lang ?? "it") === "it" ? "en" : "it"].alternateLink.replace("%url%", buildTranslationUrl(frontmatter.url, frontmatter.lang ?? "it"))} />
+          </p>
+        )
+      }
       <slot />
       {
         frontmatter.AISupport && (
@@ -37,22 +53,22 @@ const i18n = {
       }
     </div>
   </section>
-  <script src="https://giscus.app/client.js"
-        data-repo="Cadienvan/Cadienvan.github.io"
-        data-repo-id="R_kgDOKvGeYg"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOKvGeYs4Ce923"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="light_high_contrast"
-        data-lang="it"
-        data-loading="lazy"
-        crossorigin="anonymous"
-        async>
-</script>
+  <script
+    src='https://giscus.app/client.js'
+    data-repo='Cadienvan/Cadienvan.github.io'
+    data-repo-id='R_kgDOKvGeYg'
+    data-category='Announcements'
+    data-category-id='DIC_kwDOKvGeYs4Ce923'
+    data-mapping='pathname'
+    data-strict='0'
+    data-reactions-enabled='1'
+    data-emit-metadata='0'
+    data-input-position='top'
+    data-theme='light_high_contrast'
+    data-lang='it'
+    data-loading='lazy'
+    crossorigin='anonymous'
+    async></script>
 </Layout>
 <style is:inline>
   h3 {

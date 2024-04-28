@@ -58,7 +58,20 @@ import CookieBanner from "../components/CookieBanner.astro";
       }
     </main>
     <script>
-      let copyButtonLabel = "Copia";
+      const i18n = {
+        it: {
+          copyButtonLabel: "Copia",
+          copyButtonLabelOk: "Copiato!",
+          copyButtonLabelError: "Errore!",
+        },
+        en: {
+          copyButtonLabel: "Copy",
+          copyButtonLabelOk: "Copied!",
+          copyButtonLabelError: "Error!",
+        },
+      };
+
+      let copyButtonLabel = i18n[document.documentElement.lang].copyButtonLabel;
       let codeBlocks = Array.from(document.querySelectorAll("pre"));
 
       for (let codeBlock of codeBlocks) {
@@ -78,13 +91,13 @@ import CookieBanner from "../components/CookieBanner.astro";
         copyButton.addEventListener("click", async () => {
           try {
             await navigator.clipboard.writeText(codeBlock.querySelector("code").innerText);
-            copyButton.innerHTML = "Copiato!";
+            copyButton.innerHTML = i18n[document.documentElement.lang].copyButtonLabelOk;
             setTimeout(() => {
               copyButton.innerHTML = copyButtonLabel;
             }, 2000);
           } catch (err) {
             console.error("Failed to copy: ", err);
-            copyButton.innerHTML = "Errore!";
+            copyButton.innerHTML = i18n[document.documentElement.lang].copyButtonLabelError;
             setTimeout(() => {
               copyButton.innerHTML = copyButtonLabel;
             }, 5000);

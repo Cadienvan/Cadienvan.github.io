@@ -6,9 +6,8 @@ description: How we tested all our APIs without writing a single test.
 date: 2024-04-26
 AISupport: low
 lang: en
+hasTranslation: true
 ---
-
-> Stai cercando la versione italiana di questo articolo? [Clicca qui](/blog/iterative-contract-testing).
 
 ## Introduction
 
