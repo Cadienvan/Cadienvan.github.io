@@ -4,6 +4,7 @@ title: Asynchronous Batching
 author: Michael Di Prisco
 description: L'arma (non) segreta per migliorare le prestazioni delle applicazioni web
 date: 2023-12-11
+hasTranslation: true
 ---
 
 <div class="nes-container is-rounded">
