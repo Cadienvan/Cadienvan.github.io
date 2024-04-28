@@ -16,7 +16,11 @@ const i18n = {
   },
 };
 
-const buildTranslationUrl = (url, lang) => {
+const buildTranslationUrl = (url, lang, customTranslationUrl = null) => {
+  if (customTranslationUrl) {
+    return customTranslationUrl;
+  }
+
   if (lang === "en") {
     return url.replace("/blog/en/", "/blog/");
   }
@@ -39,7 +43,7 @@ const buildTranslationUrl = (url, lang) => {
       {
         frontmatter.hasTranslation && (
           <p>
-            <blockquote set:html={i18n[(frontmatter.lang ?? "it") === "it" ? "en" : "it"].alternateLink.replace("%url%", buildTranslationUrl(frontmatter.url, frontmatter.lang ?? "it"))} />
+            <blockquote set:html={i18n[(frontmatter.lang ?? "it") === "it" ? "en" : "it"].alternateLink.replace("%url%", buildTranslationUrl(frontmatter.url, frontmatter.lang ?? "it", frontmatter.customTranslationUrl ?? null))} />
           </p>
         )
       }

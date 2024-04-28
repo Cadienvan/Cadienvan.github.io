@@ -5,6 +5,8 @@ author: Michael Di Prisco
 description: La mia risposta all'articolo di Josh Collinsworth.
 date: 2024-04-01
 AISupport: low
+hasTranslation: true
+customTranslationUrl: /blog/en/devaluing-frontend
 ---
 
 ## Premessa
