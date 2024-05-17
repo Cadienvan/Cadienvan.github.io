@@ -13,7 +13,7 @@
     "@astrojs/preact": "^3.2.0",
     "@orama/orama": "^2.0.16",
     "astro": "^4.7.0",
-    "cssnano": "^7.0.0",
+    "cssnano": "^7.0.1",
     "nes.css": "^2.3.0"
   }
 }
