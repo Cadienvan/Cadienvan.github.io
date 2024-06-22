@@ -266,12 +266,12 @@ Who knows what the next decade will bring? Surely, I can find _what_ will be: AI
 
 ## Some thanks.
 
-Hundreds of people have forged this article and helped me grow in the last 10 years. I can't thank them all, but I want to thank some of them.
+Hundreds of people have forged this article and helped me grow in the last 10 years. I can't thank them all, but I feel the need to thank some of them.
 
-Flavia, my wife, who had the patience to listen to me talking about code for hours.
-Christian, my brother, who taught me how to install a graphics card and how to write my first line of code.
-Michele, my first mentor, who taught me how to be a critical thinker and a problem solver.
-Max, a dear friend, who taught me how to be a better person, both in and out of work.
+Flavia, my wife, who had the patience to listen to me talking about code for hours.  
+Christian, my brother, who taught me how to install a graphics card and how to write my first line of code.  
+Michele, my first mentor, who taught me how to be a critical thinker and a problem solver.  
+Max, a dear friend, who taught me how to be a better person, both in and out of work.  
 Serena, who has always been there to help me when I needed it.
 
 Thanks,

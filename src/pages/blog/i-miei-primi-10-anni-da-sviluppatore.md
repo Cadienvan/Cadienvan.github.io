@@ -262,12 +262,12 @@ Chi sa cosa mi riserverà il prossimo decennio? Sicuramente, posso intuire _cosa
 
 ## Un po' di ringraziamenti.
 
-Centinaia di persone hanno forgiato questo articolo e mi hanno aiutato a crescere negli ultimi 10 anni. Non posso ringraziarle tutte, ma voglio ringraziarne alcune.
+Centinaia di persone hanno forgiato questo articolo e mi hanno aiutato a crescere negli ultimi 10 anni. Non posso ringraziarle tutte, ma sento il bisogno di ringraziarne alcune in particolare.
 
-Flavia, mia moglie, che ha avuto la pazienza di ascoltarmi parlare di codice per ore.
-Christian, mio fratello, che mi ha insegnato come installare una scheda grafica e come scrivere la mia prima riga di codice.
-Michele, il mio primo mentore, che mi ha insegnato a pensare in modo critico e a risolvere i problemi.
-Max, un caro amico, che mi ha insegnato a essere una persona migliore, sia dentro che fuori dal lavoro.
+Flavia, mia moglie, che ha avuto la pazienza di ascoltarmi parlare di codice per ore.  
+Christian, mio fratello, che mi ha insegnato come installare una scheda grafica e come scrivere la mia prima riga di codice.  
+Michele, il mio primo mentore, che mi ha insegnato a pensare in modo critico e a risolvere i problemi.  
+Max, un caro amico, che mi ha insegnato a essere una persona migliore, sia dentro che fuori dal lavoro.  
 Serena, che è sempre stata lì, pronta ad aiutarmi quando ne avevo bisogno.
 
 Grazie,
