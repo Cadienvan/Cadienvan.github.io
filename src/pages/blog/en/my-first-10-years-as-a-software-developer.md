@@ -50,7 +50,7 @@ Some days ago, I read an article talking about [Senior Engineer Fatigue](https:/
 
 And I couldn't agree more. The best code is the code you never wrote, the feature you never implemented, the library you never built. Ask yourself and the people around you if you really need that feature, if you really need that library, if you really need that code. Most of the time, the answer will be _no_.
 
-Does this mean you should stop writing code? Absolutely not. It means you should be more thoughtful about the code you write, the features you implement, and the libraries you build. It means you should focus on solving the problem at hand, not on writing the most performant, clean, and elegant code possible. It means you should be pragmatic, not dogmatic.
+Does this mean you should stop writing code? Absolutely not. It means you should be more thoughtful about the code you write, the features you implement, and the libraries you build. It means you should focus on solving the problem at hand, not only on writing performant and clean code. It means you should be pragmatic, not dogmatic.
 
 
 ## 1. People over processes.
@@ -140,17 +140,17 @@ You are usually the person who knows the most about the business you are working
 
 **Trunk-based development is great, but it's not for everyone.**
 
-I'm in the middle of the _Trunk-based vs. Feature Branches_ war. I've seen both sides, and I've seen both sides fail. I've seen both sides succeed. I've seen both sides fail and succeed at the same time.
+We are in the middle of the _Trunk-based vs. Feature Branches_ war. I've seen both sides, and I've seen both sides fail. I've seen both sides succeed. I've seen both sides fail and succeed at the same time.
 
-Trunk-based development can help reduce integration issues, improve collaboration, and speed up the development process but, as with any development practice, that is not a one-size-fits-all solution. While it helps with what I mentioned above, it can also make review processes harder, effectively reducing the development process because of regressions and bugs.
+Trunk-based development can help reduce integration issues, improve collaboration, and speed up the development process but, as with any development practice, that is not a one-size-fits-all solution. While it helps with what I mentioned above, it can complicate review processes, effectively reducing the development process because of regressions and bugs.
 
-I'm a fan of trunk-based development, but I'm also a fan of _let's learn together and improve together_. I've seen feature branches work wonders in some contexts, and I've seen trunk-based development fail miserably in others. The key is to find the right trade-off for your team and your project.
+While I favor trunk-based development, I also believe in continuous learning and improvement. Feature branches can be very effective in certain situations, and trunk-based development can sometimes fall short. The key is finding the right balance for your team and project.
 
-In my opinion, the best approach is to find a balance between the two, using feature branches for larger features or changes that require more time and collaboration, and trunk-based development for smaller, more straightforward changes.
-
-I'd suggest using feature branches and keeping them alive for less than a day. If your feature can't be merged the next morning, then you should have put a <s>ring</s> _feature flag_ on it.
+As of my experience, I'd recommend a balanced approach: use feature branches for larger, more collaborative features, and trunk-based development for smaller, straightforward changes. If you do use feature branches, aim to merge them within a day. If the feature isn't ready to merge by the next morning, then you should have put a <s>ring</s> _feature flag_ on it.
 
 ![Put a ring on it meme](../../../assets/put-a-ring-on-it.gif)
+
+Generally speaking, I'm against following the rules rigidly, but strongly in favor of understanding them and adapting them to your needs.
 
 ## 5. Enough Testing Makes You Sleep Better. Too Much Testing Gives You Headaches.
 
@@ -203,6 +203,8 @@ Moreover, involving the team in the documentation process can foster a sense of 
 Of course, _team_ doesn't mean _everyone, everytime_. You should involve the right people in the documentation process, those who have the most knowledge and experience in the areas being documented, and don't be afraid to ask for a rewrite or a clarification if something is not clear or accurate.
 
 Lastly, documentation should not be a separate activity from software development, but should be integrated into the development process itself. Documentation should be written alongside the code, so that it is always up to date and accurate.
+
+Just to be clear: I don't mean you should write comments **in the code**. I mean you should write documentation **with the code**. Comments are a great tool for explaining _why_ you wrote a piece of code, but they are not a substitute for documentation. Documentation should provide a high-level overview of the codebase or the functionality you are representing, explain how the different components interact with each other, and provide guidance on how to use and maintain the code.
 
 ## 9. Stability over innovation.
 
@@ -273,6 +275,7 @@ Christian, my brother, who taught me how to install a graphics card and how to w
 Michele, my first mentor, who taught me how to be a critical thinker and a problem solver.  
 Max, a dear friend, who taught me how to be a better person, both in and out of work.  
 Serena, who has always been there to help me when I needed it.
+Enry, who believed in me since the first moment we met.
 
 Thanks,
 Michael.

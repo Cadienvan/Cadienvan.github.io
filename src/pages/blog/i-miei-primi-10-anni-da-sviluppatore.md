@@ -49,7 +49,7 @@ Qualche giorno fa ho letto un articolo che parlava della [Senior Engineer Fatigu
 
 E non potrei essere più d'accordo. Il miglior codice è il codice che non hai mai scritto, la funzionalità che non hai mai implementato, la libreria che non hai mai costruito. Chiediti e chiedi alle persone intorno a te se hai davvero bisogno di quella funzionalità, di quella libreria, di quel codice. La maggior parte delle volte, la risposta sarà _no_.
 
-Quindi dovresti smettere di scrivere codice? Assolutamente no. Significa che dovresti essere più attento al codice che scrivi, alle funzionalità che implementi e alle librerie che costruisci. Significa che dovresti concentrarti sulla risoluzione del problema in questione, non sulla scrittura del codice più performante, pulito ed elegante possibile. Significa che dovresti essere pragmatico, non dogmatico.
+Quindi dovresti smettere di scrivere codice? Assolutamente no. Significa che dovresti essere più attento al codice che scrivi, alle funzionalità che implementi e alle librerie che costruisci. Significa che dovresti concentrarti sulla risoluzione del problema in questione, e non solo sulla scrittura di codice performante e pulito. Significa che dovresti essere pragmatico, non dogmatico.
 
 ## 1. Le persone prima dei processi.
 
@@ -128,7 +128,7 @@ N.B. Il codice che ho mostrato è solo un esempio che mi è venuto in mente ment
 
 Se devo additare una cosa che vedo ripetutamente negli sviluppatori, è la mentalità di _noi contro loro_. _Noi_ siamo gli sviluppatori, _loro_ sono il business. Questa è una mentalità davvero pericolosa di cui anch'io sono stato colpevole in passato e nella quale a volte ricado ancora. Questo non potrebbe essere più lontano dalla verità.
 
-Nel mondo di oggi, tutto ciò che vedi è realizzato da uno sviluppatore e ha del software che ci gira dentro. Il PC, il tablet o lo smartphone che usi per leggere questo articolo, l'auto che guidi, la macchina del caffè che usi ogni mattina, il frigorifero che apri ogni sera alla ricerca di qualcosa da mangiare - e, tra l'altro, non troverai kmai nulla, dovresti andare a fare shopping più spesso - tutto ha un software che lo gestisce. E noi, come sviluppatori, siamo **letteralmente** coloro che fanno girare il mondo.
+Nel mondo di oggi, tutto ciò che vedi è realizzato da uno sviluppatore e ha del software che ci gira dentro. Il PC, il tablet o lo smartphone che usi per leggere questo articolo, l'auto che guidi, la macchina del caffè che usi ogni mattina, il frigorifero che apri ogni sera alla ricerca di qualcosa da mangiare - e, tra l'altro, non troverai mai nulla, dovresti andare a fare shopping più spesso - tutto ha un software che lo gestisce. E noi, come sviluppatori, siamo **letteralmente** coloro che fanno girare il mondo.
 
 Quindi, perché dovremmo essere _contro_ il business? Il business siamo noi. Siamo noi che facciamo funzionare il business. Siamo noi che facciamo crescere il business. Siamo noi a far sì che l'azienda abbia successo. E se lo dimentichiamo saremo noi a far fallire l'azienda.
 
@@ -138,17 +138,20 @@ Di solito, come sviluppatore sei tu la persona che conosce meglio il business in
 
 **Lo sviluppo trunk-based è fantastico, ma non è per tutti.**
 
-Sono nel mezzo della guerra _Trunk-based contro Feature Branches_. Ho visto entrambe le parti e ho visto entrambe le parti fallire. Ho visto entrambe le parti avere successo. Ho visto entrambe le parti fallire e avere successo allo stesso tempo.
+Siamo nel mezzo della guerra _Trunk-based contro Feature Branches_. Ho visto entrambe le parti e ho visto entrambe le parti fallire. Ho visto entrambe le parti avere successo. Ho visto entrambe le parti fallire e avere successo allo stesso tempo.
 
-Lo sviluppo trunk-based può aiutare a ridurre i problemi di integrazione, migliorare la collaborazione e accelerare il processo di sviluppo ma, come con qualsiasi pratica di sviluppo, non è una soluzione valida per tutti. Anche se aiuta con quanto citato sopra, può anche rendere più difficili i processi di revisione, riducendo di fatto il processo di sviluppo a causa di regressioni e bug.
+Lo sviluppo trunk-based può aiutare a ridurre i problemi di integrazione, migliorare la collaborazione e accelerare il processo di sviluppo ma, come con qualsiasi pratica di sviluppo, non è una soluzione valida per tutti. Anche se aiuta con quanto citato sopra, può anche rendere più complicati i processi di revisione, riducendo di fatto il processo di sviluppo a causa di regressioni e bug.
 
-Personalmente, sono un fan dello sviluppo trunk-based, ma sono anche un fan del _impariamo insieme e miglioriamo insieme_. Ho visto i feature branch fare miracoli in alcuni contesti, e ho visto lo sviluppo trunk-based fallire miseramente in altri. La chiave è trovare il giusto compromesso per il tuo team e il tuo progetto.
+Sebbene io sia favorevole allo sviluppo trunk-based, credo anche nell'apprendimento e nel miglioramento continui. I feature branch possono essere molto efficaci in determinate situazioni, dove il trunk-based risulta non essere all'altezza. La chiave è trovare il giusto equilibrio per il tuo team e il tuo progetto.
+
 
 Secondo me, il miglior approccio è trovare un equilibrio tra i due, utilizzando i feature branch per funzionalità più grandi o modifiche che richiedono più tempo e collaborazione, e lo sviluppo trunk-based per modifiche più piccole e più semplici.
 
-Suggerirei di utilizzare i feature branch e mantenerli attivi per meno di un giorno. Se la tua funzionalità non può essere integrata la mattina successiva, allora avresti dovuto metterci un feature flag.
+Per quella che è stata la mia esperienza, raccomando un approccio equilibrato: utilizzare i feature branch per funzionalità più grandi e più collaborative e lo sviluppo trunk-based per modifiche più piccole e semplici. Se utilizzi feature branch, cerca di fare merge entro un giorno. Se la tua funzionalità non può essere integrata entro la mattina successiva, allora dovresti metterci un feature flag.
 
-## 5. Testare abbastanza ti fa dormire meglio. Testare troppo ti dà mal di testa.
+In linea generale, sono contrario a seguire le regole in modo rigido, ma fortemente favorevole a comprenderle e ad adattarle alle proprie esigenze.
+
+## 5. Testare abbastanza ti fa dormire meglio. Testare troppo ti darà il mal di testa.
 
 **Sono contrario a una coverage del 100% in una codebase, ma sono fortemente a favore del testare ogni percorso critico.**
 
@@ -199,6 +202,8 @@ Inoltre, coinvolgere il team nel processo di documentazione può favorire un sen
 Ovviamente, _team_ non significa _tutti, sempre_. Dovresti coinvolgere le persone giuste nel processo di documentazione, quelle che hanno più conoscenza ed esperienza nelle aree che vengono documentate, e non aver paura di chiedere una riscrittura o una chiarificazione se qualcosa non è chiaro o accurato.
 
 Infine, la documentazione non dovrebbe essere un'attività separata dallo sviluppo del software, ma dovrebbe essere integrata nel processo di sviluppo stesso. La documentazione dovrebbe essere scritta insieme al codice, in modo che sia sempre aggiornata e accurata.
+
+Per essere chiari: non intendo dire che dovresti scrivere commenti **nel codice**. Intendo dire che dovresti scrivere la documentazione **assieme al codice**. I commenti sono un ottimo strumento per spiegare _perché_ hai scritto un pezzo di codice, ma non sostituiscono la documentazione. La documentazione dovrebbe fornire una panoramica di alto livello della codebase o della funzionalità che si sta rappresentando, spiegare come i diversi componenti interagiscono tra loro e fornire indicazioni su come utilizzare e mantenere il codice.
 
 ## 9. Stabilità prima dell'innovazione.
 
@@ -258,17 +263,18 @@ Pensa ai trade-off ogni volta che prendi una decisione. Pensa ai pro e ai contro
 
 # Conclusioni.
 
-Chi sa cosa mi riserverà il prossimo decennio? Sicuramente, posso intuire _cosa_ sarà: AI, sicuramente. Ma il _come_ è una questione totalmente diversa.
+Chissà cosa mi riserverà il prossimo decennio? Sicuramente, posso intuire _cosa_ sarà: AI, sicuramente. Ma il _come_ è una questione totalmente diversa.
 
 ## Un po' di ringraziamenti.
 
 Centinaia di persone hanno forgiato questo articolo e mi hanno aiutato a crescere negli ultimi 10 anni. Non posso ringraziarle tutte, ma sento il bisogno di ringraziarne alcune in particolare.
 
 Flavia, mia moglie, che ha avuto la pazienza di ascoltarmi parlare di codice per ore.  
-Christian, mio fratello, che mi ha insegnato come installare una scheda grafica e come scrivere la mia prima riga di codice.  
+Christian, mio fratello, che mi ha insegnato come montare una scheda grafica e come scrivere la mia prima riga di codice.  
 Michele, il mio primo mentore, che mi ha insegnato a pensare in modo critico e a risolvere i problemi.  
 Max, un caro amico, che mi ha insegnato a essere una persona migliore, sia dentro che fuori dal lavoro.  
 Serena, che è sempre stata lì, pronta ad aiutarmi quando ne avevo bisogno.
+Enry, che ha creduto in me fin dal primo momento.
 
 Grazie,
 Michael.
