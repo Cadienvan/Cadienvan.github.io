@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@astrojs/preact": "^3.2.0",
-    "@orama/orama": "^2.0.16",
+    "@orama/orama": "^2.0.17",
     "astro": "^4.7.0",
     "cssnano": "^7.0.0",
     "nes.css": "^2.3.0"
