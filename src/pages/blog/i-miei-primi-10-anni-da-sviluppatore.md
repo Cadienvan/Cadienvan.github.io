@@ -27,7 +27,7 @@ Molti cappelli indossati, esponenzialmente più errori commessi e di conseguenza
 
 ## Cosa è cambiato nel settore?
 
-Praticamente tutto. Quando ho iniziato, **jQuery** era il re indiscusso, WordPress era la soluzione standard per ogni sito web e i prefissi `-mz-` e `-webkit-` erano ancora in voga.
+Praticamente tutto. Quando ho iniziato, **jQuery** era il re indiscusso, WordPress era la soluzione standard per ogni sito web e i prefissi `-moz-` e `-webkit-` erano ancora in voga.
 Oggi, possiamo costruire intere applicazioni con un singolo comando, abbiamo strumenti che possono scrivere codice per noi, e possiamo distribuire le nostre applicazioni in tutto il mondo in pochi secondi. L'industria si è evoluta a un ritmo incredibile, ed è stato sia emozionante che impegnativo tenere il passo con tutto questo.
 
 Eppure, sembra che in fondo nulla sia cambiato: abbiamo ancora basi di codice legacy, test instabili e 42 modi per centrare un div. Inoltre, non sappiamo ancora come fare stime.
