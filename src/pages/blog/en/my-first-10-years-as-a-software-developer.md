@@ -28,7 +28,7 @@ Many hats worn, way more mistakes made, and consequently a lot of lessons learne
 
 ## What's changed in the industry?
 
-Pretty much everything. When I started, **jQuery** was the king, WordPress was the go-to solution for every website and `-mz-` and `-webkit-` prefixes were still a thing. 
+Pretty much everything. When I started, **jQuery** was the king, WordPress was the go-to solution for every website and `-moz-` and `-webkit-` prefixes were still a thing. 
 Today, we can build entire applications with a single command, we have tools that can write code for us, and we can deploy our applications worldwide in seconds. The industry has evolved at an incredible pace, and it's been both exciting and challenging to keep up with all of this.
 
 Yet, it seems like nothing has changed after all: we still have legacy codebases, flaky tests and 42 ways for centering a div. Also, we still don't know how to estimate.
