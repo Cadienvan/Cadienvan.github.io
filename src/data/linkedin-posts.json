@@ -661,7 +661,7 @@
   },
   {
     "url": "https://www.linkedin.com/posts/mdiprisco_data-engineer-activity-7173592387896688640-fFPF?utm_source=share&utm_medium=member_desktop",
-    "title": "Fundamentals of Data Engineering.",
+    "title": "Fundamentals of Data Engineering // Joe Reis, Matt Housley.",
     "category": "books"
   },
   {
@@ -823,5 +823,20 @@
     "url": "https://www.linkedin.com/posts/mdiprisco_pillole-di-software-architecture-technical-activity-7217430057210830849-Hxqf?utm_source=share&utm_medium=member_desktop",
     "title": "Technical Vs Domain.",
     "category": "software-architecture"
+  },
+  {
+    "url": "https://www.linkedin.com/posts/mdiprisco_pillole-di-software-architecture-la-legge-activity-7219966784781639680-sqFX?utm_source=share&utm_medium=member_desktop",
+    "title": "La legge di Conway.",
+    "category": "software-architecture"
+  },
+  {
+    "url": "https://www.linkedin.com/posts/mdiprisco_pillole-di-software-architecture-inverse-activity-7222503478672130050-FoTG?utm_source=share&utm_medium=member_desktop",
+    "title": "Inverse Conway Maneuver.",
+    "category": "software-architecture"
+  },
+  {
+    "url": "https://www.linkedin.com/posts/mdiprisco_some-days-ago-i-finished-platform-strategy-activity-7222865888734044160-oWVJ?utm_source=share&utm_medium=member_desktop",
+    "title": "Platform Strategy // Gregor Hohpe.",
+    "category": "books"
   }
 ]
