@@ -2,31 +2,109 @@
 import { Image } from "astro:assets";
 
 import pointerRight from "../../public/assets/pointer-right.png";
+
+interface Props {
+  lang: string;
+  langIcon: string;
+}
+
+const articles = [
+  {
+    it: {
+      title: "Inevitabot",
+      url: "/blog/inevitabot",
+    },
+    en: null,
+  },
+  {
+    it: {
+      title: "Asynchronous Batching",
+      url: "/blog/asynchronous-batching",
+    },
+    en: {
+      title: "Asynchronous Batching",
+      url: "/blog/en/asynchronous-batching",
+    },
+  },
+  {
+    it: {
+      title: "La silenziosa e pervasiva svalutazione del frontend",
+      url: "/blog/svalutazione-frontend",
+    },
+    en: {
+      title: "The quiet, pervasive devaluation of frontend",
+      url: "/blog/en/devaluing-frontend",
+    },
+  },
+  {
+    it: {
+      title: "Iterative Contract Testing",
+      url: "/blog/iterative-contract-testing",
+    },
+    en: {
+      title: "Iterative Contract Testing",
+      url: "/blog/en/iterative-contract-testing",
+    },
+  },
+  {
+    it: {
+      title: "I miei primi 10 anni da sviluppatore",
+      url: "/blog/i-miei-primi-10-anni-da-sviluppatore",
+    },
+    en: {
+      title: "My first 10 years in the world of development",
+      url: "/blog/en/my-first-10-years-as-a-software-developer",
+    },
+  },
+  {
+    it: {
+      title: "La verità sulla test coverage",
+      url: "/blog/la-verita-sulla-test-coverage",
+    },
+    en: {
+      title: "The truth about test coverage",
+      url: "/blog/en/the-truth-about-test-coverage",
+    },
+  },
+  {
+    it: {
+      title: "Node non ha implementato TypeScript",
+      url: "/blog/node-non-ha-implementato-typescript",
+    },
+    en: {
+      title: "Node did not implement TypeScript",
+      url: "/blog/en/node-did-not-implement-typescript",
+    },
+  },
+  {
+    it: {
+      title: "Event-Driven Architecture @ TheRedCode.it",
+      url: "https://www.theredcode.it/tags/event-driven/",
+    },
+    en: {
+      title: "Event-Driven Architecture @ TheRedCode.it",
+      url: "https://www.theredcode.it/tags/event-driven/",
+    },
+  },
+];
+
+const { lang, langIcon } = Astro.props;
 ---
 
 <section class='nes-container with-title'>
-  <h3 class='title'>Blog</h3>
+  <h3 class='title'>Blog {langIcon}</h3>
   <div class='lists'>
-    <h2>
-      <a href='/blog/inevitabot'><Image src={pointerRight} alt='Pointer Right' /><span>Inevitabot</span></a>
-    </h2>
-    <h2>
-      <a href='/blog/asynchronous-batching'><Image src={pointerRight} alt='Pointer Right' /><span>Asynchronous Batching</span></a>
-    </h2>
-    <h2>
-      <a href='/blog/svalutazione-frontend'><Image src={pointerRight} alt='Pointer Right' /><span>La silenziosa e pervasiva svalutazione del frontend</span></a>
-    </h2>
-    <h2>
-      <a href='/blog/iterative-contract-testing'><Image src={pointerRight} alt='Pointer Right' /><span>Iterative Contract Testing</span></a>
-    </h2>
-    <h2>
-      <a href='/blog/i-miei-primi-10-anni-da-sviluppatore'><Image src={pointerRight} alt='Pointer Right' /><span>I miei primi 10 anni da sviluppatore</span></a>
-    </h2>
-    <h2>
-      <a href='/blog/la-verita-sulla-test-coverage'><Image src={pointerRight} alt='Pointer Right' /><span>La verità sulla test coverage</span></a>
-    </h2>
-    <h2>
-      <a href='https://www.theredcode.it/tags/event-driven/' target='_blank' rel='noopener'><Image src={pointerRight} alt='Pointer Right' /><span>Event-Driven Architecture @ TheRedCode.it</span></a>
-    </h2>
+    {
+      articles
+        .filter(article => article[lang])
+        .map(article => (
+          <h2>
+            <a href={article[lang].url}>
+              <Image src={pointerRight} alt='Pointer Right' />
+              <span>{article[lang].title}</span>
+            </a>
+          </h2>
+        ))
+    }
   </div>
 </section>
