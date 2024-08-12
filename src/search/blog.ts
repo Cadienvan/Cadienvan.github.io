@@ -8,6 +8,8 @@ import * as ict from "../pages/blog/iterative-contract-testing.md";
 import * as ictEn from "../pages/blog/en/iterative-contract-testing.md";
 import * as testCoverage from "../pages/blog/la-verita-sulla-test-coverage.md";
 import * as testCoverageEn from "../pages/blog/en/the-truth-about-test-coverage.md";
+import * as nodeTypeScript from "../pages/blog/node-non-ha-implementato-typescript.md";
+import * as nodeTypeScriptEn from "../pages/blog/en/node-did-not-implement-typescript.md";
 
 export default async function fill() {
   const blogDB = await create({
@@ -81,6 +83,20 @@ export default async function fill() {
     date: testCoverageEn.frontmatter.date,
     content: testCoverageEn.rawContent(),
     url: "/blog/en/the-truth-about-test-coverage",
+  });
+
+  await insert(blogDB, {
+    title: `Blog: ${nodeTypeScript.frontmatter.title} 🇮🇹`,
+    date: nodeTypeScript.frontmatter.date,
+    content: nodeTypeScript.rawContent(),
+    url: "/blog/node-non-ha-implementato-typescript",
+  });
+
+  await insert(blogDB, {
+    title: `Blog: ${nodeTypeScriptEn.frontmatter.title} 🇬🇧`,
+    date: nodeTypeScriptEn.frontmatter.date,
+    content: nodeTypeScriptEn.rawContent(),
+    url: "/blog/en/node-did-not-implement-typescript",
   });
 
   return {
