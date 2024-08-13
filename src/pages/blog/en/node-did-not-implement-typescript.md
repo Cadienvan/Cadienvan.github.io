@@ -61,6 +61,24 @@ Node.js simply can't accept TypeScript as a dependency because it would break se
 
 This is where the confusion arises. Node.js did not implement TypeScript, but they did add type stripping under an experimental flag. This feature allows developers to write TypeScript code and have it compiled to JavaScript without the type information. This is a compromise that allows developers to use TypeScript in Node.js without introducing the issues mentioned above.
 
+Do you want an example? Here you go:
+
+```typescript
+function sum(a: number, b: number): number {
+  return a + b;
+}
+```
+
+This function, when compiled with the `--experimental-strip-types` flag, will become:
+
+```javascript
+function sum(a        , b        )         {
+  return a + b;
+}
+```
+
+Did you see that? The types are gone and have been replaced by spaces. _But, why?_, you might ask. Well, because doing so preserves sourcemaps references without the hassle of having a separate build process for those.
+
 Internally, this is done via a package called `amaro` which wraps `swc` — a well-known build tool which does the actual stripping.
 
 Of course, limitations exist, such as the inability to use TypeScript-specific features like the before-mentioned _enums_. But still, it's a big step forward to prevent people from writing 135 config files to make a `sum` function accept two numbers and return a third one.

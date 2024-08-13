@@ -61,6 +61,24 @@ Node.js semplicemente non può accettare TypeScript come dipendenza perché romp
 
 È qui che nasce la confusione. Node.js non ha implementato TypeScript, ma ha aggiunto lo stripping dei tipi sotto un flag sperimentale. Questa funzionalità consente agli sviluppatori di scrivere codice TypeScript e di compilarlo in JavaScript rimuovendo la tipizzazione. Questo è un compromesso che consente agli sviluppatori di utilizzare TypeScript in Node.js senza introdurre i problemi menzionati sopra.
 
+Vediamo un esempio:
+
+```typescript
+function sum(a: number, b: number): number {
+  return a + b;
+}
+```
+
+Questa funzione, quando compilata con il flag `--experimental-strip-types`, diventerà:
+
+```javascript
+function sum(a        , b        )         {
+  return a + b;
+}
+```
+
+Visto quello che è successo? I tipi sono scomparsi e sono stati sostituiti da spazi. _Ma, perché?_, potresti chiedere. Beh, perché in questo modo si preservano i riferimenti alle sourcemap senza il fastidio di dover avere un processo di build separato per quelle.
+
 Internamente, questo viene fatto tramite un pacchetto chiamato `amaro` che racchiude `swc`, un noto _build tool_ che esegue lo stripping effettivo.
 
 Naturalmente, esistono delle limitazioni, come l'impossibilità di utilizzare funzionalità specifiche di TypeScript come gli _enum_ menzionati in precedenza. Ma è comunque un grande passo avanti impedire alle persone di scrivere 135 file di configurazione per far sì che una funzione `sum` accetti due numeri e ne restituisca un terzo.
