@@ -853,5 +853,15 @@
     "url": "https://www.linkedin.com/posts/mdiprisco_pillole-di-software-architecture-monoliti-activity-7227576894580264961-rwFR?utm_source=share&utm_medium=member_desktop",
     "title": "Monoliti Vs Sistemi Distribuiti.",
     "category": "software-architecture"
+  },
+  {
+    "url": "https://www.linkedin.com/posts/mdiprisco_pillole-di-software-architecture-big-ball-activity-7230113564517167104-bOa7?utm_source=share&utm_medium=member_desktop",
+    "title": "Big Ball of Mud.",
+    "category": "software-architecture"
+  },
+  {
+    "url": "https://www.linkedin.com/posts/mdiprisco_lesson-18-the-fallacies-of-distributed-activity-7232650292972969984-zRG_?utm_source=share&utm_medium=member_desktop",
+    "title": "Fallacies of Distributed Systems.",
+    "category": "software-architecture"
   }
 ]
