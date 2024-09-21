@@ -10,6 +10,8 @@ import * as testCoverage from "../pages/blog/la-verita-sulla-test-coverage.md";
 import * as testCoverageEn from "../pages/blog/en/the-truth-about-test-coverage.md";
 import * as nodeTypeScript from "../pages/blog/node-non-ha-implementato-typescript.md";
 import * as nodeTypeScriptEn from "../pages/blog/en/node-did-not-implement-typescript.md";
+import * as roadmapAlternative from "../pages/blog/l-alternativa-alle-roadmap.md";
+import * as roadmapAlternativeEn from "../pages/blog/en/the-alternative-to-roadmaps.md";
 
 export default async function fill() {
   const blogDB = await create({
@@ -97,6 +99,20 @@ export default async function fill() {
     date: nodeTypeScriptEn.frontmatter.date,
     content: nodeTypeScriptEn.rawContent(),
     url: "/blog/en/node-did-not-implement-typescript",
+  });
+
+  await insert(blogDB, {
+    title: `Blog: ${roadmapAlternative.frontmatter.title} 🇮🇹`,
+    date: roadmapAlternative.frontmatter.date,
+    content: roadmapAlternative.rawContent(),
+    url: "/blog/l-alternativa-alle-roadmap",
+  });
+
+  await insert(blogDB, {
+    title: `Blog: ${roadmapAlternativeEn.frontmatter.title} 🇬🇧`,
+    date: roadmapAlternativeEn.frontmatter.date,
+    content: roadmapAlternativeEn.rawContent(),
+    url: "/blog/en/the-alternative-to-roadmaps",
   });
 
   return {
