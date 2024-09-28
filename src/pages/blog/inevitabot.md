@@ -5,6 +5,7 @@ author: Michael Di Prisco
 description: Un futuro tanto inevitabile quanto imprevedibile.
 date: 2023-11-21
 AISupport: low
+hasTranslation: true
 ---
 
 ## Premessa

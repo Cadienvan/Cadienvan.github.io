@@ -1,5 +1,6 @@
 import { create, insert } from "@orama/orama";
 import * as inevitabot from "../pages/blog/inevitabot.md";
+import * as inevitabotEn from "../pages/blog/en/inevitabot.md";
 import * as asynchronousBatching from "../pages/blog/asynchronous-batching.md";
 import * as asynchronousBatchingEn from "../pages/blog/en/asynchronous-batching.md";
 import * as svalutazioneFrontend from "../pages/blog/svalutazione-frontend.md";
@@ -32,24 +33,17 @@ export default async function fill() {
   });
 
   await insert(blogDB, {
+    title: `Blog: ${inevitabotEn.frontmatter.title} 🇬🇧`,
+    date: inevitabotEn.frontmatter.date,
+    content: inevitabotEn.rawContent(),
+    url: "/blog/en/inevitabot",
+  });
+
+  await insert(blogDB, {
     title: `Blog: ${asynchronousBatching.frontmatter.title} 🇮🇹`,
     date: asynchronousBatching.frontmatter.date,
     content: asynchronousBatching.rawContent(),
     url: "/blog/asynchronous-batching",
-  });
-
-  await insert(blogDB, {
-    title: `Blog: ${svalutazioneFrontend.frontmatter.title} 🇮🇹`,
-    date: svalutazioneFrontend.frontmatter.date,
-    content: svalutazioneFrontend.rawContent(),
-    url: "/blog/svalutazione-frontend",
-  });
-
-  await insert(blogDB, {
-    title: `Blog: ${ict.frontmatter.title} 🇮🇹`,
-    date: ict.frontmatter.date,
-    content: ict.rawContent(),
-    url: "/blog/iterative-contract-testing",
   });
 
   await insert(blogDB, {
@@ -60,10 +54,24 @@ export default async function fill() {
   });
 
   await insert(blogDB, {
+    title: `Blog: ${svalutazioneFrontend.frontmatter.title} 🇮🇹`,
+    date: svalutazioneFrontend.frontmatter.date,
+    content: svalutazioneFrontend.rawContent(),
+    url: "/blog/svalutazione-frontend",
+  });
+
+  await insert(blogDB, {
     title: `Blog: ${svalutazioneFrontendEn.frontmatter.title} 🇬🇧`,
     date: svalutazioneFrontendEn.frontmatter.date,
     content: svalutazioneFrontendEn.rawContent(),
     url: "/blog/en/devaluing-frontend",
+  });
+
+  await insert(blogDB, {
+    title: `Blog: ${ict.frontmatter.title} 🇮🇹`,
+    date: ict.frontmatter.date,
+    content: ict.rawContent(),
+    url: "/blog/iterative-contract-testing",
   });
 
   await insert(blogDB, {
