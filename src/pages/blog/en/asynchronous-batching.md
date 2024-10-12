@@ -2,7 +2,7 @@
 layout: ../../../layouts/_partials/RetroBlogPostLayout.astro
 title: Asynchronous Batching
 author: Michael Di Prisco
-description: L'arma (non) segreta per migliorare le prestazioni delle applicazioni web
+description: The (not so) secret weapon to improve web applications performance
 date: 2023-12-11
 lang: en
 hasTranslation: true
