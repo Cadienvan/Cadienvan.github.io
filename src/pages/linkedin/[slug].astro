@@ -21,7 +21,7 @@ if (!category) {
     status: 404,
   };
 }
-const posts = linkedinPosts.filter(post => post.category === category.slug).reverse();
+const posts = linkedinPosts.filter(post => post.category === category.slug);
 ---
 
 <Layout title={category.title} hasGoBack={false}>
