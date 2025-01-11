@@ -13,6 +13,8 @@ import * as nodeTypeScript from "../pages/blog/node-non-ha-implementato-typescri
 import * as nodeTypeScriptEn from "../pages/blog/en/node-did-not-implement-typescript.md";
 import * as roadmapAlternative from "../pages/blog/l-alternativa-alle-roadmap.md";
 import * as roadmapAlternativeEn from "../pages/blog/en/the-alternative-to-roadmaps.md";
+import * as whatSitsAndWhatFits from "../pages/blog/what-sits-and-what-fits.md";
+import * as whatSitsAndWhatFitsEn from "../pages/blog/en/what-sits-and-what-fits.md";
 
 export default async function fill() {
   const blogDB = await create({
@@ -121,6 +123,20 @@ export default async function fill() {
     date: roadmapAlternativeEn.frontmatter.date,
     content: roadmapAlternativeEn.rawContent(),
     url: "/blog/en/the-alternative-to-roadmaps",
+  });
+
+  await insert(blogDB, {
+    title: `Blog: ${whatSitsAndWhatFits.frontmatter.title} 🇮🇹`,
+    date: whatSitsAndWhatFits.frontmatter.date,
+    content: whatSitsAndWhatFits.rawContent(),
+    url: "/blog/what-sits-and-what-fits",
+  });
+
+  await insert(blogDB, {
+    title: `Blog: ${whatSitsAndWhatFitsEn.frontmatter.title} 🇬🇧`,
+    date: whatSitsAndWhatFitsEn.frontmatter.date,
+    content: whatSitsAndWhatFitsEn.rawContent(),
+    url: "/blog/en/what-sits-and-what-fits",
   });
 
   return {
