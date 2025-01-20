@@ -13,7 +13,7 @@ hasTranslation: true
 
 > **[TL;DR]** It depends.
 
-In software development, the concepts of rules, principles, and best practices form the backbone of our work. These are the foundational elements - what ***sits*** - hat guide decisions, standardize processes, and ensure scalability in complex systems. They act as anchors, providing stability and a shared understanding across teams and projects.
+In software development, the concepts of rules, principles, and best practices form the backbone of our work. These are the foundational elements - what ***sits*** - that guide decisions, standardize processes, and ensure scalability in complex systems. They act as anchors, providing stability and a shared understanding across teams and projects.
 
 Yet, no rule or practice exists in a vacuum. There are moments when the established path is not the best path. Context shifts, priorities change, and sometimes the solution lies in stepping outside the boundaries. These are the moments when ***fits*** - context-specific adaptations - become necessary to resolve unique challenges. The tension between ***sits*** and ***fits*** is the core of pragmatic software architecture.
 
