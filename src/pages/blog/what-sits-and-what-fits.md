@@ -63,6 +63,10 @@ Una delle lezioni più importanti che ho imparato nell'architettura software è 
 
 Tenendo ben presente questo concetto, ho imparato ad affrontare ogni scelta architetturale con una prospettiva più ampia, considerando non solo i benefici tecnici immediati ma anche gli effetti a catena sugli stakeholder e sugli obiettivi di lungo periodo.
 
+> Le organizzazioni che progettano sistemi sono vincolate a produrre design che sono copie delle strutture di comunicazione delle organizzazioni stesse.
+
+Melvin Conway - 1967
+
 ### Esempi di Sits e Fits specifici per contesto.
 
 Consideriamo alcuni esempi comuni di ***sits*** nell'architettura software:
@@ -152,6 +156,8 @@ Quando si sceglie tra ***sits*** e ***fits***, poniti le seguenti domande:
 -   **Qual è l'obiettivo immediato?** Questa decisione aiuta a raggiungerlo?
 -   **Quali sono le implicazioni a lungo termine?** Questa scelta creerà debito tecnico difficile da risolvere?
 -   **La deviazione semplifica o complica il sistema?** La semplicità dovrebbe essere un principio guida.
+
+> Luciano Mammino, un caro amico, mi ha suggerito di includere questo fantastico articolo che spiega il modello Amazon, che suggerisco come aggiunta a questo test: [One-way vs Two-way door decisions](https://thoughtbot.com/blog/one-way-vs-two-way-door-decisions)
 
 ### Altre domande potenti da porsi.
 

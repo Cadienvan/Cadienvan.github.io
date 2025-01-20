@@ -57,6 +57,10 @@ It's a powerful reminder that we, as architects and developers, operate at the i
 
 By keeping this in mind, I've learned to approach every architectural choice with a broader perspective, considering not only the immediate technical benefits but also the ripple effects on stakeholders and long-term goals.
 
+> Organizations which design systems are constrained to produce designs which are copies of the communication structures of these organizations.
+
+Melvin Conway - 1967
+
 ### Examples of Sits and context-specific Fits.
 Let's consider some common examples of ***sits*** in software architecture:
 
@@ -145,6 +149,8 @@ When deciding between ***sits*** and ***fits***, consider the following question
 - **What is the immediate goal?** Does this decision help achieve it?
 - **What are the long-term implications?** Will this create tech debt that's difficult to resolve?
 - **Does the deviation simplify or complicate the system?** Simplicity should be a guiding principle.
+
+> Luciano Mammino, a dear friend of mine, suggested to include this awesome article which explains the Amazon model, which I suggest as an addition to this test: [One-way vs Two-way door decisions](https://thoughtbot.com/blog/one-way-vs-two-way-door-decisions)
 
 ### Other Powerful Questions to Ask.
 
