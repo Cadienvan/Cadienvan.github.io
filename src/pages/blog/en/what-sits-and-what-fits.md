@@ -157,3 +157,5 @@ When deciding between ***sits*** and ***fits***, consider the following question
 In software architecture, both ***sits*** and ***fits*** have their place. The key is not choosing one over the other but understanding when to lean on foundational principles and when to adapt them to the context. This balance - the pragmatism in architecture - separates competent developers from great architects.
 
 As Mark Richards and Neal Ford remind us: *"Everything in software architecture is a trade-off."* Embrace that reality, and use it to guide your decisions.
+
+> Obvious things are always useful, especially when they are not obvious.

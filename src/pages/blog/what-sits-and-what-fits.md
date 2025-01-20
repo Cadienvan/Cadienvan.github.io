@@ -164,3 +164,5 @@ Quando si sceglie tra ***sits*** e ***fits***, poniti le seguenti domande:
 Nell'architettura software, sia i ***sits*** sia i ***fits*** hanno il loro posto. La chiave non è sceglierne uno a scapito dell'altro, ma capire quando affidarsi ai principi di base e quando adattarli al contesto. Questo equilibrio - il pragmatismo nell'architettura - distingue gli sviluppatori competenti dai grandi architect.
 
 Come ricordano Mark Richards e Neal Ford: *"Tutto nell'architettura software è un trade-off."* Abbraccia questa realtà e usala per guidare le tue decisioni.
+
+> Le ovvietà servono sempre, soprattutto quando non sono ovvie.
