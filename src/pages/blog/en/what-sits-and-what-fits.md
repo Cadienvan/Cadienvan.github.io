@@ -78,7 +78,7 @@ The key, here, is understanding the trade-offs:
 
 #### Sit #2: Comprehensive unit testing.
 
-The pursuit of 100% test coverage is another example where pragmatism trumps dogma. While comprehensive testing is valuable, focusing on critical paths — like the checkout flow in an e-commerce app — often delivers more ROI (Return of interest) than exhaustive tests for minor features. In my article, [The Truth About Test Coverage](./the-truth-about-test-coverage), I try to demonstrate how understanding the limits of metrics like coverage leads to better decision-making.
+The pursuit of 100% test coverage is another example where pragmatism trumps dogma. While comprehensive testing is valuable, focusing on critical paths — like the checkout flow in an e-commerce app — often delivers more ROI (Return of interest) than exhaustive tests for minor features. In my article, [The Truth About Test Coverage](/blog/en/the-truth-about-test-coverage), I try to demonstrate how understanding the limits of metrics like coverage leads to better decision-making.
 
 #### Sit #3: Event-driven architecture.
 
@@ -86,7 +86,7 @@ Event-driven architecture (EDA) is a powerful paradigm for building scalable, de
 
 #### Sit #4: Contract Testing.
 
-Contract testing is a methodology that ensures APIs adhere to a predefined contract. The standard approach involves manually defining these contracts, which can be time-consuming and error-prone in legacy codebases. Instead, in [Iterative Contract Testing](./iterative-contract-testing), we leveraged API responses themselves to generate contracts dynamically. This ***fit*** reduced overhead while maintaining reliability.
+Contract testing is a methodology that ensures APIs adhere to a predefined contract. The standard approach involves manually defining these contracts, which can be time-consuming and error-prone in legacy codebases. Instead, in [Iterative Contract Testing](/blog/en/iterative-contract-testing), we leveraged API responses themselves to generate contracts dynamically. This ***fit*** reduced overhead while maintaining reliability.
 
 By introducing patterns like optimistic schema updates, we sidestepped the initial burden of mapping every API. While this approach might not suit every scenario, it exemplifies how bending traditional practices can yield substantial benefits in specific contexts.
 
@@ -106,7 +106,7 @@ Over-engineering occurs when solutions are designed with more complexity than ne
 
 ### Strategic Fits in Action.
 
-Conversely, there are scenarios where unconventional approaches shine. In [Asynchronous Batching](./asynchronous-batching), grouping requests in Node.js with Fastify provided a lightweight solution to repetitive tasks, reducing computational waste. While it deviated from traditional REST principles, it delivered exceptional performance improvements.
+Conversely, there are scenarios where unconventional approaches shine. In [Asynchronous Batching](/blog/en/asynchronous-batching), grouping requests in Node.js with Fastify provided a lightweight solution to repetitive tasks, reducing computational waste. While it deviated from traditional REST principles, it delivered exceptional performance improvements.
 
 ### Tracking Technical Debt in Fits Scenarios.
 

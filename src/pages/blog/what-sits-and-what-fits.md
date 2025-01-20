@@ -85,7 +85,7 @@ La chiave qui è comprendere i trade-off:
 
 #### Sit #2: Test unitari completi.
 
-Perseguire il 100% di copertura di test è un altro esempio in cui il pragmatismo vince sul dogmatismo. Sebbene i test completi siano preziosi, concentrarsi sulle parti critiche - come il checkout in un'app e-commerce - spesso offre più ROI (Ritorno sull'investimento) che coprire in modo esaustivo funzionalità minori. Nel mio articolo, La verità sulla test coverage](./la-verita-sulla-test-coverage), cerco di dimostrare come comprendere i limiti di metriche come la coverage possa portare a decisioni migliori.
+Perseguire il 100% di copertura di test è un altro esempio in cui il pragmatismo vince sul dogmatismo. Sebbene i test completi siano preziosi, concentrarsi sulle parti critiche - come il checkout in un'app e-commerce - spesso offre più ROI (Ritorno sull'investimento) che coprire in modo esaustivo funzionalità minori. Nel mio articolo, La verità sulla test coverage](/blog/la-verita-sulla-test-coverage), cerco di dimostrare come comprendere i limiti di metriche come la coverage possa portare a decisioni migliori.
 
 #### Sit #3: Architettura event-driven.
 
@@ -93,7 +93,7 @@ L'architettura event-driven (EDA) è un paradigma potente per la realizzazione d
 
 #### Sit #4: Contract Testing.
 
-Il contract testing è una metodologia che assicura che le API rispettino un contratto predefinito. L'approccio standard prevede la definizione manuale di questi contratti, un processo spesso lungo e soggetto a errori nelle codebase legacy. Invece, in [Iterative Contract Testing](./iterative-contract-testing), abbiamo sfruttato direttamente le risposte delle API per generare contratti dinamicamente. Questo adattamento (***fit***) ha ridotto l'overhead mantenendo l'affidabilità.
+Il contract testing è una metodologia che assicura che le API rispettino un contratto predefinito. L'approccio standard prevede la definizione manuale di questi contratti, un processo spesso lungo e soggetto a errori nelle codebase legacy. Invece, in [Iterative Contract Testing](/blog/iterative-contract-testing), abbiamo sfruttato direttamente le risposte delle API per generare contratti dinamicamente. Questo adattamento (***fit***) ha ridotto l'overhead mantenendo l'affidabilità.
 
 Introducendo pattern come l'optimistic schema updates, abbiamo evitato il fardello iniziale di mappare ogni API. Sebbene questo approccio possa non essere adatto a tutti gli scenari, dimostra come piegare le pratiche tradizionali alle proprie necessità possa offrire benefici sostanziali in contesti specifici.
 
@@ -113,7 +113,7 @@ L'over-engineering si verifica quando le soluzioni vengono progettate con una co
 
 ### Fits strategici in azione.
 
-Al contrario, esistono scenari in cui approcci non convenzionali brillano. In [Asynchronous Batching](./asynchronous-batching), raggruppare le richieste in Node.js con Fastify ha fornito una soluzione leggera a task ripetitivi, riducendo gli sprechi di calcolo. Pur deviando dai principi REST tradizionali, ha garantito miglioramenti prestazionali notevoli.
+Al contrario, esistono scenari in cui approcci non convenzionali brillano. In [Asynchronous Batching](/blog/asynchronous-batching), raggruppare le richieste in Node.js con Fastify ha fornito una soluzione leggera a task ripetitivi, riducendo gli sprechi di calcolo. Pur deviando dai principi REST tradizionali, ha garantito miglioramenti prestazionali notevoli.
 
 ### Tenere traccia del debito tecnico quando si utilizzano Fits.
 
