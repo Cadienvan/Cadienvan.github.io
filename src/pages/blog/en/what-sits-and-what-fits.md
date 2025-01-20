@@ -39,7 +39,7 @@ Moreover, clear rules prevent tech debt from spiraling out of control. Following
 
 When designing systems, scalability is often a key concern. Principles like horizontal scaling and stateless services allow architectures to handle increased loads without dramatic redesigns. Kubernetes, for instance, thrives on stateless containers that can be scaled up or down seamlessly. These practices might not seem essential during initial development, but as traffic grows, their importance becomes apparent.
 
-However, sticking rigidly to these principles can sometimes stifle innovation or delay delivery. This is where ***fits*** come into play.
+However, sticking rigidly to these principles can sometimes choke innovation or delay delivery. This is where ***fits*** come into play.
 
 ---
 
