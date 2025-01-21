@@ -138,6 +138,9 @@ Core aspects of intentional governance include:
 
 By practicing intentional governance, organizations can strike a balance between consistency and adaptability, fostering innovation while maintaining structural integrity.
 
+![Schema Sits & Fits](../../../assets/schema-sits-fits.jpg)
+_Thank you, Alessandro Cappellozza, for this amazing representation._
+
 ---
 
 ## Conclusion.

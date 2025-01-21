@@ -145,6 +145,9 @@ Alcuni aspetti chiave della governance intenzionale includono:
 
 Praticando la governance intenzionale, le organizzazioni possono trovare il giusto equilibrio tra coerenza e adattabilità, favorendo l'innovazione senza rinunciare alla solidità strutturale.
 
+![Schema Sits & Fits](../../assets/schema-sits-fits.jpg)
+_Grazie, Alessandro Cappellozza, per questa fantastica rappresentazione._
+
 ---
 
 ## Conclusione.
