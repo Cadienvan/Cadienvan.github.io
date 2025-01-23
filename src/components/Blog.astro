@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 
 import pointerRight from "../../public/assets/pointer-right.png";
+import feedRSS from "../../public/assets/feed-rss.png";
 
 interface Props {
   lang: string;
@@ -116,17 +117,24 @@ const { lang, langIcon } = Astro.props;
 
 <section class='nes-container with-title'>
   <h3 class='title'>Blog {langIcon}</h3>
+  <h2>
+    <a href={new URL(lang === "it" ? "feed-it.xml" : "feed.xml", Astro.site)}>
+      <Image src={feedRSS} alt='Feed RSS' />
+      <span>RSS Feed</span>
+    </a>
+  </h2>
+  <hr />
   <div class='lists'>
     {
       articles
         .filter(article => article[lang])
         .map(article => (
-          <h2>
+          <h3>
             <a href={article[lang].url}>
-              <Image src={pointerRight} alt='Pointer Right' />
+              <Image src={pointerRight} alt={article[lang].title} />
               <span>{article[lang].title}</span>
             </a>
-          </h2>
+          </h3>
         ))
     }
   </div>

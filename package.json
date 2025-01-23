@@ -10,10 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/preact": "^3.2.0",
-    "@orama/orama": "^2.0.16",
-    "astro": "^4.7.0",
-    "cssnano": "^7.0.0",
+    "@astrojs/preact": "^4.0.3",
+    "@astrojs/rss": "^4.0.11",
+    "@orama/orama": "^3.0.5",
+    "astro": "^5.1.9",
+    "cssnano": "^7.0.6",
     "nes.css": "^2.3.0"
   }
 }
