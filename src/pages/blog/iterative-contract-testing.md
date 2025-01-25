@@ -80,6 +80,8 @@ Naturalmente c'è un sovraccarico in termini di prestazioni. Stai registrando og
 
 Ciò che abbiamo fatto è stato **trovare un compromesso**. Registriamo le chiamate API solo nell'ambiente di staging, poiché è abbastanza utilizzato per essere utile, ma rimuovendo il problema in produzione. Per darti qualche numero, elaboriamo circa 3000 chiamate API al giorno, abbiamo circa 100 API, e siamo riusciti a generare tutti i contratti in un paio di giorni, modificandoli in una settimana per farli funzionare. Ad oggi, più di 10 API sono state aggiornate in base ai risultati di CAT e siamo estremamente soddisfatti dei risultati.
 
+> Aggiornamento: A inizio 2025 abbiamo attivato CAT in produzione e attualmente elabora regolarmente oltre 150.000 chiamate API al giorno, con picchi di varie centinaia di migliaia di chiamate.
+
 ## Conclusione
 
 Siamo arrivati alla fine del racconto. Abbiamo trovato un modo per testare tutte le nostre API senza scrivere un singolo test. Siamo soddisfatti dei risultati e contiamo di utilizzare questo strumento d'ora in poi. Qualche giorno fa stavamo pensando di renderlo open source, ma lo strumento così come è implementato è semplicemente troppo immaturo per essere condiviso. Stiamo programmando di lavorarci nei prossimi mesi e forse, chissà, lo condivideremo con la community.

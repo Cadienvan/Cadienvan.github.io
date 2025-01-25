@@ -81,6 +81,8 @@ Of course, there is a performance overhead. You are logging every API call in yo
 
 What we did was **find a compromise**. We only log the API calls in the staging environment, as it is used enough to be useful, but without the hassle of running it in production. To give you some numbers, we elaborate around 3000 API calls per day, and we have around 100 APIs, and we were able to generate all the contracts in a couple of days, tweaking them in a week to make them work. As of today, more than 10 APIs have been updated according to findings from CAT, and we are extremely happy with the results.
 
+> Update: At the beginning of 2025, we activated CAT in production and it currently processes over 150,000 API calls per day, with peaks of several hundred thousand calls.
+
 ## Conclusion
 
 So, that's it. We found a way to test all our APIs without writing a single test. We are happy with the results, and we are planning to use this tool for the time being. Some days ago we were considering going open-source with it, but the tool as it is implemented is just too immature to be shared. We are planning to work on it in the next months and maybe, who knows, we will share it with the community.
