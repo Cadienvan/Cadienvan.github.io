@@ -15,6 +15,8 @@ import * as roadmapAlternative from "../pages/blog/l-alternativa-alle-roadmap.md
 import * as roadmapAlternativeEn from "../pages/blog/en/the-alternative-to-roadmaps.md";
 import * as whatSitsAndWhatFits from "../pages/blog/what-sits-and-what-fits.md";
 import * as whatSitsAndWhatFitsEn from "../pages/blog/en/what-sits-and-what-fits.md";
+import * as colleagueBasedTesting from "../pages/blog/colleague-based-testing.md";
+import * as colleagueBasedTestingEn from "../pages/blog/en/colleague-based-testing.md";
 
 export default async function fill() {
   const blogDB = await create({
@@ -138,6 +140,22 @@ export default async function fill() {
     content: whatSitsAndWhatFitsEn.rawContent(),
     url: "/blog/en/what-sits-and-what-fits",
   });
+
+  await insert(blogDB, {
+    title: `Blog: ${colleagueBasedTesting.frontmatter.title} 🇮🇹`,
+    date: colleagueBasedTesting.frontmatter.date,
+    content: colleagueBasedTesting.rawContent(),
+    url: "/blog/colleague-based-testing",
+  });
+
+  await insert(blogDB, {
+    title: `Blog: ${colleagueBasedTestingEn.frontmatter.title} 🇬🇧`,
+    date: colleagueBasedTestingEn.frontmatter.date,
+    content: colleagueBasedTestingEn.rawContent(),
+    url: "/blog/en/colleague-based-testing",
+  });
+
+
 
   return {
     instance: blogDB,
