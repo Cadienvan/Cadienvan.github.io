@@ -1,0 +1,54 @@
+---
+import Layout from "../layouts/RetroLayout.astro";
+---
+
+<Layout title='Is This Newsletter Useful?' hasGoBack lang='en'>
+  <section>
+    <h2><a href='javascript:void(0);'>#</a>Is This Newsletter Useful?</h2>
+    <p>
+      What follows are 3 buttons you can add as bookmarklets to your browser. <br />
+      I created them as I was overwhelmed by the number of newsletters I was receiving and wanted to better understand which ones were useful and which ones were not. <br />
+      Those buttons only work on Gmail - that was my need - and will allow you to track newsletter usefulness.
+    </p>
+
+    <h3>How to use them</h3>
+    <p>
+      To use them, you need to drag and drop the buttons to your bookmarks bar. <br />
+      Then, after reading a newsletter - but still having it opened -, click on <code>Useful</code> if you found the newsletter useful, <code>Not Useful</code> if you didn't. <br />
+      You can also click on <code>Usefulness Data</code> to see how many times you clicked on each button for that specific email sender. <br />
+      This data is stored in <code>localStorage</code> and will never leave your browser.<br />
+      <blockquote>
+        Be sure to not use the split pane layout, as this will break the bookmarklets.<br />
+        Also, be aware these bookmarklets use the sender's name as the key to store the data, so if the sender's name changes, the data will not match.
+      </blockquote>
+    </p>
+
+    <h3>Bookmarklets</h3>
+    <p>
+      <a href="javascript:(() => {
+      const val = document.querySelectorAll('div[role=listitem][aria-expanded=true] span[email]')[0].innerText;
+      if (!val) alert('Cannot get to the element');
+      const useful = parseInt(localStorage.getItem(`USEFULNESS_${val}`) || 0);
+      localStorage.setItem(`USEFULNESS_${val}`, useful + 1);
+    })()">Useful</a>
+      <a href="javascript:(() => {
+      const val = document.querySelectorAll('div[role=listitem][aria-expanded=true] span[email]')[0].innerText;
+      if (!val) alert('Cannot get to the element');
+      const nonUseful = parseInt(localStorage.getItem(`NON_USEFULNESS_${val}`) || 0);
+      localStorage.setItem(`NON_USEFULNESS_${val}`, nonUseful + 1);
+    })()"
+        >Not Useful</a
+      >
+      <a
+        href="javascript:(() => {
+        const val = document.querySelectorAll('div[role=listitem][aria-expanded=true] span[email]')[0].innerText;
+        if (!val) alert('Cannot get to the element');
+        const useful = localStorage.getItem(`USEFULNESS_${val}`);
+        const notUseful = localStorage.getItem(`NON_USEFULNESS_${val}`);
+        alert(`Useful: ${useful || 0} | Not Useful: ${notUseful || 0}`);
+    })()"
+        >Usefulness Data</a
+      >
+    </p>
+  </section>
+</Layout>
