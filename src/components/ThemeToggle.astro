@@ -1,0 +1,57 @@
+<button id="theme-toggle" class="nes-btn" aria-label="Toggle theme">
+  <span class="theme-toggle-text">🌞</span>
+</button>
+
+<style>
+  #theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    padding: 0.5rem;
+    min-width: 4rem;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    type Theme = "light" | "dark";
+    const themeToggle = document.getElementById("theme-toggle");
+    const themeText = themeToggle?.querySelector(".theme-toggle-text");
+
+    if (!themeToggle || !themeText) return;
+
+    // Check for saved theme preference, otherwise use system preference
+    const getPreferredTheme = (): Theme => {
+      const savedTheme = localStorage.getItem("theme") as Theme | null;
+      if (savedTheme === "light" || savedTheme === "dark") return savedTheme;
+      return window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+    };
+
+    const setTheme = (theme: Theme) => {
+      document.documentElement.dataset.theme = theme;
+      localStorage.setItem("theme", theme);
+      themeText.textContent = theme === "light" ? "🌞" : "🌙";
+    };
+
+    // Initialize theme
+    setTheme(getPreferredTheme());
+
+    // Toggle theme
+    themeToggle.addEventListener("click", () => {
+      const currentTheme = document.documentElement.dataset.theme as Theme;
+      setTheme(currentTheme === "light" ? "dark" : "light");
+    });
+
+    // Listen for system theme changes
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (e) => {
+        if (!localStorage.getItem("theme")) {
+          setTheme(e.matches ? "dark" : "light");
+        }
+      });
+  });
+</script>
