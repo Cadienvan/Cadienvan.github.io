@@ -17,6 +17,8 @@ import * as whatSitsAndWhatFits from "../pages/blog/what-sits-and-what-fits.md";
 import * as whatSitsAndWhatFitsEn from "../pages/blog/en/what-sits-and-what-fits.md";
 import * as colleagueBasedTesting from "../pages/blog/colleague-based-testing.md";
 import * as colleagueBasedTestingEn from "../pages/blog/en/colleague-based-testing.md";
+import * as authorityAndAccountability from "../pages/blog/autorita-e-responsabilita.md";
+import * as authorityAndAccountabilityEn from "../pages/blog/en/authority-and-accountability.md";
 
 export default async function fill() {
   const blogDB = await create({
@@ -153,6 +155,20 @@ export default async function fill() {
     date: colleagueBasedTestingEn.frontmatter.date,
     content: colleagueBasedTestingEn.rawContent(),
     url: "/blog/en/colleague-based-testing",
+  });
+
+  await insert(blogDB, {
+    title: `Blog: ${authorityAndAccountability.frontmatter.title} 🇮🇹`,
+    date: authorityAndAccountability.frontmatter.date,
+    content: authorityAndAccountability.rawContent(),
+    url: "/blog/autorita-e-responsabilita",
+  });
+
+  await insert(blogDB, {
+    title: `Blog: ${authorityAndAccountabilityEn.frontmatter.title} 🇬🇧`,
+    date: authorityAndAccountabilityEn.frontmatter.date,
+    content: authorityAndAccountabilityEn.rawContent(),
+    url: "/blog/en/authority-and-accountability",
   });
 
 
