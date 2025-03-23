@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eye Check for Kids</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f8ff;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .letter-container {
+        width: 300px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+      }
+
+      .letter {
+        font-size: 200px;
+        font-weight: bold;
+        transition: transform 0.5s ease;
+      }
+
+      .controls {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        margin-bottom: 20px;
+        width: 300px;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      .zoom-control {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .zoom-control label {
+        font-size: 16px;
+      }
+
+      .zoom-control input {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Eye Check for Kids</h1>
+
+      <div class="letter-container">
+        <div class="letter" id="letter-e">E</div>
+      </div>
+
+      <div class="controls">
+        <button id="start-button">Show New Letter</button>
+
+        <div class="zoom-control">
+          <label for="zoom-slider">Zoom Level:</label>
+          <input type="range" id="zoom-slider" min="25" max="250" value="100" />
+          <span id="zoom-value">100%</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const letterE = document.getElementById("letter-e");
+        const startButton = document.getElementById("start-button");
+        const zoomSlider = document.getElementById("zoom-slider");
+        const zoomValue = document.getElementById("zoom-value");
+
+        // Function to randomly rotate the letter E
+        function rotateRandomly() {
+          const rotations = [0, 90, 180, 270];
+          const randomIndex = Math.floor(Math.random() * rotations.length);
+          const rotation = rotations[randomIndex];
+
+          letterE.style.transform = `rotate(${rotation}deg) scale(${zoomSlider.value / 100})`;
+        }
+
+        // Start with a random rotation
+        rotateRandomly();
+
+        // Button click handler
+        startButton.addEventListener("click", rotateRandomly);
+
+        // Zoom slider handler
+        zoomSlider.addEventListener("input", function () {
+          const zoomLevel = zoomSlider.value;
+          zoomValue.textContent = `${zoomLevel}%`;
+
+          // Get current rotation if any
+          const currentTransform = letterE.style.transform;
+          const currentRotation = currentTransform.includes("rotate") ? currentTransform.match(/rotate\((\d+)deg\)/)[1] : 0;
+
+          letterE.style.transform = `rotate(${currentRotation}deg) scale(${zoomLevel / 100})`;
+        });
+      });
+    </script>
+  </body>
+</html>
