@@ -19,6 +19,8 @@ import * as colleagueBasedTesting from "../pages/blog/colleague-based-testing.md
 import * as colleagueBasedTestingEn from "../pages/blog/en/colleague-based-testing.md";
 import * as authorityAndAccountability from "../pages/blog/autorita-e-responsabilita.md";
 import * as authorityAndAccountabilityEn from "../pages/blog/en/authority-and-accountability.md";
+import * as stayInTheProblemSpace from "../pages/blog/resta-nello-spazio-del-problema.md";
+import * as stayInTheProblemSpaceEn from "../pages/blog/en/stay-in-the-problem-space.md";
 
 export default async function fill() {
   const blogDB = await create({
@@ -169,6 +171,20 @@ export default async function fill() {
     date: authorityAndAccountabilityEn.frontmatter.date,
     content: authorityAndAccountabilityEn.rawContent(),
     url: "/blog/en/authority-and-accountability",
+  });
+
+  await insert(blogDB, {
+    title: `Blog: ${stayInTheProblemSpace.frontmatter.title} 🇮🇹`,
+    date: stayInTheProblemSpace.frontmatter.date,
+    content: stayInTheProblemSpace.rawContent(),
+    url: "/blog/resta-nello-spazio-del-problema",
+  });
+
+  await insert(blogDB, {
+    title: `Blog: ${stayInTheProblemSpaceEn.frontmatter.title} 🇬🇧`,
+    date: stayInTheProblemSpaceEn.frontmatter.date,
+    content: stayInTheProblemSpaceEn.rawContent(),
+    url: "/blog/en/stay-in-the-problem-space",
   });
 
 
