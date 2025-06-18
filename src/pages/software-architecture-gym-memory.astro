@@ -1,0 +1,153 @@
+---
+import Layout from "../layouts/RetroLayout.astro";
+---
+
+<Layout title='Software Architecture Gym Memory' hasGoBack lang='en'>
+  <section>
+    <h2><a href='javascript:void(0);'>#</a>Software Architecture Gym Memory</h2>
+    <p>
+      This tool helps you collect and manage the JSON outputs for software architecture exercises from <a href="https://chatgpt.com/g/g-6852dcca09d4819191fefe4a56bbd81e-software-architecture-gym">The Software Architecture Gym GPT</a>.<br />
+      Enter your JSON data below, and it will be saved to your browser's local storage.
+    </p>
+    
+    <div class="nes-field">
+      <label for="json-input">JSON Input:</label>
+      <textarea id="json-input" class="nes-textarea" rows="10" placeholder="Enter your JSON here..."></textarea>
+    </div>
+    
+    <div style="margin-top: 20px;">
+      <button id="save-json" class="nes-btn is-primary">Save JSON</button>
+      <button id="copy-memory" class="nes-btn is-success">Copy Memory to Clipboard</button>
+      <button id="clear-memory" class="nes-btn is-error">Clear Memory</button>
+    </div>
+    
+    <div id="status-message" style="margin-top: 20px;"></div>
+    
+    <div style="margin-top: 20px;">
+      <h3>Current Memory (Count: <span id="memory-count">0</span>)</h3>
+      <div id="memory-preview" class="nes-container is-rounded" style="max-height: 300px; overflow-y: auto;">
+        <em>No data stored yet.</em>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const STORAGE_KEY = 'saGymMemory';
+    
+    // Get elements
+    const jsonInput = document.getElementById('json-input');
+    const saveBtn = document.getElementById('save-json');
+    const copyBtn = document.getElementById('copy-memory');
+    const clearBtn = document.getElementById('clear-memory');
+    const statusMessage = document.getElementById('status-message');
+    const memoryCount = document.getElementById('memory-count');
+    const memoryPreview = document.getElementById('memory-preview');
+    
+    // Initialize
+    updateMemoryDisplay();
+    
+    // Save JSON to localStorage
+    saveBtn.addEventListener('click', () => {
+      const jsonText = (jsonInput as HTMLTextAreaElement).value.trim();
+      
+      if (!jsonText) {
+        showStatus('Please enter some JSON data.', 'error');
+        return;
+      }
+      
+      try {
+        // Validate JSON
+        const parsedJson = JSON.parse(jsonText);
+        
+        // Get existing memory or create new array
+        const memory = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+        
+        // Add new JSON to memory
+        memory.push(parsedJson);
+        
+        // Save back to localStorage
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(memory));
+        
+        // Clear input and update display
+        (jsonInput as HTMLTextAreaElement).value = '';
+        updateMemoryDisplay();
+        showStatus('JSON saved successfully!', 'success');
+        
+      } catch (error) {
+        showStatus('Invalid JSON format. Please check your input.', 'error');
+      }
+    });
+    
+    // Copy memory to clipboard
+    copyBtn.addEventListener('click', async () => {
+      const memory = localStorage.getItem(STORAGE_KEY) || '[]';
+      
+      try {
+        await navigator.clipboard.writeText(memory);
+        showStatus('Memory copied to clipboard!', 'success');
+      } catch (error) {
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = memory;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        showStatus('Memory copied to clipboard!', 'success');
+      }
+    });
+    
+    // Clear memory with confirmation
+    clearBtn.addEventListener('click', () => {
+      const memory = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+      
+      if (memory.length === 0) {
+        showStatus('Memory is already empty.', 'info');
+        return;
+      }
+      
+      if (confirm(`Are you sure you want to clear all ${memory.length} stored items? This action cannot be undone.`)) {
+        localStorage.removeItem(STORAGE_KEY);
+        updateMemoryDisplay();
+        showStatus('Memory cleared successfully!', 'success');
+      }
+    });
+    
+    // Update memory display
+    function updateMemoryDisplay() {
+      const memory = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+      memoryCount.textContent = memory.length;
+      
+      if (memory.length === 0) {
+        memoryPreview.innerHTML = '<em>No data stored yet.</em>';
+      } else {
+        memoryPreview.innerHTML = `<pre>${JSON.stringify(memory, null, 2)}</pre>`;
+      }
+    }
+    
+    // Show status message
+    function showStatus(message, type) {
+      let className = 'nes-container';
+      switch(type) {
+        case 'success':
+          className += ' is-success';
+          break;
+        case 'error':
+          className += ' is-error';
+          break;
+        case 'info':
+          className += ' is-primary';
+          break;
+        default:
+          className += ' is-rounded';
+      }
+      
+      statusMessage.innerHTML = `<div class="${className}" style="padding: 10px;">${message}</div>`;
+      
+      // Clear message after 3 seconds
+      setTimeout(() => {
+        statusMessage.innerHTML = '';
+      }, 3000);
+    }
+  </script>
+</Layout>
