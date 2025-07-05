@@ -21,6 +21,8 @@ import * as authorityAndAccountability from "../pages/blog/autorita-e-responsabi
 import * as authorityAndAccountabilityEn from "../pages/blog/en/authority-and-accountability.md";
 import * as stayInTheProblemSpace from "../pages/blog/resta-nello-spazio-del-problema.md";
 import * as stayInTheProblemSpaceEn from "../pages/blog/en/stay-in-the-problem-space.md";
+import * as buildARocketWithLEGOs from "../pages/blog/costruire-un-razzo-con-i-lego.md";
+import * as buildARocketWithLEGOsEn from "../pages/blog/en/build-a-rocket-with-legos.md";
 
 export default async function fill() {
   const blogDB = await create({
@@ -187,6 +189,20 @@ export default async function fill() {
     url: "/blog/en/stay-in-the-problem-space",
   });
 
+  await insert(blogDB, {
+    title: `Blog: ${buildARocketWithLEGOs.frontmatter.title} 🇮🇹`,
+    date: buildARocketWithLEGOs.frontmatter.date,
+    content: buildARocketWithLEGOs.rawContent(),
+    url: "/blog/costruire-un-razzo-con-i-lego",
+  });
+
+  await insert(blogDB, {
+    title: `Blog: ${buildARocketWithLEGOsEn.frontmatter.title} 🇬🇧`,
+    date: buildARocketWithLEGOsEn.frontmatter.date,
+    content: buildARocketWithLEGOsEn.rawContent(),
+    url: "/blog/en/build-a-rocket-with-legos",
+  });
+
 
 
   return {
@@ -196,7 +212,9 @@ export default async function fill() {
       limit: 5,
       boost: {
         title: 5,
+        url: 1,
         content: 0.1,
+        date: 0.1,
       },
     },
   };
