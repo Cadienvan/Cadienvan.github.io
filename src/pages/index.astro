@@ -12,6 +12,7 @@ import linkedinPosts from "../data/linkedin-posts.json";
 
 import pointerRight from "../../public/assets/pointer-right.png";
 import Blog from "../components/Blog.astro";
+import Books from "../components/Books.astro";
 ---
 
 <Layout title='Home' hasGoBack={false}>
@@ -23,6 +24,7 @@ import Blog from "../components/Blog.astro";
     <Profile />
   </section>
   <Bio />
+  <Books />
   <section>
     <h2 id='linkedin'>
       <a href='/linkedin'><Image src={pointerRight} alt='Pointer Right' /><span>I miei post Linkedin ({linkedinPosts.length})</span></a>
