@@ -34,6 +34,9 @@
       document.documentElement.dataset.theme = theme;
       localStorage.setItem("theme", theme);
       themeText.textContent = theme === "light" ? "🌞" : "🌙";
+
+      const event = new CustomEvent("themeChange", { detail: { theme } });
+      window.dispatchEvent(event);
     };
 
     // Initialize theme
