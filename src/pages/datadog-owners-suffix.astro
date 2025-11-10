@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/RetroLayout.astro";
+---
+
+<Layout title='DataDog Owners Suffix' hasGoBack lang='en'>
+  <section>
+    <h2><a href='javascript:void(0);'>#</a>DataDog Owners Suffix</h2>
+    <p>
+      What follows is a simple script which opens all DataDog services in service manager and maps the owners' emails. <br />
+      Then, it shows a suffix next to each service indicating its owner.
+    </p>
+
+    <h3>Why?</h3>
+    <p>
+      At my company, we use DataDog extensively, and we have a lot of services defined. <br />
+      However, it's not always clear who owns which service and adding a contact just displays an email icon you need to mouse over to get the info you need. <br />
+      This bookmarklet helps to quickly identify the owner of each service directly from the service list view.
+    </p>
+
+    <h3>How to use it</h3>
+    <p>
+      To use it, you need to drag and drop the buttons to your bookmarks bar. <br />
+      Then, just click it when in Service Manager. <br />
+      The script will open each service one by one, extract the owner email from the side panel, and add a suffix to the service name in the list view. <br />
+      It will also store the mapping in localStorage for faster access next time. <br />
+      The script will also monitor the page for new services added dynamically and will add the suffix automatically.
+      <blockquote>
+        Be aware that this script relies on the current DataDog DOM structure, which may change over time. <br />
+        If it stops working, you may need to update the selectors in the script.
+      </blockquote>
+    </p>
+
+    <h3>Bookmarklet</h3>
+    <p>
+      <a id="owner-mapper-bookmarklet" href="javascript:(function(){(function(){ const STORAGE_KEY = 'serviceOwnerMap_v1'; const sleep = ms => new Promise(r => setTimeout(r, ms)); function loadMap(){ try{ return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch(e){ return {}; } } function saveMap(m){ localStorage.setItem(STORAGE_KEY, JSON.stringify(m)); } function extractOwnerFromButton(btn){ if(!btn) return null; const text = (btn.textContent || '').trim(); if(text) return text; const alt = btn.getAttribute && (btn.getAttribute('data-clipboard-text') || btn.getAttribute('aria-label')); if(alt) return alt.trim(); if(btn.value) return String(btn.value).trim(); return null; } async function ensureSuffix(el, name, owner){ const suffix = ` - [${owner}]`; if(!el) return; if(!el.innerText.includes(suffix)){ el.innerText = `${name}${suffix}`; } if(el.dataset.ownerIntervalId){ try{ clearInterval(Number(el.dataset.ownerIntervalId)); }catch(e){} } const id = setInterval(()=>{ if(!el.innerText.includes(suffix)){ el.innerText = `${name}${suffix}`; } }, 1000); el.dataset.ownerIntervalId = String(id); } async function processElement(el, map){ if(!el) return; const name = (el.innerText || '').trim(); if(!name) return; if(map[name]){ await ensureSuffix(el, name, map[name]); return; } try{ el.click(); }catch(e){} await sleep(500); const btn = document.querySelector('.service-catalog_side-panel__content .service-catalog_side-panel_ownership-tab__copy-button'); let owner = extractOwnerFromButton(btn) || 'Sconosciuto'; map[name] = owner; saveMap(map); await ensureSuffix(el, name, owner); } async function processAll(){ const map = loadMap(); const selector = '.service-catalog_service-cell__service-name-container .druids_dialogs_tooltip'; const els = Array.from(document.querySelectorAll(selector)); for(const el of els){ await processElement(el, map); } console.log('service-owner-mapper: processed', els.length, 'elements'); } async function monitorMissingOwners(){ const map = loadMap(); const selector = '.service-catalog_service-cell__service-name-container .druids_dialogs_tooltip'; const els = Array.from(document.querySelectorAll(selector)); for(const el of els){ const text = (el.innerText || '').trim(); if(!text) continue; if(text.includes(' - ')) continue; if(map[text]){ await ensureSuffix(el, text, map[text]); continue; } try{ el.click(); }catch(e){} await sleep(500); const btn = document.querySelector('.service-catalog_side-panel__content .service-catalog_side-panel_ownership-tab__copy-button'); const owner = extractOwnerFromButton(btn) || 'Sconosciuto'; map[text] = owner; saveMap(map); await ensureSuffix(el, text, owner); } } function startMonitor(intervalMs = 1000){ window.serviceOwnerMapper = window.serviceOwnerMapper || {}; if(window.serviceOwnerMapper._monitorIntervalId) return; window.serviceOwnerMapper._monitorRunning = false; const id = setInterval(async ()=>{ if(window.serviceOwnerMapper._monitorRunning) return; window.serviceOwnerMapper._monitorRunning = true; try{ await monitorMissingOwners(); } catch(e){ console.error('service-owner-mapper monitor error', e); } finally{ window.serviceOwnerMapper._monitorRunning = false; } }, intervalMs); window.serviceOwnerMapper._monitorIntervalId = id; } function stopMonitor(){ if(window.serviceOwnerMapper && window.serviceOwnerMapper._monitorIntervalId){ clearInterval(window.serviceOwnerMapper._monitorIntervalId); delete window.serviceOwnerMapper._monitorIntervalId; delete window.serviceOwnerMapper._monitorRunning; } } window.serviceOwnerMapper = window.serviceOwnerMapper || {}; window.serviceOwnerMapper.run = processAll; window.serviceOwnerMapper.getMap = loadMap; window.serviceOwnerMapper.clearMap = ()=>{ localStorage.removeItem(STORAGE_KEY); }; window.serviceOwnerMapper.startMonitor = startMonitor; window.serviceOwnerMapper.stopMonitor = stopMonitor; processAll().catch(err=>{ console.error('service-owner-mapper error', err); }); startMonitor(1000); })();})()">DD Owners</a>
+    </p>
+  </section>
+</Layout>
