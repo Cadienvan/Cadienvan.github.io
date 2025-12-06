@@ -9,150 +9,77 @@ interface Props {
   langIcon: string;
 }
 
-const articles = [
+interface BlogPost {
+  frontmatter: {
+    title: string;
+    date: string;
+    lang?: string;
+    hasTranslation?: boolean;
+    customTranslationUrl?: string;
+  };
+  url: string;
+}
+
+// Link esterni che non sono file .md nel progetto
+const externalLinks = [
   {
     it: {
-      title: "Inevitabot",
-      url: "/blog/inevitabot",
+      title: "Articoli vari @ TheRedCode.it",
+      url: "https://theredcode.it/authors/michael-di-prisco/",
+      date: "2023-12-19", // Data primo articolo
     },
     en: {
-      title: "Inevitabot",
-      url: "/blog/en/inevitabot",
-    },
-  },
-  {
-    it: {
-      title: "Asynchronous Batching",
-      url: "/blog/asynchronous-batching",
-    },
-    en: {
-      title: "Asynchronous Batching",
-      url: "/blog/en/asynchronous-batching",
-    },
-  },
-  {
-    it: {
-      title: "La silenziosa e pervasiva svalutazione del frontend",
-      url: "/blog/svalutazione-frontend",
-    },
-    en: {
-      title: "The quiet, pervasive devaluation of frontend",
-      url: "/blog/en/devaluing-frontend",
-    },
-  },
-  {
-    it: {
-      title: "Iterative Contract Testing",
-      url: "/blog/iterative-contract-testing",
-    },
-    en: {
-      title: "Iterative Contract Testing",
-      url: "/blog/en/iterative-contract-testing",
-    },
-  },
-  {
-    it: {
-      title: "I miei primi 10 anni da sviluppatore",
-      url: "/blog/i-miei-primi-10-anni-da-sviluppatore",
-    },
-    en: {
-      title: "My first 10 years in the world of development",
-      url: "/blog/en/my-first-10-years-as-a-software-developer",
-    },
-  },
-  {
-    it: {
-      title: "La verità sulla test coverage",
-      url: "/blog/la-verita-sulla-test-coverage",
-    },
-    en: {
-      title: "The truth about test coverage",
-      url: "/blog/en/the-truth-about-test-coverage",
-    },
-  },
-  {
-    it: {
-      title: "Node non ha implementato TypeScript",
-      url: "/blog/node-non-ha-implementato-typescript",
-    },
-    en: {
-      title: "Node did not implement TypeScript",
-      url: "/blog/en/node-did-not-implement-typescript",
-    },
-  },
-  {
-    it: {
-      title: "L'alternativa alle Roadmap",
-      url: "/blog/l-alternativa-alle-roadmap",
-    },
-    en: {
-      title: "The alternative to Roadmaps",
-      url: "/blog/en/the-alternative-to-roadmaps",
-    },
-  },
-  {
-    it: {
-      title: "Sits e Fits",
-      url: "/blog/what-sits-and-what-fits",
-    },
-    en: {
-      title: "What Sits And What Fits",
-      url: "/blog/en/what-sits-and-what-fits",
-    },
-  },
-  {
-    it: {
-      title: "Colleague-Based Testing",
-      url: "/blog/colleague-based-testing",
-    },
-    en: {
-      title: "Colleague-Based Testing",
-      url: "/blog/en/colleague-based-testing",
-    },
-  },
-  {
-    it: {
-      title: "Autorità e Responsabilità",
-      url: "/blog/autorita-e-responsabilita",
-    },
-    en: {
-      title: "Authority and Accountability",
-      url: "/blog/en/authority-and-accountability",
-    },
-  },
-  {
-    it: {
-      title: "Resta nello Spazio del Problema",
-      url: "/blog/resta-nello-spazio-del-problema",
-    },
-    en: {
-      title: "Stay in the problem space",
-      url: "/blog/en/stay-in-the-problem-space",
-    },
-  },
-  {
-    it: {
-      title: "Costruire un razzo con i LEGO",
-      url: "/blog/costruire-un-razzo-con-i-lego",
-    },
-    en: {
-      title: "Build a rocket with LEGOs",
-      url: "/blog/en/build-a-rocket-with-legos",
-    },
-  },
-  {
-    it: {
-      title: "Event-Driven Architecture @ TheRedCode.it",
-      url: "https://www.theredcode.it/tags/event-driven/",
-    },
-    en: {
-      title: "Event-Driven Architecture @ TheRedCode.it",
-      url: "https://www.theredcode.it/tags/event-driven/",
+      title: "Various articles @ TheRedCode.it",
+      url: "https://theredcode.it/authors/michael-di-prisco/",
+      date: "2023-12-19",
     },
   },
 ];
 
+// Carica dinamicamente tutti i blog post
+const italianPosts = await Astro.glob<BlogPost["frontmatter"]>("../pages/blog/*.md");
+const englishPosts = await Astro.glob<BlogPost["frontmatter"]>("../pages/blog/en/*.md");
+
+// Crea una mappa per collegare i post italiani con le loro traduzioni inglesi
+const getArticles = (lang: string) => {
+  const posts = lang === "it" ? italianPosts : englishPosts;
+  
+  const articles = posts.map((post) => {
+    const slug = post.url || "";
+    return {
+      title: post.frontmatter.title,
+      url: slug,
+      date: post.frontmatter.date,
+    };
+  });
+
+  // Aggiungi i link esterni
+  externalLinks.forEach((link) => {
+    if (link[lang]) {
+      articles.push(link[lang]);
+    }
+  });
+
+  // Ordina per data (dal più recente al più vecchio)
+  return articles.sort((a, b) => {
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
+    return dateB.getTime() - dateA.getTime();
+  });
+};
+
 const { lang, langIcon } = Astro.props;
+const articles = getArticles(lang);
+
+// Formatta la data in formato leggibile
+const formatDate = (dateString: string) => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString(lang === "it" ? "it-IT" : "en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
+};
 ---
 
 <section class='nes-container with-title'>
@@ -166,16 +93,44 @@ const { lang, langIcon } = Astro.props;
   <hr />
   <div class='lists'>
     {
-      articles
-        .filter(article => article[lang])
-        .map(article => (
-          <h3>
-            <a href={article[lang].url}>
-              <Image src={pointerRight} alt={article[lang].title} />
-              <span>{article[lang].title}</span>
-            </a>
-          </h3>
-        ))
+      articles.map((article) => (
+        <h3 class="blog-article" data-date={article.date}>
+          <a href={article.url}>
+            <Image src={pointerRight} alt={article.title} />
+            <span>{article.title}</span>
+            <small class="blog-date">({formatDate(article.date)})</small>
+          </a>
+        </h3>
+      ))
     }
   </div>
 </section>
+
+<script>
+  // Hide future blog posts on the client side
+  function hideFuturePosts() {
+    const now = new Date();
+    now.setHours(0, 0, 0, 0);
+    
+    document.querySelectorAll('.blog-article').forEach((article) => {
+      const dateStr = article.getAttribute('data-date');
+      if (dateStr) {
+        const postDate = new Date(dateStr);
+        postDate.setHours(0, 0, 0, 0);
+        if (postDate > now) {
+          (article as HTMLElement).style.display = 'none';
+        }
+      }
+    });
+  }
+  
+  hideFuturePosts();
+</script>
+
+<style>
+  .blog-date {
+    font-size: 0.7em;
+    opacity: 0.7;
+    margin-left: 0.5em;
+  }
+</style>

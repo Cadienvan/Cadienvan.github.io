@@ -1,6 +1,21 @@
 import { useSignal } from "@preact/signals";
 import searchDB from "../search/index";
 
+// Filter out future posts from search results
+function filterFuturePosts(results: { document: { title: string; url: string; date?: string } }[]) {
+  const now = new Date();
+  now.setHours(0, 0, 0, 0);
+  
+  return results.filter(r => {
+    // Only filter blog posts (they have a date field)
+    if (!r.document.date) return true;
+    
+    const postDate = new Date(r.document.date);
+    postDate.setHours(0, 0, 0, 0);
+    return postDate <= now;
+  });
+}
+
 export default function Counter() {
   const searchResults = useSignal([] as { title: string; url: string }[]);
 
@@ -11,7 +26,8 @@ export default function Counter() {
       return;
     }
     const results = await searchDB(term);
-    searchResults.value = results.map(r => r.document);
+    const filteredResults = filterFuturePosts(results);
+    searchResults.value = filteredResults.map(r => r.document);
   }
 
   return (
