@@ -132,6 +132,23 @@ Leader vero:
 E sì - sono stato entrambe le versioni.
 A volte nella stessa settimana.
 
+## Perché allora non lo fanno tutti?
+Perché è molto più facile parlare di leadership che metterci la pelle.
+Applicare questi principi richiede due cose che molti evitano come il refactoring di venerdì sera:
+
+Autoconsapevolezza - guardare in faccia le proprie reazioni impulsive, l'ego, le insicurezze.
+Non tutti vogliono scoprire che il vero collo di bottiglia non è il team… ma loro.
+
+Vulnerabilità - ammettere che potresti sbagliare, che non hai tutte le risposte, che devi imparare a fermarti.
+È molto più comodo nascondersi dietro processi, metriche, architetture e "best practice".
+
+La verità è che "basta non essere stronzi" sembra banale finché non ti accorgi che richiede un lavoro costante su te stesso.
+E il lavoro su se stessi è la parte della leadership che non puoi delegare, automatizzare o copy-pastare da un libro.
+
+È qui che la maggior parte delle persone si ferma.
+Non perché non sappia cosa fare - ma perché farlo davvero costa più coraggio di quanto sembri.
+
+
 ## Il twist ironico.
 
 Tutte le lezioni di leadership che ammiriamo - empatia, chiarezza, autonomia, pragmatismo, comunicazione - sono le stesse cose che celebriamo nei grandi developer.
@@ -155,16 +172,12 @@ Ne farai anche tu.
 Ma se c'è una cosa che ho imparato - una cosa che nessun articolo, nessun podcast, nessun libro mi ha mai insegnato esplicitamente - è questa:
 
 La qualità della tua leadership si misura in come si sentono le persone dopo aver interagito con te.  
-Non quanto ti ammirano - ma quanto si sentono al sicuro, capaci e viste.
 
-Quindi vai pure: continua a leggere libri sulla leadership se ti piacciono.  
-Ma ricorda che il vero lavoro accade nel momento in cui li chiudi -  
-quando un compagno di team esita prima di parlare,  
-quando qualcuno lotta in silenzio,  
-quando una PR arriva con dell'insicurezza nascosta dietro ogni commit.
+La verità è che nessun framework può salvarti da te stesso.
+Le persone non ricordano il tuo titolo, le tue decisioni, le tue roadmap.
+Ricordano come le hai fatte sentire mentre tutto questo accadeva.
 
-È lì che inizia la leadership.  
-Ed è lì che il motto colpisce più forte.
+Non essere un assh*le non è un principio di leadership.
+È un principio di umanità applicato al lavoro.
 
-Basta non essere stronzi.  
-Tutto il resto è opzionale.
+Tutto il resto — processi, metriche, modelli — è solo manutenzione.

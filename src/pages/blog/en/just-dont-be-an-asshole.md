@@ -132,6 +132,24 @@ Actual leader:
 And yes - I've been both versions.
 Sometimes in the same week.
 
+## Why Don't More People Do This Then?
+
+Because it's far easier to talk about leadership than to actually live it.
+
+Applying these principles requires two things most people avoid like Friday evening refactoring:
+
+**Self-awareness** — looking your impulsive reactions, ego, and insecurities in the face.
+Not everyone wants to discover that the real bottleneck isn't the team... it's them.
+
+**Vulnerability** — admitting you might be wrong, that you don't have all the answers, that you need to learn when to stop.
+It's much more comfortable to hide behind processes, metrics, architectures, and "best practices."
+
+The truth is "just don't be an asshole" sounds trivial until you realize it demands constant work on yourself.
+And that work — the work on yourself — is the part of leadership you can't delegate, automate, or copy-paste from a book.
+
+That's where most people stop.
+Not because they don't know what to do — but because actually doing it takes more courage than it seems.
+
 ## The Ironic Twist.
 
 All the leadership lessons we admire - empathy, clarity, autonomy, pragmatism, communication - are the same things we celebrate in great developers.
@@ -148,23 +166,19 @@ Turns out the line between a good architect and a good leader is thinner than we
 
 ## Conclusion.
 
-I've made enough mistakes to fill a trilogy.  
+I've made enough mistakes to write a trilogy.  
 I'll make more.  
 You will too.
 
-But if there's one thing I've learned - one thing no article, no podcast, no book ever taught me explicitly - it's this:
+But if there's one thing I've learned — something no article, no podcast, no book ever taught me explicitly — it's this:
 
-The quality of your leadership is measured in how people feel after interacting with you.  
-Not how much they admire you - but how safe, capable, and seen they feel.
+The quality of your leadership is measured by how people feel after interacting with you.  
 
-So go ahead: keep reading leadership books if you enjoy them.  
-But remember that the real work happens the moment you close them -  
-when a teammate hesitates before speaking,  
-when someone silently struggles,  
-when a PR arrives with hidden insecurity behind every commit.
+The truth is no framework can save you from yourself.  
+People don't remember your title, your decisions, your roadmaps.  
+They remember how you made them feel while all of that was happening.
 
-That's where leadership begins.  
-And that's where the motto hits hardest.
+Not being an asshole isn't a leadership principle.  
+It's a principle of humanity applied to work.
 
-Just don't be an asshole.  
-Everything else is optional.
+Everything else — processes, metrics, models — is just maintenance.
