@@ -15,7 +15,7 @@ Threads, books, courses, TED talks, frameworks, pyramids, quadrants, canvases, p
 
 But after years of being a Developer / Tech Lead / Manager / everything in between, here's the uncomfortable punchline I keep coming back to:
 
-> 95% of leadership wisdom can be reduced to one brutal sentence:  
+> Much of leadership starts from a brutally simple principle:  
 > "Thanks Captain Obvious - just don't be an asshole."
 
 And sure, it sounds superficial... until you look closely and realize how many people fail at exactly this.
@@ -27,7 +27,8 @@ We celebrate team ownership while hoarding decisions.
 The problem isn't knowledge.  
 It's interest.  
 It's empathy.  
-It's the willingness to see the human being behind the ticket, the PR, the meeting request.
+It's habit to dismantle.  
+It's the willingness to see the human being, both on the other side of the desk and especially behind your own.
 
 And I'm not innocent either.  
 I'm writing this while replaying a highlight reel of all the times I failed people - the times I interrupted, dismissed, rushed to solutions, hid behind architecture, or simply didn't listen. I still regret some of those moments. And I know the next mistake is just around the corner, waiting to teach me something else about myself.
@@ -77,7 +78,7 @@ If you don't genuinely want them to succeed, they will feel it. Immediately.
 After years of reading, practicing, and messing up, here's the truth I can't unsee:
 
 Leadership doesn't come from frameworks.  
-It comes from how you see - and treat - people.
+It mostly comes from how you see - and treat - people.
 
 You can read 200 leadership books.  
 You can memorize every model.  
@@ -131,6 +132,8 @@ Actual leader:
 
 And yes - I've been both versions.
 Sometimes in the same week.
+
+P.S. These phrases are examples to make a point; each of the "bad leader" statements I indicated could be said constructively and coherently in the right context. What matters is the attitude and intention behind the words. Leadership is not an if-else statement.
 
 ## Why Don't More People Do This Then?
 

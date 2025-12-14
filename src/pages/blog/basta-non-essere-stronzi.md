@@ -15,7 +15,7 @@ Thread, libri, corsi, TED talk, framework, piramidi, quadranti, canvas, principi
 
 Eppure, dopo anni da Developer / Tech Lead / Manager / un po' di tutto, ecco la scomoda verità a cui continuo a tornare:
 
-> Il 95% della saggezza sulla leadership può essere ridotto a una frase brutale:  
+> Gran parte della leadership parte da un principio brutalmente semplice:  
 > "Grazie al cazzo - basta non essere stronzi."
 
 E certo, sembra superficiale... finché non guardi da vicino e ti rendi conto di quante persone falliscono miseramente nel farlo.
@@ -27,7 +27,8 @@ Celebriamo l'ownership del team mentre accumuliamo decisioni.
 Il problema non è la conoscenza.  
 È l'interesse.  
 È l'empatia.  
-È la volontà di vedere l'essere umano dietro il ticket, la PR, la richiesta di meeting.
+È l'abitudine da smantellare.  
+È la volontà di vedere l'essere umano, sia dall'altro lato della scrivania che anche e soprattutto dietro la propria.
 
 E nemmeno io sono innocente.  
 Scrivo questo mentre mi scorre davanti un montaggio di tutte le volte che ho deluso le persone - le volte che ho interrotto, liquidato, corso verso soluzioni, mi sono nascosto dietro l'architettura, o semplicemente non ho ascoltato. Rimpiango ancora alcuni di quei momenti. E so che il prossimo errore è dietro l'angolo, pronto a insegnarmi qualcos'altro su me stesso.
@@ -77,7 +78,7 @@ Se non vuoi genuinamente che abbiano successo, lo sentiranno. Immediatamente.
 Dopo anni di letture, pratica e errori, ecco la verità che non riesco più a non vedere:
 
 La leadership non viene dai framework.  
-Viene da come vedi - e tratti - le persone.
+Tanto viene da come vedi - e tratti - le persone.
 
 Puoi leggere 200 libri sulla leadership.  
 Puoi memorizzare ogni modello.  
@@ -131,6 +132,8 @@ Leader vero:
 
 E sì - sono stato entrambe le versioni.
 A volte nella stessa settimana.
+
+P.S. Queste frasi sono esempi per esprimere un punto, ognuna di quelle che ho indicato per un "pessimo leader" nel giusto contesto potrebbe essere detta in modo costruttivo e coerente per la situazione. L'importante è l'atteggiamento e l'intenzione dietro le parole. La leadership non è un'istruzione if-else.
 
 ## Perché allora non lo fanno tutti?
 Perché è molto più facile parlare di leadership che metterci la pelle.
