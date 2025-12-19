@@ -82,7 +82,7 @@ The key, here, is understanding the trade-offs:
 
 #### Sit #2: Comprehensive unit testing.
 
-The pursuit of 100% test coverage is another example where pragmatism trumps dogma. While comprehensive testing is valuable, focusing on critical paths — like the checkout flow in an e-commerce app — often delivers more ROI (Return of interest) than exhaustive tests for minor features. In my article, [The Truth About Test Coverage](/blog/en/the-truth-about-test-coverage), I try to demonstrate how understanding the limits of metrics like coverage leads to better decision-making.
+The pursuit of 100% test coverage is another example where pragmatism trumps dogma. While comprehensive testing is valuable, focusing on critical paths - like the checkout flow in an e-commerce app - often delivers more ROI (Return of interest) than exhaustive tests for minor features. In my article, [The Truth About Test Coverage](/blog/en/the-truth-about-test-coverage), I try to demonstrate how understanding the limits of metrics like coverage leads to better decision-making.
 
 #### Sit #3: Event-driven architecture.
 

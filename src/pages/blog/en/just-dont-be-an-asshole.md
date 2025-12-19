@@ -3,7 +3,7 @@ layout: ../../../layouts/_partials/RetroBlogPostLayout.astro
 title: Thanks Captain Obvious - Just Don't Be An Asshole
 author: Michael Di Prisco
 description: The Leadership Motto Nobody Likes to Admit... Because It Removes All Excuses.
-date: 2026-01-07
+date: 2026-01-01
 AISupport: low
 lang: en
 hasTranslation: true
@@ -141,17 +141,17 @@ Because it's far easier to talk about leadership than to actually live it.
 
 Applying these principles requires two things most people avoid like Friday evening refactoring:
 
-**Self-awareness** — looking your impulsive reactions, ego, and insecurities in the face.
+**Self-awareness** - looking your impulsive reactions, ego, and insecurities in the face.
 Not everyone wants to discover that the real bottleneck isn't the team... it's them.
 
-**Vulnerability** — admitting you might be wrong, that you don't have all the answers, that you need to learn when to stop.
+**Vulnerability** - admitting you might be wrong, that you don't have all the answers, that you need to learn when to stop.
 It's much more comfortable to hide behind processes, metrics, architectures, and "best practices."
 
 The truth is "just don't be an asshole" sounds trivial until you realize it demands constant work on yourself.
-And that work — the work on yourself — is the part of leadership you can't delegate, automate, or copy-paste from a book.
+And that work - the work on yourself - is the part of leadership you can't delegate, automate, or copy-paste from a book.
 
 That's where most people stop.
-Not because they don't know what to do — but because actually doing it takes more courage than it seems.
+Not because they don't know what to do - but because actually doing it takes more courage than it seems.
 
 ## The Ironic Twist.
 
@@ -173,7 +173,7 @@ I've made enough mistakes to write a trilogy.
 I'll make more.  
 You will too.
 
-But if there's one thing I've learned — something no article, no podcast, no book ever taught me explicitly — it's this:
+But if there's one thing I've learned - something no article, no podcast, no book ever taught me explicitly - it's this:
 
 The quality of your leadership is measured by how people feel after interacting with you.  
 
@@ -184,4 +184,4 @@ They remember how you made them feel while all of that was happening.
 Not being an asshole isn't a leadership principle.  
 It's a principle of humanity applied to work.
 
-Everything else — processes, metrics, models — is just maintenance.
+Everything else - processes, metrics, models - is just maintenance.

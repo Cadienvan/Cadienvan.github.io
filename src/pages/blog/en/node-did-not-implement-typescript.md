@@ -79,7 +79,7 @@ function sum(a        , b        )         {
 
 Did you see that? The types are gone and have been replaced by spaces. _But, why?_, you might ask. Well, because doing so preserves sourcemaps references without the hassle of having a separate build process for those.
 
-Internally, this is done via a package called `amaro` which wraps `swc` — a well-known build tool which does the actual stripping.
+Internally, this is done via a package called `amaro` which wraps `swc` - a well-known build tool which does the actual stripping.
 
 Of course, limitations exist, such as the inability to use TypeScript-specific features like the before-mentioned _enums_. But still, it's a big step forward to prevent people from writing 135 config files to make a `sum` function accept two numbers and return a third one.
 

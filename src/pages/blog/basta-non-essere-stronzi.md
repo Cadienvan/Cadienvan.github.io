@@ -3,7 +3,7 @@ layout: ../../layouts/_partials/RetroBlogPostLayout.astro
 title: Grazie al cazzo - Basta non essere stronzi
 author: Michael Di Prisco
 description: Il motto di leadership che nessuno vuole ammettere... perché elimina tutte le scuse.
-date: 2026-01-07
+date: 2026-01-01
 AISupport: low
 lang: it
 hasTranslation: true
@@ -140,7 +140,7 @@ Perché è molto più facile parlare di leadership che metterci la pelle.
 Applicare questi principi richiede due cose che molti evitano come il refactoring di venerdì sera:
 
 Autoconsapevolezza - guardare in faccia le proprie reazioni impulsive, l'ego, le insicurezze.
-Non tutti vogliono scoprire che il vero collo di bottiglia non è il team… ma loro.
+Non tutti vogliono scoprire che il vero collo di bottiglia non è il team... ma loro.
 
 Vulnerabilità - ammettere che potresti sbagliare, che non hai tutte le risposte, che devi imparare a fermarti.
 È molto più comodo nascondersi dietro processi, metriche, architetture e "best practice".
@@ -180,7 +180,7 @@ La verità è che nessun framework può salvarti da te stesso.
 Le persone non ricordano il tuo titolo, le tue decisioni, le tue roadmap.
 Ricordano come le hai fatte sentire mentre tutto questo accadeva.
 
-Non essere un assh*le non è un principio di leadership.
+Non essere uno stronzo non è un principio di leadership.
 È un principio di umanità applicato al lavoro.
 
-Tutto il resto — processi, metriche, modelli — è solo manutenzione.
+Tutto il resto - processi, metriche, modelli - è solo manutenzione.

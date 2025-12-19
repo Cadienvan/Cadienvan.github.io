@@ -48,7 +48,7 @@ To tell the truth, I see this theme as much more explicit than the author says. 
 
 I believe the community needs to do more to eradicate this mentality. The frontend developer is a professional in all respects, and his work is fundamental to the success of a product.
 
-The frontend developer is called upon to solve complex problems, supported by constantly evolving tools — which greatly increases the cognitive load — and to make important decisions that directly influence the user experience, the bulwark of a successful product.
+The frontend developer is called upon to solve complex problems, supported by constantly evolving tools - which greatly increases the cognitive load - and to make important decisions that directly influence the user experience, the bulwark of a successful product.
 
 ## Our output is artistic, to some degree, and artistic things have a long, storied history of being tragically devalued merely because they seem simple and enjoyable.
 
@@ -58,7 +58,7 @@ Lack of understanding of roles and responsibilities plays a fundamental role in 
 
 First of all, it is often not the frontend developer who decides the design of an application, but the designer (UX, UI, call it what you want). The frontend developer is called upon to translate the design into code, and to do so in an efficient and high-performance way. This requires technical skills and specific knowledge, which go far beyond simply writing code.
 
-Secondly, as already mentioned above, the responsibilities of a frontend developer often go far beyond simply writing code. If I modify code in my backend application, the automatic tests will most likely notice any regressions sooner than I can. If I modify code in my frontend application, it is very likely that the only way to notice any regressions is to manually test the application or wait for a report from end customers*. This makes the frontend developer’s job much more complex and demanding than one might think. Not to mention the amount of _business logic_ and _state management_ — both promptly poured into the frontend — which make the role increasingly integrated with the business.
+Secondly, as already mentioned above, the responsibilities of a frontend developer often go far beyond simply writing code. If I modify code in my backend application, the automatic tests will most likely notice any regressions sooner than I can. If I modify code in my frontend application, it is very likely that the only way to notice any regressions is to manually test the application or wait for a report from end customers*. This makes the frontend developer’s job much more complex and demanding than one might think. Not to mention the amount of _business logic_ and _state management_ - both promptly poured into the frontend - which make the role increasingly integrated with the business.
 
 *Note: I am well aware of the existence of end-to-end tests, but their implementation is much more complex and expensive than traditional automatic tests, furthermore their reliability is often questioned due to their random and external conditions.
 
@@ -84,19 +84,19 @@ The complexity of today’s world makes the role of the frontend developer even 
 
 > ❌ I agree less with this one.
 
-Although it is true that the evolution of the frontend world — as already mentioned previously — has led to a proliferation of ideas, tools and methodologies, _Shiny Object Syndrome_ is a real and widespread problem, especially in the frontend community. This doesn’t mean that you shouldn’t be curious or adaptable, but that you often fall into the trap of adopting new technologies without fully understanding the pros and cons, and without evaluating whether they are actually necessary or not.
+Although it is true that the evolution of the frontend world - as already mentioned previously - has led to a proliferation of ideas, tools and methodologies, _Shiny Object Syndrome_ is a real and widespread problem, especially in the frontend community. This doesn’t mean that you shouldn’t be curious or adaptable, but that you often fall into the trap of adopting new technologies without fully understanding the pros and cons, and without evaluating whether they are actually necessary or not.
 
 ## If our skills are valuable as duct tape over the cracks of organizational shortcomings, why aren’t they valuable during the planning and decision-making that led to those defects, when we could potentially prevent them?
 
 > ✅ Totally agree.
 
-Exactly as a Software Architect (Or Tech Lead, or whoever is in charge of the architecture) must involve every member of the team in the architectural choices — despite having the last word and ultimately the responsibility over them -, also the decision-making process that leads to the creation of an application or part of it should involve every member of the team, including frontend developers. Those who have been doing this long enough may be able to find gaps in the user experience or design that others wouldn’t see, and involving them in the decision-making process can lead to a better user experience and a successful product.
+Exactly as a Software Architect (Or Tech Lead, or whoever is in charge of the architecture) must involve every member of the team in the architectural choices - despite having the last word and ultimately the responsibility over them -, also the decision-making process that leads to the creation of an application or part of it should involve every member of the team, including frontend developers. Those who have been doing this long enough may be able to find gaps in the user experience or design that others wouldn’t see, and involving them in the decision-making process can lead to a better user experience and a successful product.
 
 ## Frontend tools market themselves as though frontend is something no one wants to do, and nobody should care about any more than they have to.
 
 > ❌ You can clearly see the frustration increasing as the post develops, but in this case I can only disagree.
 
-The _marketing_ — as Josh defines it — of frontend tools has never trivialized or tried to simplify the challenges of developers, except for a few rare exceptions. These tools increasingly aim to make the frontend developer’s work simpler and more efficient, but never _banal_, and it is right that the direction remains the same. The promise is never to make the frontend developer a _code monkey_, but to allow him to focus on what is truly important: the creation of a successful user experience and the impact on the business and the world around him . The same goes for the backend world, where tools have evolved to allow developers to focus on the product, rather than on technical choices or configuration issues.
+The _marketing_ - as Josh defines it - of frontend tools has never trivialized or tried to simplify the challenges of developers, except for a few rare exceptions. These tools increasingly aim to make the frontend developer’s work simpler and more efficient, but never _banal_, and it is right that the direction remains the same. The promise is never to make the frontend developer a _code monkey_, but to allow him to focus on what is truly important: the creation of a successful user experience and the impact on the business and the world around him . The same goes for the backend world, where tools have evolved to allow developers to focus on the product, rather than on technical choices or configuration issues.
 
 Finally, let us remember that the world of Developer Relations has developed in a structured manner in recent years, and any missteps by some companies should not be considered the norm.
 
