@@ -76,11 +76,17 @@
     "url": "https://youtu.be/_xlHncHAOoo?t=9596",
     "media": "youtube"
   },
-
   {
     "date": "2025-10-14",
     "conference": "Codemotion Milan",
     "title": "[EN] Context Engineering: Turning Documentation into Qualiity (not just with AI)",
+    "url": "",
+    "media": ""
+  },
+  {
+    "date": "2026-04-09",
+    "conference": "JSDay",
+    "title": "[EN] Leveraging the Event Loop for Blazing-Fast Applications!",
     "url": "",
     "media": ""
   }
