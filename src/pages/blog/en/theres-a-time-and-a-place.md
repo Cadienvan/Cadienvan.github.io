@@ -7,6 +7,7 @@ date: 2026-04-17
 AISupport: mid
 lang: en
 hasTranslation: true
+customTranslationUrl: /blog/tempo-e-luogo-per-ogni-cosa
 ---
 
 I'm in my thirties and I still have my Game Boy Color on the shelf. I turn it on sometimes, especially when I need to remind myself that simplicity works. And every time I do, I stumble into one of the most important lessons in software engineering — disguised as dialogue from a children's video game.
@@ -49,7 +50,7 @@ Scaling a problem that doesn't exist is one of the most effective ways to create
 
 In Pokémon terms: it's like teaching *Hydro Pump* to a level 3 Magikarp. The move exists, it's powerful, it makes sense — just not for that Pokémon, not at that moment. You have to wait until level 20 first. You have to earn your Gyarados.
 
-❌ **The trap**: "When we scale, we'll already be ready."
+❌ **The trap**: "When we scale, we'll already be ready."  
 ✅ **Reality**: When you scale, you'll know what to build. Right now, you don't.
 
 ### 2. Microservices for a Team of One
@@ -64,7 +65,7 @@ The result? A distributed monolith. That is: all the disadvantages of microservi
 
 It's the equivalent of teaching your Pokémon only moves of a different type, hoping it "covers more ground." In theory it makes sense. In practice, it'll never be super effective at anything, and it loses all the STAB bonuses — the Same Type Attack Bonus you get when you use a move that matches your Pokémon's type.
 
-❌ **The trap**: "It's best practice."
+❌ **The trap**: "It's best practice."  
 ✅ **Reality**: It's best practice *in a specific context*. Your context is different.
 
 ### 3. AI Solving Problems You Don't Have
@@ -124,4 +125,3 @@ The technologies you adopt prematurely aren't wrong in the abstract. Often they'
 And meanwhile, the problem you do have — the real one, the one your users are waiting for you to solve — is sitting there, waiting.
 
 **It's not the time to use the bike. Go on foot. It's faster.**
-
