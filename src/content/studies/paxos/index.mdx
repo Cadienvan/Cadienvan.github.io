@@ -1,0 +1,19 @@
+---
+title: Paxos
+summary: Note rapide sul protocollo di consenso Paxos, partendo dal paper "Paxos Simple" di Leslie Lamport.
+kind: paper
+pdfUrl: https://lamport.azurewebsites.net/pubs/paxos-simple.pdf
+lang: it
+slug: paxos
+order: 1
+---
+
+import Explanation from "./Explanation.jsx";
+
+<Explanation client:load />
+
+## Spiegazione
+
+L'idea di base di Paxos è quella di avere un insieme di nodi che collaborano per raggiungere un consenso su una singola proposta. Il protocollo è progettato per essere tollerante ai guasti, il che significa che può continuare a funzionare anche se alcuni nodi falliscono o diventano inaccessibili.
+
+Il Multi-Paxos è un'estensione del protocollo Paxos che consente di raggiungere un consenso su una sequenza di proposte, piuttosto che su una singola proposta. Questa spiegazione non tratta Multi-Paxos.

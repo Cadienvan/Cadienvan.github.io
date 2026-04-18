@@ -1,0 +1,19 @@
+---
+title: Transformers
+summary: Note rapide sul modello di deep learning Transformers, partendo dal paper "Attention is All You Need" di Vaswani et al.
+kind: paper
+pdfUrl: https://arxiv.org/pdf/1706.03762
+lang: it
+slug: transformers
+order: 1
+---
+
+import Explanation from "./Explanation.jsx";
+
+<Explanation client:load />
+
+## Spiegazione
+
+L'idea di base dei Transformers è quella di utilizzare meccanismi di attenzione per elaborare sequenze di dati, come il testo, in modo parallelo piuttosto che sequenziale. Questo approccio consente di catturare dipendenze a lungo raggio in modo più efficiente rispetto ai modelli basati su RNN o LSTM.
+
+Il paper "Attention is All You Need" introduce il concetto di self-attention, che permette al modello di pesare l'importanza di diverse parti della sequenza di input per ogni elemento della sequenza di output.
