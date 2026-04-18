@@ -1,0 +1,60 @@
+---
+import { getCollection, render } from "astro:content";
+
+import Layout from "../../layouts/ModernLayout.astro";
+
+export async function getStaticPaths() {
+  const studies = await getCollection("studies");
+  return studies.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<Layout title={entry.data.title} hasGoBack lang={entry.data.lang}>
+  <section>
+    <h2>
+      <a href='/studi'>#</a>Studi
+    </h2>
+    <h1>{entry.data.title}</h1>
+    {entry.data.summary && <p class='default-font'>{entry.data.summary}</p>}
+    {
+      entry.data.pdfUrl && (
+        <p>
+          <a
+            href={entry.data.pdfUrl}
+            target='_blank'
+            rel='noopener noreferrer'
+            class='nes-btn is-primary default-font'
+          >
+            Scarica PDF (link esterno)
+          </a>
+        </p>
+      )
+    }
+    <hr />
+    <article class='default-font'>
+      <Content />
+    </article>
+  </section>
+</Layout>
+
+<style>
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  article :global(h2),
+  article :global(h3) {
+    margin-top: 2rem;
+  }
+
+  article :global(p),
+  article :global(li) {
+    line-height: 1.8;
+  }
+</style>
