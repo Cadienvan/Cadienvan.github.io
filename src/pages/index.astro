@@ -9,12 +9,15 @@ import SearchBar from "../components/SearchBar.astro";
 import conferences from "../data/conferences.json";
 import interviews from "../data/interviews.json";
 import linkedinPosts from "../data/linkedin-posts.json";
+import { getCollection } from "astro:content";
 
 import pointerRight from "../../public/assets/pointer-right.png";
 import Blog from "../components/Blog.astro";
 import Books from "../components/Books.astro";
 import PodcastOS from "../components/PodcastOS.astro";
 import PodcastSFDL from "../components/PodcastSFDL.astro";
+
+const studies = await getCollection("studies");
 ---
 
 <Layout title='Home' hasGoBack={false}>
@@ -42,6 +45,11 @@ import PodcastSFDL from "../components/PodcastSFDL.astro";
   <section>
     <h2 id='interviste'>
       <a href='/interviste'><Image src={pointerRight} alt='Pointer Right' /><span>Interviste ({interviews.length})</span></a>
+    </h2>
+  </section>
+  <section>
+    <h2 id='paper-analysis'>
+      <a href='/paper-analysis'><Image src={pointerRight} alt='Pointer Right' /><span>Analisi su paper scientifici ({studies.length})</span></a>
     </h2>
   </section>
   <section>

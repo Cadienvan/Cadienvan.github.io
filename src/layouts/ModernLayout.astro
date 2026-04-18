@@ -23,7 +23,6 @@ const i18n = {
   },
 };
 
-import "nes.css/css/nes.min.css";
 import "../styles/tailwind.css";
 import CookieBanner from "../components/CookieBanner.astro";
 import ThemeToggle from "../components/ThemeToggle.astro";
@@ -54,7 +53,7 @@ import ThemeToggle from "../components/ThemeToggle.astro";
       {
         hasGoBack && (
           <section>
-            <a href='/' class='nes-btn is-primary'>
+            <a href='/' class='is-primary'>
               <span>{i18n[lang].goBack}</span>
             </a>
           </section>
@@ -83,7 +82,7 @@ import ThemeToggle from "../components/ThemeToggle.astro";
         wrapper.style.position = "relative";
 
         let copyButton = document.createElement("button");
-        copyButton.className = "copy-code nes-btn is-primary";
+        copyButton.className = "copy-code is-primary";
         copyButton.innerHTML = copyButtonLabel;
 
         codeBlock.setAttribute("tabindex", "0");
@@ -112,16 +111,8 @@ import ThemeToggle from "../components/ThemeToggle.astro";
   </body>
 </html>
 <style is:global>
-  @font-face {
-    font-family: "PressStart2P-Regular";
-    src: url("/fonts/PressStart2P-Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-
   * {
-    font-family: "PressStart2P-Regular", sans-serif;
+    font-family: sans-serif;
   }
 
   main {
@@ -154,7 +145,7 @@ import ThemeToggle from "../components/ThemeToggle.astro";
   }
 
   a,
-  .nes-text.is-primary {
+  .is-primary {
     color: #005099;
   }
 
@@ -346,13 +337,13 @@ import ThemeToggle from "../components/ThemeToggle.astro";
   }
 
   a,
-  .nes-text.is-primary {
+  .is-primary {
     color: var(--link-color);
   }
 
   code {
     background-color: var(--code-bg);
-    color: var (--code-color);
+    color: var(--code-color);
   }
 
   .nes-container {

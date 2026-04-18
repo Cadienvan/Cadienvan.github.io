@@ -1,0 +1,58 @@
+---
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+
+import Layout from "../../layouts/RetroLayout.astro";
+import pointerRight from "../../../public/assets/pointer-right.png";
+
+const studies = (await getCollection("studies")).sort((a, b) => {
+  const orderA = a.data.order ?? Number.MAX_SAFE_INTEGER;
+  const orderB = b.data.order ?? Number.MAX_SAFE_INTEGER;
+
+  if (orderA !== orderB) {
+    return orderA - orderB;
+  }
+
+  return a.data.title.localeCompare(b.data.title);
+});
+
+const kindLabel: Record<(typeof studies)[number]["data"]["kind"], string> = {
+  paper: "Paper",
+  concept: "Concetto",
+  pattern: "Pattern",
+};
+---
+
+<Layout title='Studi' hasGoBack>
+  <section>
+    <h2>
+      <a href='javascript:void(0);'>#</a>Studi e note ({studies.length})
+    </h2>
+    <p class='default-font'>
+      Una raccolta di paper, pattern e concetti che sto studiando.
+    </p>
+    <div class='lists'>
+      {
+        studies.map((study) => (
+          <h3>
+            <a href={`/paper-analysis/${study.slug}`}>
+              <Image src={pointerRight} alt={study.data.title} />
+              <span>{study.data.title}</span>
+            </a>
+            <small class='default-font meta'>
+              [{kindLabel[study.data.kind]}]{study.data.pdfUrl ? " • PDF disponibile" : ""}
+            </small>
+          </h3>
+        ))
+      }
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .meta {
+    display: block;
+    margin: 0.5rem 0 1.5rem 2.2rem;
+    opacity: 0.8;
+  }
+</style>
