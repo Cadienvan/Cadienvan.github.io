@@ -8,7 +8,6 @@ import SearchBar from "../components/SearchBar.astro";
 
 import conferences from "../data/conferences.json";
 import interviews from "../data/interviews.json";
-import linkedinPosts from "../data/linkedin-posts.json";
 import { getCollection } from "astro:content";
 
 import pointerRight from "../../public/assets/pointer-right.png";
@@ -32,11 +31,6 @@ const studies = await getCollection("studies");
   <PodcastOS />
   <PodcastSFDL />
   <Books />
-  <section>
-    <h2 id='linkedin'>
-      <a href='/linkedin'><Image src={pointerRight} alt='Pointer Right' /><span>I miei post Linkedin ({linkedinPosts.length})</span></a>
-    </h2>
-  </section>
   <section>
     <h2 id='conferenze'>
       <a href='/conferenze'><Image src={pointerRight} alt='Pointer Right' /><span>Conferenze ({conferences.length})</span></a>
