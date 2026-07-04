@@ -3,7 +3,7 @@ layout: ../../../layouts/_partials/RetroBlogPostLayout.astro
 title: Harness is King
 author: Michael Di Prisco
 description: A better model showed up. The harness still won.
-date: 2026-07-04
+date: 2026-07-03
 AISupport: mid
 lang: en
 hasTranslation: true
