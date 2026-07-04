@@ -37,23 +37,23 @@ I’ve found that using a model geared towards deep reasoning (like Opus 4.6) fo
 
 ### A Concrete Example: Develop a new feature for my side-project RPG.
 
-> Oh, hey, I didn't have the time to tell you, but I'm building a web-based MMORPG! It's called "World Of Yggdrasil" and it's a passion project of mine. Do you wanna try it? [Click here!](https://woy.ovh)
+> Oh, hey, I didn't have the time to tell you, but I'm building a web-based MMORPG! It's called "Warriors Of Yggdrasil" and it's a passion project of mine. Do you wanna try it? [Click here!](https://woy.ovh)
 
 I wanted to add a new feature: a dynamic weather system that affects gameplay.
 
 ❌ **The Old Way (The Mega-Prompt):**
-> *"Act as an Expert Software Architect. I am building a web-based MMORPG called World Of Yggdrasil. I want to implement a dynamic weather system that affects gameplay. Every map in the game could randomly move from a weather to another every round (Let's say 3% chance every round), and the weather should affect player stats, dungeons, raids and monsters. I want sunny weather to provide 10% accuracy to players, rainy weather to provide 15% evasion, and snowy weather to reduce speed by 20%. As per the monsters, it depends on their nature. If their nature matches the weather, they get a 20% boost to all stats. If their nature is opposite to the weather, they get a 20% reduction to all stats. I also want a guide in the in-game sage explaining how this mechanic works. Also, add a contextual guide as the other ones in a modal as soon as the first weather mechanic is exposed to a new user. Keep the code testable and maintainable."*
+> *"Act as an Expert Software Architect. I am building a web-based MMORPG called Warriors Of Yggdrasil. I want to implement a dynamic weather system that affects gameplay. Every map in the game could randomly move from a weather to another every round (Let's say 3% chance every round), and the weather should affect player stats, dungeons, raids and monsters. I want sunny weather to provide 10% accuracy to players, rainy weather to provide 15% evasion, and snowy weather to reduce speed by 20%. As per the monsters, it depends on their nature. If their nature matches the weather, they get a 20% boost to all stats. If their nature is opposite to the weather, they get a 20% reduction to all stats. I also want a guide in the in-game sage explaining how this mechanic works. Also, add a contextual guide as the other ones in a modal as soon as the first weather mechanic is exposed to a new user. Keep the code testable and maintainable."*
 
 **The Result:** The AI writes the code. But it never asks if you actually *need* a dynamic weather system. It never challenges the core mechanic. It just executes the prompt, which may lead to a lot of wasted effort if the feature turns out to be a bad idea or an unstable solution.
 
 ✅ **The New Way (The Minimum Viable Prompt):**
-> *"Hey, I'm building a web-based MMORPG called World Of Yggdrasil. I'm thinking about adding a dynamic weather system that affects gameplay. What do you think about this idea?"*
+> *"Hey, I'm building a web-based MMORPG called Warriors Of Yggdrasil. I'm thinking about adding a dynamic weather system that affects gameplay. What do you think about this idea?"*
 
 **The Result:** The AI gives you options. You review them. You reply: *"Option 2 looks good, but our team lacks Terraform experience. Can we simplify the infrastructure?"* ➡️ You iterate. 
 ➡️ You challenge its suggestions. 
 ➡️ You reason *together*.
 
-> Fun fact, there's no weather system in World Of Yggdrasil because Opus 4.6 convinced me it was a bad idea.
+> Fun fact, there's no weather system in Warriors Of Yggdrasil because Opus 4.6 convinced me it was a bad idea.
 
 P.S. Of course, that prompt is just an example. The agent I was talking to is a custom agent which can use an entire folder of documentation docs built by itself during the project's lifetime as context, so I didn't need to explain the game mechanics or the codebase. The point is that I provided the minimum context necessary to start a conversation about the feature, rather than trying to cram every detail into a single prompt.
 

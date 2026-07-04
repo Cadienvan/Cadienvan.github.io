@@ -37,23 +37,23 @@ Ho scoperto che usare un modello orientato al deep reasoning, come Opus 4.6, per
 
 ### Un esempio concreto: sviluppare una nuova feature per il mio side-project RPG
 
-> Ah, giusto, non ho fatto in tempo a dirtelo, ma sto costruendo un web-based MMORPG! Si chiama "World Of Yggdrasil" ed è un progetto nato dalla mia passione per i giochi di ruolo. Vuoi provarlo? [Clicca qui!](https://woy.ovh)
+> Ah, giusto, non ho fatto in tempo a dirtelo, ma sto costruendo un web-based MMORPG! Si chiama "Warriors Of Yggdrasil" ed è un progetto nato dalla mia passione per i giochi di ruolo. Vuoi provarlo? [Clicca qui!](https://woy.ovh)
 
 Volevo aggiungere una nuova feature: un dynamic weather system che influenzasse il gameplay.
 
 ❌ **Il vecchio modo (il Mega-Prompt):**
-> *"Act as an Expert Software Architect. I am building a web-based MMORPG called World Of Yggdrasil. I want to implement a dynamic weather system that affects gameplay. Every map in the game could randomly move from a weather to another every round (Let's say 3% chance every round), and the weather should affect player stats, dungeons, raids and monsters. I want sunny weather to provide 10% accuracy to players, rainy weather to provide 15% evasion, and snowy weather to reduce speed by 20%. As per the monsters, it depends on their nature. If their nature matches the weather, they get a 20% boost to all stats. If their nature is opposite to the weather, they get a 20% reduction to all stats. I also want a guide in the in-game sage explaining how this mechanic works. Also, add a contextual guide as the other ones in a modal as soon as the first weather mechanic is exposed to a new user. Keep the code testable and maintainable."*
+> *"Act as an Expert Software Architect. I am building a web-based MMORPG called Warriors Of Yggdrasil. I want to implement a dynamic weather system that affects gameplay. Every map in the game could randomly move from a weather to another every round (Let's say 3% chance every round), and the weather should affect player stats, dungeons, raids and monsters. I want sunny weather to provide 10% accuracy to players, rainy weather to provide 15% evasion, and snowy weather to reduce speed by 20%. As per the monsters, it depends on their nature. If their nature matches the weather, they get a 20% boost to all stats. If their nature is opposite to the weather, they get a 20% reduction to all stats. I also want a guide in the in-game sage explaining how this mechanic works. Also, add a contextual guide as the other ones in a modal as soon as the first weather mechanic is exposed to a new user. Keep the code testable and maintainable."*
 
 **Il risultato:** L'AI scrive il codice. Però non ti chiede mai se hai davvero *bisogno* di un dynamic weather system. Non mette mai in discussione la meccanica di base. Si limita a eseguire il prompt, e questo può portare a molto lavoro sprecato se la feature si rivela una cattiva idea o una soluzione instabile.
 
 ✅ **Il nuovo modo (il Minimum Viable Prompt):**
-> *"Hey, I'm building a web-based MMORPG called World Of Yggdrasil. I'm thinking about adding a dynamic weather system that affects gameplay. What do you think about this idea?"*
+> *"Hey, I'm building a web-based MMORPG called Warriors Of Yggdrasil. I'm thinking about adding a dynamic weather system that affects gameplay. What do you think about this idea?"*
 
 **Il risultato:** L'AI ti propone delle opzioni. Tu le valuti. Poi rispondi: *"L'opzione 2 sembra buona, ma il nostro team non ha esperienza con Terraform. Possiamo semplificare l'infrastructure?"* E a quel punto iteri.
 Sfidi i suoi suggerimenti.
 Ragionate *insieme*.
 
-> Fun fact: in World Of Yggdrasil non esiste alcun weather system, perche Opus 4.6 mi ha convinto che fosse una cattiva idea.
+> Fun fact: in Warriors Of Yggdrasil non esiste alcun weather system, perche Opus 4.6 mi ha convinto che fosse una cattiva idea.
 
 P.S. Ovviamente, quel prompt è solo un esempio. L'agente di cui stavo parlando è un agente custom che può usare un'intera cartella di documentazione costruita da se stesso durante la vita del progetto come contesto, quindi non avevo bisogno di spiegare le meccaniche di gioco o la codebase. Il punto è che ho fornito il minimo contesto necessario per iniziare una conversazione sulla feature, invece di cercare di infilare ogni dettaglio in un singolo prompt.
 
