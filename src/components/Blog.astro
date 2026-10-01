@@ -37,8 +37,8 @@ const externalLinks = [
 ];
 
 // Carica dinamicamente tutti i blog post
-const italianPosts = await Astro.glob<BlogPost["frontmatter"]>("../pages/blog/*.md");
-const englishPosts = await Astro.glob<BlogPost["frontmatter"]>("../pages/blog/en/*.md");
+const italianPosts = Object.values(import.meta.glob<BlogPost>("../pages/blog/*.md", { eager: true }));
+const englishPosts = Object.values(import.meta.glob<BlogPost>("../pages/blog/en/*.md", { eager: true }));
 
 // Crea una mappa per collegare i post italiani con le loro traduzioni inglesi
 const getArticles = (lang: string) => {
