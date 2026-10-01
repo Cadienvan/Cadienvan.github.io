@@ -12,16 +12,12 @@
   "dependencies": {
     "@astrojs/mdx": "^8.0.2",
     "@astrojs/preact": "^6.0.5",
-    "@astrojs/react": "^7.0.0",
     "@astrojs/rss": "^4.0.19",
     "@orama/orama": "^3.1.18",
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.3.5",
     "cssnano": "^9.1.2",
-    "lucide-react": "^1.49.0",
     "nes.css": "^2.3.0",
-    "react": "^19.3.0",
-    "react-dom": "^19.3.0",
     "tailwindcss": "^4.3.3"
   }
 }
