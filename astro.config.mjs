@@ -9,8 +9,8 @@ export default defineConfig({
   site: "https://cadienvan.github.io/",
   syntaxHighlight: 'prism',
   integrations: [
-    preact({ exclude: ["src/content/studies/**"] }),
-    react({ include: ["src/content/studies/**"] }),
+    preact({ exclude: ["**/content/studies/**"] }),
+    react({ include: ["**/content/studies/**"] }),
     mdx(),
   ],
   vite: {

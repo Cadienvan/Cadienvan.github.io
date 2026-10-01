@@ -6,7 +6,7 @@ import Layout from "../../layouts/ModernLayout.astro";
 export async function getStaticPaths() {
   const studies = await getCollection("studies");
   return studies.map((entry) => ({
-    params: { slug: entry.slug },
+    params: { slug: entry.id },
     props: { entry },
   }));
 }

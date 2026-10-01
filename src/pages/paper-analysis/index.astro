@@ -35,7 +35,7 @@ const kindLabel: Record<(typeof studies)[number]["data"]["kind"], string> = {
       {
         studies.map((study) => (
           <h3>
-            <a href={`/paper-analysis/${study.slug}`}>
+            <a href={`/paper-analysis/${study.id}`}>
               <Image src={pointerRight} alt={study.data.title} />
               <span>{study.data.title}</span>
             </a>
